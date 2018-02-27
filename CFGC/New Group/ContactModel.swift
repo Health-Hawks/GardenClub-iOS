@@ -10,24 +10,31 @@ import Foundation
 
 class ContactModel {
     private var _imageURL: String!
-    private var _contactName: String!
-    private var _contactMbrStat: String!
+    private var _firstName: String!
+    private var _lastName: String!
+    private var _mbrStat: String!
+    
     
     var imageURL: String{
         return _imageURL
     }
     
-    var contactName: String {
-        return _contactName
+    var firstName: String {
+        return _firstName
     }
     
-    var contactMbrStat: String{
-        return _contactMbrStat
+    var lastName: String {
+        return _lastName
     }
     
-    init(imageURL: String, contactName: String, contactMbrStat: String){
+    var mbrStat: String{
+        return _mbrStat
+    }
+    
+    init(imageURL: String, firstName: String, lastName: String, mbrStat: String){
         _imageURL = imageURL
-        _contactName = contactName
-        _contactMbrStat = contactMbrStat
+        _firstName = firstName
+        _lastName = lastName
+        _mbrStat = mbrStat
     }
 }

@@ -8,12 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
+    @IBOutlet weak var userName: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    
+    @IBOutlet weak var submitBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userName.borderStyle = UITextBorderStyle.roundedRect
+        password.borderStyle = UITextBorderStyle.roundedRect
+        submitBtn.layer.cornerRadius = 23
+        
     }
 
     override func didReceiveMemoryWarning() {

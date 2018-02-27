@@ -12,7 +12,7 @@ class ContactCell: UITableViewCell {
 
     @IBOutlet weak var contactImg: UIImageView!
     @IBOutlet weak var contactName: UILabel!
-    @IBOutlet weak var contactMbrStat: UILabel!
+    @IBOutlet weak var mbrStat: UILabel!
     
     
     override func awakeFromNib() {
@@ -21,8 +21,8 @@ class ContactCell: UITableViewCell {
     }
 
     func updateUI(contactModel: ContactModel){
-        contactName.text = contactModel.contactName
-        contactMbrStat.text = contactModel.contactMbrStat
+        contactName.text = contactModel.firstName + " " + contactModel.lastName
+        mbrStat.text = contactModel.mbrStat
     }
 
 }

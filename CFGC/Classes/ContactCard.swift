@@ -8,7 +8,7 @@
 
 import Foundation
 
-class contactCard {
+class ContactCard {
     
     private var _PhotoID: String!
     private var _UserID: String!
@@ -30,14 +30,14 @@ class contactCard {
     private var _OfficerTitle: String!
     private var _ExcecutiveBdMbrship: String!
     private var _CurrentCmteAssignment1: String!
-    private var _CmteAssign1Chair: Bool!
-    private var _CmteAssign1CoChair: Bool!
+    private var _CmteAssign1Chair: String!
+    private var _CmteAssign1CoChair: String!
     private var _CurrentCmteAssignment2: String!
-    private var _CmteAssign2Chair: Bool!
-    private var _CmteAssign2CoChair: Bool!
+    private var _CmteAssign2Chair: String!
+    private var _CmteAssign2CoChair: String!
     private var _CurrentCmteAssignment3: String!
-    private var _CmteAssign3Chair: Bool!
-    private var _CmteAssign3CoChair: Bool!
+    private var _CmteAssign3Chair: String!
+    private var _CmteAssign3CoChair: String!
     private var _BiographicalInfo: String!
     
     var UserID: String {
@@ -97,35 +97,35 @@ class contactCard {
     var CurrentCmteAssignment1: String {
         return _CurrentCmteAssignment1
     }
-    var CmteAssign1Chair: Bool {
+    var CmteAssign1Chair: String {
         return _CmteAssign1Chair
     }
-    var CmteAssign1CoChair: Bool {
+    var CmteAssign1CoChair: String {
         return _CmteAssign1CoChair
     }
     var CurrentCmteAssignment2: String {
         return _CurrentCmteAssignment2
     }
-    var CmteAssign2Chair: Bool {
+    var CmteAssign2Chair: String {
         return _CmteAssign2Chair
     }
-    var CmteAssign2CoChair: Bool {
+    var CmteAssign2CoChair: String {
         return _CmteAssign2CoChair
     }
     var CurrentCmteAssignment3: String {
         return _CurrentCmteAssignment3
     }
-    var CmteAssign3Chair: Bool {
+    var CmteAssign3Chair: String {
         return _CmteAssign3Chair
     }
-    var CmteAssign3CoChair: Bool {
+    var CmteAssign3CoChair: String {
         return _CmteAssign3CoChair
     }
     var BiographicalInfo: String {
         return _BiographicalInfo
     }
     
-    init(PhotoID: String, UserID: String, MbrStatus: String, YearTurnedActive: String, LastName: String, FirstName: String, Spouse: String, StreetAddress: String, City: String, State: String, ZipCode: String, PrimaryContactNo: String, SecondaryContactNo: String?, ContactEmail: String?, TypeofPrimaryContactNo: String?, TypeofSecondaryContactNo: String?, Officer: String?, OfficerTitle: String?, ExcecutiveBdMbrship: String?, CurrentCmteAssignment1: String?, CmteAssign1Chair: Bool?, CmteAssign1CoChair: Bool?, CurrentCmteAssignment2: String?, CmteAssign2Chair: Bool?, CmteAssign2CoChair: Bool?, CurrentCmteAssignment3: String?, CmteAssign3Chair: Bool?, CmteAssign3CoChair: Bool?, BiographicalInfo: String?) {
+    init(PhotoID: String, UserID: String, MbrStatus: String, YearTurnedActive: String, LastName: String, FirstName: String, Spouse: String, StreetAddress: String, City: String, State: String, ZipCode: String, PrimaryContactNo: String, SecondaryContactNo: String?, ContactEmail: String?, TypeofPrimaryContactNo: String?, TypeofSecondaryContactNo: String?, Officer: String?, OfficerTitle: String?, ExcecutiveBdMbrship: String?, CurrentCmteAssignment1: String?, CmteAssign1Chair: String?, CmteAssign1CoChair: String?, CurrentCmteAssignment2: String?, CmteAssign2Chair: String?, CmteAssign2CoChair: String?, CurrentCmteAssignment3: String?, CmteAssign3Chair: String?, CmteAssign3CoChair: String?, BiographicalInfo: String?) {
         
         _PhotoID = PhotoID;
         _UserID = UserID;

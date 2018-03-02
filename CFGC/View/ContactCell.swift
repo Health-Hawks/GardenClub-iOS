@@ -20,9 +20,17 @@ class ContactCell: UITableViewCell {
         // Initialization code
     }
 
+    
+    /**
+    
     func updateUI(contactModel: ContactModel){
         contactName.text = contactModel.firstName + " " + contactModel.lastName
         mbrStat.text = contactModel.mbrStat
     }
-
+    */
+    
+    func updateUI(contactCard: ContactCard){
+        contactName.text = contactCard.FirstName + " " + contactCard.LastName;
+        mbrStat.text = contactCard.MbrStatus;
+    }
 }

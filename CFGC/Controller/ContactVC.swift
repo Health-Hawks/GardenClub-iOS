@@ -36,17 +36,16 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let p3 = ContactModel(imageURL: "test", firstName: "Test",lastName: "Test", mbrStat: "Active")
         let p4 = ContactModel(imageURL: "test", firstName: "John",lastName: "Doe", mbrStat: "Active")
         let p5 = ContactModel(imageURL: "test", firstName: "Jane",lastName: "Doe", mbrStat: "Active")
+        let p6 = ContactModel(imageURL: "test", firstName: "Jennifer",lastName: "Doe", mbrStat: "Active")
 
         conCellModels.append(p1)
-        contactUsed.append(false)
         conCellModels.append(p2)
-        contactUsed.append(false)
         conCellModels.append(p3)
-        contactUsed.append(false)
         conCellModels.append(p4)
-        contactUsed.append(false)
         conCellModels.append(p5)
-        contactUsed.append(false)
+        conCellModels.append(p6)
+        
+        conCellModels.sort { ($0.lastName.prefix(1) < $1.lastName.prefix(1)) } //sort array
         
         for user in conCellModels {
             let userKey = String(user.lastName.prefix(1))
@@ -110,22 +109,23 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // 3
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactCell{
             
+
             let userKey = userSectionTitles[indexPath.section]
             if let userValues = userDictionary[userKey] {
+                
+                //print (userDictionary[userKey])
                 //cell.textLabel?.text = userValues[indexPath.row]
-                var contactModel = conCellModels[0]
-                var x = 0;
-                for user in conCellModels{
+                //var contactModel = conCellModels[0]
+                for x in 0...conCellModels.count{
                     
-                    print("Checking \(user.firstName)")
-                    if user.lastName == userValues[indexPath.row] /*&& !contactUsed[x]*/{
-                        contactModel = conCellModels[x]
-                        //contactUsed[x] = true;                        // BUG will only print correctly one time.
+                    //print("Checking \(user.firstName)")
+                    if conCellModels[x].lastName == userValues[indexPath.row]{
+                        let contactModel = conCellModels[x + indexPath.row]
                         cell.updateUI(contactModel: contactModel)
                         return cell
                     }
                     
-                    x = x+1;
+                    //x = x+1;
                 }
                 
             }

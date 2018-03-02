@@ -12,6 +12,7 @@
 		0130DC3C2034B06400362B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0130DC3A2034B06400362B90 /* Main.storyboard */; };
 		0130DC3E2034B06400362B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0130DC3D2034B06400362B90 /* Assets.xcassets */; };
 		0130DC412034B06400362B90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0130DC3F2034B06400362B90 /* LaunchScreen.storyboard */; };
+		8B24CBFA2048C93200FE6390 /* contactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24CBF92048C93200FE6390 /* contactCard.swift */; };
 		8BB974F2203B5EF1008039BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB974F1203B5EF1008039BB /* LoginViewController.swift */; };
 		8BC643292044F22F00AC8C8C /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC643282044F22F00AC8C8C /* InfoVC.swift */; };
 		8BD6DC5C203B38F800788CB6 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6DC5B203B38F800788CB6 /* ContactCell.swift */; };
@@ -26,6 +27,7 @@
 		0130DC3D2034B06400362B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0130DC402034B06400362B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0130DC422034B06400362B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B24CBF92048C93200FE6390 /* contactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contactCard.swift; sourceTree = "<group>"; };
 		8BB974F1203B5EF1008039BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BC643282044F22F00AC8C8C /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		8BD6DC5B203B38F800788CB6 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		8B9239F82044E48A00E43F45 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8B24CBF92048C93200FE6390 /* contactCard.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB974F2203B5EF1008039BB /* LoginViewController.swift in Sources */,
+				8B24CBFA2048C93200FE6390 /* contactCard.swift in Sources */,
 				8BD6DC5C203B38F800788CB6 /* ContactCell.swift in Sources */,
 				8BD6DC5F203B3E4300788CB6 /* ContactModel.swift in Sources */,
 				0130DC392034B06400362B90 /* ContactVC.swift in Sources */,

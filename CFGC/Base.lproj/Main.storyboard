@@ -124,9 +124,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s39-24-BnM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s39-24-BnM">
                                 <rect key="frame" x="0.0" y="104" width="375" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-i6-Pfp">
                                         <rect key="frame" x="8" y="2" width="74" height="66"/>
@@ -142,10 +141,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="prq-jr-TSG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="prq-jr-TSG">
                                 <rect key="frame" x="0.0" y="182" width="375" height="485"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="485" id="35x-Wu-mgv"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="42" id="xjt-mm-DGa" customClass="ContactCell" customModule="CFGC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="42"/>
@@ -197,12 +198,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oOR-vh-FUx" firstAttribute="trailing" secondItem="eN4-DO-oMc" secondAttribute="trailing" id="3DN-pH-CuK"/>
+                            <constraint firstItem="s39-24-BnM" firstAttribute="leading" secondItem="eN4-DO-oMc" secondAttribute="leading" id="2El-Sf-cEq"/>
+                            <constraint firstItem="oOR-vh-FUx" firstAttribute="top" secondItem="C41-tx-ER4" secondAttribute="bottom" constant="7" id="B2c-5O-dzP"/>
+                            <constraint firstItem="s39-24-BnM" firstAttribute="top" secondItem="oOR-vh-FUx" secondAttribute="bottom" id="L2I-du-bfb"/>
                             <constraint firstItem="eN4-DO-oMc" firstAttribute="trailing" secondItem="C41-tx-ER4" secondAttribute="trailing" constant="137" id="Loz-fF-QOi"/>
-                            <constraint firstItem="oOR-vh-FUx" firstAttribute="leading" secondItem="eN4-DO-oMc" secondAttribute="leading" id="h9H-pc-fyQ"/>
+                            <constraint firstItem="prq-jr-TSG" firstAttribute="trailing" secondItem="s39-24-BnM" secondAttribute="trailing" id="X5O-fs-DhO"/>
+                            <constraint firstItem="oOR-vh-FUx" firstAttribute="leading" secondItem="eN4-DO-oMc" secondAttribute="leading" id="YUa-Bw-Ha2"/>
+                            <constraint firstItem="s39-24-BnM" firstAttribute="centerX" secondItem="UzW-mc-qrT" secondAttribute="centerX" id="bfW-xa-T32"/>
+                            <constraint firstItem="prq-jr-TSG" firstAttribute="bottom" secondItem="eN4-DO-oMc" secondAttribute="bottom" id="boF-5n-f4F"/>
+                            <constraint firstItem="s39-24-BnM" firstAttribute="trailing" secondItem="eN4-DO-oMc" secondAttribute="trailing" id="cx2-1Q-Lt6"/>
+                            <constraint firstItem="oOR-vh-FUx" firstAttribute="trailing" secondItem="eN4-DO-oMc" secondAttribute="trailing" id="fQ6-H3-Hyw"/>
+                            <constraint firstItem="prq-jr-TSG" firstAttribute="leading" secondItem="s39-24-BnM" secondAttribute="leading" id="hld-hD-E6F"/>
+                            <constraint firstItem="prq-jr-TSG" firstAttribute="top" secondItem="s39-24-BnM" secondAttribute="bottom" constant="10" id="lYa-Zy-zqK"/>
                             <constraint firstItem="C41-tx-ER4" firstAttribute="top" secondItem="eN4-DO-oMc" secondAttribute="top" id="mZN-X1-XFm"/>
                             <constraint firstItem="C41-tx-ER4" firstAttribute="leading" secondItem="eN4-DO-oMc" secondAttribute="leading" constant="137" id="nc3-NE-0uj"/>
-                            <constraint firstItem="oOR-vh-FUx" firstAttribute="top" secondItem="C41-tx-ER4" secondAttribute="bottom" constant="7" id="wUj-XG-zRq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eN4-DO-oMc"/>
                     </view>
@@ -416,7 +425,6 @@
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nbx-kC-dCk"/>
         <segue reference="Dvq-tu-ypw"/>
     </inferredMetricsTieBreakers>
 </document>

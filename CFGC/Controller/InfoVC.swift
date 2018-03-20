@@ -34,6 +34,11 @@ class InfoVC: UIViewController {
     
     @IBOutlet weak var membersBackBtn: UIBarButtonItem!
     
+    @IBOutlet weak var txtMsgBtn: UIBarButtonItem!
+    @IBOutlet weak var callBtn: UIBarButtonItem!
+    @IBOutlet weak var emailBtn: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         buildInfoScreen()
@@ -86,6 +91,13 @@ class InfoVC: UIViewController {
         if gestureRecognizer.state == .ended{
             performSegue(withIdentifier: "BiographicalVC", sender: contact)
         }
+    }
+    
+    @IBAction func callBtnPressed(_ sender: UIBarButtonItem){
+        let telephoneNum = contact.PrimaryContactNo.replacingOccurrences(of: ".", with: "")
+        
+        guard let number = URL(string: "tel://\(telephoneNum)") else { return }
+        UIApplication.shared.open(number)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

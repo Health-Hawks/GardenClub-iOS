@@ -335,11 +335,15 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem title="Text Message" width="128" id="W2U-fz-Le5"/>
-                                    <barButtonItem title="Call" width="126" id="0UD-Qp-REG"/>
+                                    <barButtonItem title="Call" width="126" id="0UD-Qp-REG">
+                                        <connections>
+                                            <action selector="callBtnPressed:" destination="2Kx-Le-dP1" id="ckh-C1-HIh"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Email" width="131" id="dqn-CY-ncp"/>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elizabeth White Baker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-3f-xvn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Elizabeth White Baker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-3f-xvn">
                                 <rect key="frame" x="10" y="265" width="355" height="40"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="36"/>
                                 <nil key="textColor"/>
@@ -436,7 +440,7 @@ Wilmington, NC 28403</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20162-Baker" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-uo-vMj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-uo-vMj">
                                 <rect key="frame" x="111" y="104" width="153" height="153"/>
                             </imageView>
                         </subviews>
@@ -512,7 +516,9 @@ Wilmington, NC 28403</string>
                         <outlet property="SecondaryContactViewRect" destination="ieF-nG-Zev" id="gs6-SG-Aoc"/>
                         <outlet property="SpouseViewRect" destination="SFD-ZL-V1t" id="8u8-jQ-5Lg"/>
                         <outlet property="addressLbl" destination="gZb-EL-v9A" id="dr5-Xa-xSJ"/>
+                        <outlet property="callBtn" destination="0UD-Qp-REG" id="FGG-fF-ywO"/>
                         <outlet property="contactImage" destination="g5o-uo-vMj" id="jeD-y0-gD3"/>
+                        <outlet property="emailBtn" destination="dqn-CY-ncp" id="GCo-7a-Q1E"/>
                         <outlet property="emailLbl" destination="6Tw-Ha-3VO" id="fsQ-Zx-b9i"/>
                         <outlet property="mbrStatLbl" destination="Ja1-wL-QMh" id="GcX-dV-bfU"/>
                         <outlet property="mbrStatusRect" destination="beh-DG-HPf" id="CeK-UY-nY6"/>
@@ -521,6 +527,7 @@ Wilmington, NC 28403</string>
                         <outlet property="primaryConLbl" destination="HdH-Yp-fVm" id="mJi-Bu-U4l"/>
                         <outlet property="secondaryConLbl" destination="B4Q-T0-3Qe" id="wal-8o-nnM"/>
                         <outlet property="spouseLbl" destination="HBg-ZM-3sk" id="f4a-am-3jL"/>
+                        <outlet property="txtMsgBtn" destination="W2U-fz-Le5" id="8yn-1h-yal"/>
                         <segue destination="O3Q-4l-Vd9" kind="show" identifier="ContactVC" id="eqM-Mc-gli"/>
                         <segue destination="Bc1-di-6Rq" kind="show" identifier="BiographicalVC" customClass="SegueFromRight" customModule="CFGC" customModuleProvider="target" id="ZLJ-nP-i28"/>
                     </connections>
@@ -608,7 +615,6 @@ Wilmington, NC 28403</string>
         </scene>
     </scenes>
     <resources>
-        <image name="20162-Baker" width="153" height="153"/>
         <image name="CFGC banner with logo - small" width="375" height="93"/>
         <image name="CarolinaYellowJessamineMed1" width="375" height="281"/>
         <image name="Placeholder" width="42" height="42"/>

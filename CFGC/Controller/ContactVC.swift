@@ -8,21 +8,31 @@
 
 import UIKit
 
-class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
+    var currentUser: User!
     var userDictionary = [String: [String]]()
     var userSectionTitles = [String]()
+    var possibleDuplicate = 0;
+    
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    var inSearchMode = false;
     //var users = [String]()
     
     var conCellModels = [ContactModel]()        // model
     
     var contactCards = [ContactCard]()
+    var filteredContacts = [ContactCard]()
+    var filteredUserSectionTitles = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
         let path = Bundle.main.path(forResource: "sqlData_1", ofType: "txt") //path to text file
         
         let fileMgr = FileManager.default
@@ -40,6 +50,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     let c1 = ContactCard(PhotoID: contactData[0], UserID: contactData[1], MbrStatus: contactData[2], YearTurnedActive: contactData[3], LastName: contactData[4], FirstName: contactData[5], Spouse: contactData[6], StreetAddress: contactData[7], City: contactData[8], State: contactData[9], ZipCode: contactData[10], PrimaryContactNo: contactData[11], SecondaryContactNo: contactData[12], ContactEmail: contactData[13], TypeofPrimaryContactNo: contactData[14], TypeofSecondaryContactNo: contactData[15], Officer: contactData[16], OfficerTitle: contactData[17], ExcecutiveBdMbrship: contactData[18], CurrentCmteAssignment1: contactData[19], CmteAssign1Chair: contactData[20], CmteAssign1CoChair: contactData[21], CurrentCmteAssignment2: contactData[22], CmteAssign2Chair: contactData[23], CmteAssign2CoChair: contactData[24], CurrentCmteAssignment3: contactData[25], CmteAssign3Chair: contactData[26], CmteAssign3CoChair: contactData[27], BiographicalInfo: contactData[28])
                     
                     contactCards.append(c1); //append to array of contacts
+                    //print(c1.LastName)
                 }
                 
             }catch let error as NSError{
@@ -47,19 +58,27 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        contactCards.sort { ($0.LastName.prefix(1) < $1.LastName.prefix(1)) } //sort array (Seems to be a bug here)
+        contactCards = contactCards.sorted{ ($0.LastName < $1.LastName) } //sort array (Seems to be a bug here)
         
         for user in contactCards {
-            let userKey = String(user.LastName.prefix(1))
-            print(user.LastName)
+            var userKey = String(user.LastName.prefix(1))
+            if (userKey == userKey.lowercased()){
+                userKey = userKey.uppercased()
+            }
+            //print(user.LastName)
             if var userValues = userDictionary[userKey] {
-                userValues.append(user.LastName)
+                userValues.append(user.LastName + user.FirstName)
+                //print(userValues[0],userValues[1])
                 userDictionary[userKey] = userValues
             } else {
-                userDictionary[userKey] = [user.LastName]
+                userDictionary[userKey] = [user.LastName + user.FirstName]
             }
         }
-        
+        /*
+        for section in userDictionary{
+            print(section.key + " " + String(section.value.count))
+        }
+        */
         /*
         let p1 = ContactModel(imageURL: "test", firstName: "Elizabeth",lastName: "White Baker", mbrStat: "Active")
         let p2 = ContactModel(imageURL: "test", firstName: "Cory",lastName: "Shrum", mbrStat: "Inactive")
@@ -90,6 +109,8 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         userSectionTitles = [String](userDictionary.keys)
         userSectionTitles = userSectionTitles.sorted(by: { $0 < $1 })
+        
+        
         
         //print(userSectionTitles)
         
@@ -123,11 +144,19 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
     func numberOfSections(in tableView: UITableView) -> Int {
         // 1
+        if (inSearchMode){
+            return filteredUserSectionTitles.count
+        }
+        
         return userSectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 2
+        if(inSearchMode){
+            return filteredContacts.count
+        }
+        
         let userKey = userSectionTitles[section]
         if let userValues = userDictionary[userKey] {
             return userValues.count
@@ -140,31 +169,125 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // 3
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactCell{
             
-
-            let userKey = userSectionTitles[indexPath.section]
-            if let userValues = userDictionary[userKey] {
+            if(inSearchMode){
+                var contact: ContactCard!
+                let userKey = filteredUserSectionTitles[indexPath.section]
                 
-                for x in 0...contactCards.count{
-                    
-                    if contactCards[x].LastName == userValues[indexPath.row]{
-                        let contactCard = contactCards[x + indexPath.row]
-                        cell.updateUI(contactCard: contactCard)
-                        return cell
-                    }
-                    
-                }
                 
+                
+                contact = filteredContacts[indexPath.row]
+                
+                cell.updateUI(contactCard: contact)
+                return cell
             }
+            
+            var contact: ContactCard!
+            let userKey = userSectionTitles[indexPath.section]
+            var sectionSum = 0
+            
+            for section in userSectionTitles{
+                let userValues = userDictionary[section]
+                if(userKey > section){
+                    sectionSum += userValues!.count
+                }
+            }
+            
+            contact = contactCards[sectionSum+indexPath.row]
+            
+            cell.updateUI(contactCard: contact)
+            return cell
         }
         return UITableViewCell();
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if(inSearchMode){
+            return filteredUserSectionTitles[section]
+        }
         return userSectionTitles[section]
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        if(inSearchMode){
+            return filteredUserSectionTitles
+        }
+        
         return userSectionTitles
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if(inSearchMode){
+            var contact: ContactCard!
+            
+            contact = filteredContacts[indexPath.row]
+            
+            performSegue(withIdentifier: "InfoVC", sender: contact)
+        }
+        
+        var contact: ContactCard!
+        let userKey = userSectionTitles[indexPath.section]
+        var sectionSum = 0
+        
+        for section in userSectionTitles{
+            let userValues = userDictionary[section]
+            if(userKey > section){
+                sectionSum += userValues!.count
+            }
+        }
+        
+        contact = contactCards[sectionSum+indexPath.row]
+        
+        performSegue(withIdentifier: "InfoVC", sender: contact)
+    }
+    
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchBar.text == nil || searchBar.text == "" {
+            
+            inSearchMode = false
+            tableView.reloadData()
+            view.endEditing(true)
+            
+        }else {
+            
+            inSearchMode = true
+            print("insearchmode")
+            let lower = String(searchBar.text!.lowercased())
+            print(lower.uppercased().hasPrefix("B"))
+            let pre = lower.prefix(1)
+            print(pre)
+            /*
+            for section in userSectionTitles{
+                print(String(section))
+            }
+ */
+            
+            filteredUserSectionTitles = userSectionTitles.filter({ $0.range(of: lower.uppercased().prefix(1)) != nil})
+            
+            filteredContacts = contactCards.filter({$0.LastName.lowercased().range(of: lower) != nil})
+            
+            
+            tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "InfoVC"{
+            
+            if let infoVC = segue.destination as? InfoVC{
+                if let contact = sender as? ContactCard {
+                    infoVC.contact = contact;
+                }
+            }
+            
+        }
     }
  
 }

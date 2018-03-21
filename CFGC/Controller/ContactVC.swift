@@ -173,6 +173,10 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 var contact: ContactCard!
                 let userKey = filteredUserSectionTitles[indexPath.section]
                 
+<<<<<<< HEAD
+=======
+                
+>>>>>>> master
                 contact = filteredContacts[indexPath.row]
                 
                 cell.updateUI(contactCard: contact)

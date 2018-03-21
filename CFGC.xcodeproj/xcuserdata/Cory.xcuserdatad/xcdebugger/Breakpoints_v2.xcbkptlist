@@ -10,7 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFGC/Controller/ContactVC.swift"
+<<<<<<< HEAD
             timestampString = "543272254.889529"
+=======
+            timestampString = "543296102.1827379"
+>>>>>>> master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
@@ -22,17 +26,40 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CFGC/Controller/ContactVC.swift"
+<<<<<<< HEAD
             timestampString = "543272254.889661"
+=======
+            timestampString = "543296102.182808"
+>>>>>>> master
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "173"
             endingLineNumber = "173"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
+<<<<<<< HEAD
+=======
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CFGC/Controller/LoginViewController.swift"
+            timestampString = "543295144.484971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "keyboardDidShow(notification:)"
+            landmarkType = "7">
+>>>>>>> master
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

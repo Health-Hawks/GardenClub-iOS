@@ -74,6 +74,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MiY-RY-FO6"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igp-cs-h5e">
                                 <rect key="frame" x="96" y="563" width="182" height="45"/>
@@ -84,6 +87,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Sf5-tL-v7Z"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.83921568627450982" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -593,16 +599,26 @@ Wilmington, NC 28403</string>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="MfT-Mv-WQu"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GMe-Vd-vkb" appends="YES" id="dKk-A2-w9e"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="biographicalLbl" destination="JQf-zv-HW3" id="NSC-y3-Rn8"/>
                         <outlet property="returnBtn" destination="Jat-xb-qK9" id="Onf-eg-5wP"/>
+                        <outlet property="swipe" destination="GMe-Vd-vkb" id="w8L-I1-LM6"/>
                         <outlet property="yearLbl" destination="ZBK-A2-CSK" id="3OK-qA-4fh"/>
-                        <segue destination="2Kx-Le-dP1" kind="show" identifier="InfoVC" id="tvg-Mh-GLi"/>
+                        <segue destination="2Kx-Le-dP1" kind="show" identifier="InfoVC" customClass="SegueFromLeft" customModule="CFGC" customModuleProvider="target" id="tvg-Mh-GLi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNc-7k-HFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="GMe-Vd-vkb">
+                    <connections>
+                        <action selector="swipeHandler:" destination="Bc1-di-6Rq" id="H9s-wu-Shd"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2997.5999999999999" y="131.78410794602701"/>
         </scene>
@@ -616,7 +632,8 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cZF-10-4Rl"/>
+        <segue reference="ZLJ-nP-i28"/>
+        <segue reference="tvg-Mh-GLi"/>
         <segue reference="eqM-Mc-gli"/>
     </inferredMetricsTieBreakers>
 </document>

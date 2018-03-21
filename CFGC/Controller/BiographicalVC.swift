@@ -15,6 +15,7 @@ class BiographicalVC: UIViewController {
     @IBOutlet weak var yearLbl: UILabel!
     @IBOutlet weak var biographicalLbl: UILabel!
     
+    @IBOutlet var swipe: UISwipeGestureRecognizer!
     @IBOutlet weak var returnBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,12 @@ class BiographicalVC: UIViewController {
     @IBAction func returnBtnPressed(_ sender: UIBarButtonItem){
         performSegue(withIdentifier: "InfoVC", sender: contactCard)
     }
+    @IBAction func swipeHandler(_ gestureRecognizer : UISwipeGestureRecognizer){
+        if gestureRecognizer.state == .ended{
+            performSegue(withIdentifier: "InfoVC", sender: contactCard)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "InfoVC"{
             

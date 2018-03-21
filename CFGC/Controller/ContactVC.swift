@@ -174,7 +174,6 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 let userKey = filteredUserSectionTitles[indexPath.section]
                 
                 
-                
                 contact = filteredContacts[indexPath.row]
                 
                 cell.updateUI(contactCard: contact)

@@ -16,8 +16,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var userDictionary = [String: [String]]()
     var userSectionTitles = [String]()
     var possibleDuplicate = 0;
-    
-    
+    private var login_url = "http://satoshi.cis.uncw.edu/~jbr5433/GardenClub/login.php";
     
     @IBOutlet weak var searchBar: UISearchBar!
     var inSearchMode = false;
@@ -29,14 +28,22 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var filteredContacts = [ContactCard]()
     var filteredUserSectionTitles = [String]()
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let backG = Background(login: true)
+        
+        contactCards = backG.contactCards
+        
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
         let path = Bundle.main.path(forResource: "sqlData_1", ofType: "txt") //path to text file
         
         let fileMgr = FileManager.default
-        
+        /*
         if fileMgr.fileExists(atPath: path!){ //if file exists
             do{
                 let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8) // gets entire text document
@@ -57,7 +64,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 print("Error \(error)")
             }
         }
-        
+        */
         contactCards = contactCards.sorted{ ($0.LastName < $1.LastName) } //sort array (Seems to be a bug here)
         
         for user in contactCards {
@@ -172,11 +179,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             if(inSearchMode){
                 var contact: ContactCard!
                 let userKey = filteredUserSectionTitles[indexPath.section]
-                
-<<<<<<< HEAD
-=======
-                
->>>>>>> master
+
                 contact = filteredContacts[indexPath.row]
                 
                 cell.updateUI(contactCard: contact)

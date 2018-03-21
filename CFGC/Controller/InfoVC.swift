@@ -96,8 +96,13 @@ class InfoVC: UIViewController {
     @IBAction func callBtnPressed(_ sender: UIBarButtonItem){
         let telephoneNum = contact.PrimaryContactNo.replacingOccurrences(of: ".", with: "")
         
-        guard let number = URL(string: "tel://\(telephoneNum)") else { return }
-        UIApplication.shared.open(number)
+        if let url = URL(string: "tel://\(telephoneNum)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

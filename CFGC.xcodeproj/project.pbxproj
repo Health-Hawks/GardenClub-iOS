@@ -18,6 +18,7 @@
 		8B37B8CF2060C43F00611889 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B37B8CE2060C43F00611889 /* SegueFromRight.swift */; };
 		8B639E2F20608ABF00C0D525 /* BiographicalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B639E2E20608ABF00C0D525 /* BiographicalVC.swift */; };
 		8B639E332060958000C0D525 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B639E322060958000C0D525 /* SegueFromLeft.swift */; };
+		8B79A88B20620B9A00716D47 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B79A88A20620B9A00716D47 /* Background.swift */; };
 		8B8560FA205EEF0600470330 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8560F9205EEF0600470330 /* User.swift */; };
 		8BB974F2203B5EF1008039BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB974F1203B5EF1008039BB /* LoginViewController.swift */; };
 		8BC643292044F22F00AC8C8C /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC643282044F22F00AC8C8C /* InfoVC.swift */; };
@@ -39,6 +40,7 @@
 		8B37B8CE2060C43F00611889 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		8B639E2E20608ABF00C0D525 /* BiographicalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographicalVC.swift; sourceTree = "<group>"; };
 		8B639E322060958000C0D525 /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		8B79A88A20620B9A00716D47 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		8B8560F9205EEF0600470330 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8BB974F1203B5EF1008039BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BC643282044F22F00AC8C8C /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				8B2DB6F1206026C4009F52A5 /* BackgroundDb.swift */,
 				8B639E322060958000C0D525 /* SegueFromLeft.swift */,
 				8B37B8CE2060C43F00611889 /* SegueFromRight.swift */,
+				8B79A88A20620B9A00716D47 /* Background.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				8B8560FA205EEF0600470330 /* User.swift in Sources */,
 				8B639E2F20608ABF00C0D525 /* BiographicalVC.swift in Sources */,
 				8B2DB6F2206026C4009F52A5 /* BackgroundDb.swift in Sources */,
+				8B79A88B20620B9A00716D47 /* Background.swift in Sources */,
 				0130DC372034B06400362B90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

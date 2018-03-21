@@ -43,6 +43,9 @@ class ContactCard {
     var UserID: String {
         return _UserID
     }
+    var PhotoId: String {
+        return _PhotoID
+    }
     var MbrStatus: String {
         return _MbrStatus
     }

@@ -50,6 +50,29 @@ class InfoVC: UIViewController {
         //mbrStatLbl.layer.borderWidth = 1.0
         //mbrStatLbl.layer.cornerRadius = 20
         
+        //Get photo from photo ID in recieved contact: ContactCard
+        let imageName = contact.PhotoId
+        let image = UIImage(named: imageName)
+        if(image != nil){
+            print("Image found!")
+            contactImage.image = image
+            contactImage.frame = CGRect(x: 0, y: 0, width: 153, height: 153)
+        }
+        else{ //Pull stock flower image
+            //print("Clear")
+            let image = UIImage(named: "CarolinaYellowJessamineMed1")
+            
+            contactImage.image = image
+        }
+        
+        contactImage.layer.borderWidth = 1
+        contactImage.layer.masksToBounds = false
+        contactImage.layer.cornerRadius = contactImage.frame.width/1.6 //dont know why 1.6 look better than 2
+        contactImage.clipsToBounds = true;
+        contactImage.layer.borderColor = UIColor.black.cgColor
+        
+        
+        
         mbrStatusRect.layer.borderColor = UIColor.black.cgColor
         mbrStatusRect.layer.borderWidth = 1.0
         mbrStatusRect.layer.cornerRadius = 20
@@ -83,6 +106,8 @@ class InfoVC: UIViewController {
         emailLbl.text = contact.ContactEmail
     }
     
+    
+    
     @IBAction func membersBackBtnPressed(_ sender: UIBarButtonItem){
         performSegue(withIdentifier: "ContactVC", sender: nil)
     }
@@ -108,7 +133,7 @@ class InfoVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
             
-            var _contVC = segue.destination as? ContactVC
+            var contVC = segue.destination as? ContactVC
         }
         
         else if segue.identifier == "BiographicalVC"{

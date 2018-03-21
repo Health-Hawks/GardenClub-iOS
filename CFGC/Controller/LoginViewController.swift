@@ -13,7 +13,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     var activeTextField: UITextField!
-
+    /*
+    //////////////////REMOVE ME WHEN DONE//////////////////
+    */
+    
+    @IBOutlet weak var skipBtn: UIButton!
+    
+    /*
+    ///////////////////////////////////////////////////////
+    */
     
     var currentUser: User!
     
@@ -126,5 +134,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func skipBtnPressed(_ sender: UIButton){
+        performSegue(withIdentifier: "ContactVC", sender: nil)
+    }
 
 }

@@ -14,6 +14,8 @@ class Background {
     private var _contactCards = [ContactCard]()
     private var _login: Bool!
     
+    
+    
     var contactCards: [ContactCard]{
         return _contactCards
     }
@@ -65,7 +67,7 @@ class Background {
         URLSession.shared.dataTask(with: url) { (data, response, err) in
             //check err
             //check response status 200 OK
-            
+            print(response)
             if (err == nil){
                 print("do stuff")
                 

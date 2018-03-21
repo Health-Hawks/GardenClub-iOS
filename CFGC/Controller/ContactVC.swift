@@ -11,6 +11,7 @@ import UIKit
 class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     
+    @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var currentUser: User!
     var userDictionary = [String: [String]]()
@@ -34,16 +35,20 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /* Future JSON Decoder Call to class Background
         let backG = Background(login: true)
-        
         contactCards = backG.contactCards
+        */
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
+        
+        
         let path = Bundle.main.path(forResource: "sqlData_1", ofType: "txt") //path to text file
         
         let fileMgr = FileManager.default
-        /*
+        
+        
         if fileMgr.fileExists(atPath: path!){ //if file exists
             do{
                 let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8) // gets entire text document
@@ -52,7 +57,15 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 
                 for i in 0..<readings.count-1 {
                     
-                    let contactData = readings[i].components(separatedBy: ",") //delineated by commas
+                    var contactData = readings[i].components(separatedBy: ",") //delineated by commas
+                    
+                    for x in 0...contactData.count-1 {
+                        
+                        if (contactData[x] == "null"){
+                            contactData[x] = ""
+                        }
+                        
+                    }
                     
                     let c1 = ContactCard(PhotoID: contactData[0], UserID: contactData[1], MbrStatus: contactData[2], YearTurnedActive: contactData[3], LastName: contactData[4], FirstName: contactData[5], Spouse: contactData[6], StreetAddress: contactData[7], City: contactData[8], State: contactData[9], ZipCode: contactData[10], PrimaryContactNo: contactData[11], SecondaryContactNo: contactData[12], ContactEmail: contactData[13], TypeofPrimaryContactNo: contactData[14], TypeofSecondaryContactNo: contactData[15], Officer: contactData[16], OfficerTitle: contactData[17], ExcecutiveBdMbrship: contactData[18], CurrentCmteAssignment1: contactData[19], CmteAssign1Chair: contactData[20], CmteAssign1CoChair: contactData[21], CurrentCmteAssignment2: contactData[22], CmteAssign2Chair: contactData[23], CmteAssign2CoChair: contactData[24], CurrentCmteAssignment3: contactData[25], CmteAssign3Chair: contactData[26], CmteAssign3CoChair: contactData[27], BiographicalInfo: contactData[28])
                     
@@ -64,7 +77,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 print("Error \(error)")
             }
         }
-        */
+        
         contactCards = contactCards.sorted{ ($0.LastName < $1.LastName) } //sort array (Seems to be a bug here)
         
         for user in contactCards {
@@ -183,6 +196,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 contact = filteredContacts[indexPath.row]
                 
                 cell.updateUI(contactCard: contact)
+                
                 return cell
             }
             
@@ -246,6 +260,12 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         performSegue(withIdentifier: "InfoVC", sender: contact)
     }
     
+    @IBAction func logoutBtnPressed(_ logoutBtn: UIBarButtonItem){
+        //segue to loginVC with empty currentUser
+        //send empty user
+        let user = User(userName: "", password: "")
+        performSegue(withIdentifier: "LoginVC", sender: user)
+    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
@@ -292,6 +312,14 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 }
             }
             
+        }
+        
+        if segue.identifier == "LoginVC"{
+            if let loginVC = segue.destination as? LoginViewController{
+                if let user = sender as? User{
+                    loginVC.currentUser = user
+                }
+            }
         }
     }
  

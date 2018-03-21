@@ -32,5 +32,25 @@ class ContactCell: UITableViewCell {
     func updateUI(contactCard: ContactCard){
         contactName.text = contactCard.FirstName + " " + contactCard.LastName;
         mbrStat.text = contactCard.MbrStatus;
+        let imageName = contactCard.PhotoId
+        let image = UIImage(named: imageName)
+        if(image != nil){
+            print("Image found!")
+            contactImg.image = image
+            contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+                
+                
+        }
+        else{ //Replace dequeued cell with stock flower image
+            //print("Clear")
+            let image = UIImage(named: "CarolinaYellowJessamineMed1")
+
+            contactImg.image = image
+            /*
+            
+            contactImg.image = image
+            contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+             */
+        }
     }
 }

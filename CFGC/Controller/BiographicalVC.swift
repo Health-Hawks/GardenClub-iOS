@@ -8,25 +8,49 @@
 
 import UIKit
 
-class BiographicalVC: UIViewController {
+class BiographicalVC: UIViewController, UITextFieldDelegate {
     
     var contactCard: ContactCard!
     
-    @IBOutlet weak var yearLbl: UILabel!
-    @IBOutlet weak var biographicalLbl: UILabel!
-    
+    //@IBOutlet weak var yearLbl: UILabel!
+    //@IBOutlet weak var biographicalLbl: UILabel!
+    @IBOutlet weak var yearActiveTextField: UITextField!
+    @IBOutlet weak var BiographicalTextField: UITextView!
+
+
     @IBOutlet var swipe: UISwipeGestureRecognizer!
     @IBOutlet weak var returnBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         buildBiographicalView()
     }
-
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if textField == yearActiveTextField {
+            return false; //do not show keyboard nor cursor
+        }
+        return true
+    }
     func buildBiographicalView(){
         
         returnBtn.title = contactCard.FirstName + " " + contactCard.LastName
-        yearLbl.text = contactCard.YearTurnedActive
-        biographicalLbl.text = contactCard.BiographicalInfo
+        //yearLbl.text = contactCard.YearTurnedActive
+        //biographicalLbl.text = contactCard.BiographicalInfo
+        yearActiveTextField.delegate = self
+        
+        
+        
+        yearActiveTextField.text = "  " + contactCard.YearTurnedActive
+        yearActiveTextField.layer.borderColor = UIColor.black.cgColor
+        yearActiveTextField.layer.borderWidth = 1.0
+        yearActiveTextField.layer.cornerRadius = 20
+        
+        
+        BiographicalTextField.text = contactCard.BiographicalInfo
+        BiographicalTextField.layer.borderColor = UIColor.black.cgColor
+        BiographicalTextField.layer.borderWidth = 1.0
+        BiographicalTextField.layer.cornerRadius = 20
+        
+        
     }
     @IBAction func returnBtnPressed(_ sender: UIBarButtonItem){
         performSegue(withIdentifier: "InfoVC", sender: contactCard)

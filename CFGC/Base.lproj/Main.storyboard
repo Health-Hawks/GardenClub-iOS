@@ -95,6 +95,8 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-UC-7Ju">
                                 <rect key="frame" x="286" y="544" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Cory's Skip"/>
                                 <connections>
                                     <action selector="skipBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQA-DT-FOv"/>
@@ -282,7 +284,6 @@
                                                 <action selector="membersBackBtnPressed:" destination="2Kx-Le-dP1" id="TwC-th-Bb6"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Star" image="Star" id="g3l-ac-Ku9"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -564,9 +565,8 @@ Wilmington, NC 28403</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eU-By-Rif">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2eU-By-Rif">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="93L-Mj-zLk">
                                         <barButtonItem key="leftBarButtonItem" title="Elizabeth Baker" id="Jat-xb-qK9">
@@ -574,58 +574,77 @@ Wilmington, NC 28403</string>
                                                 <action selector="returnBtnPressed:" destination="Bc1-di-6Rq" id="Fy3-je-3Hp"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Star" id="t2n-Ng-eHJ"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biographical Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-qo-Mnt">
-                                <rect key="frame" x="115" y="120" width="145" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year Turned Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-rJ-vbz">
+                                <rect key="frame" x="24" y="151" width="181" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biographical Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDG-qo-Mnt">
+                                <rect key="frame" x="102" y="109" width="171" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
                                 <color key="textColor" red="0.1877970229" green="0.43214625629999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year Turned Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-rJ-vbz">
-                                <rect key="frame" x="36" y="182" width="161" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YY-w4-IdX" userLabel="BiographicalTextField">
+                                <rect key="frame" x="16" y="252" width="340" height="290"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2017" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dQm-tE-4Zm" userLabel="YearTurnedActiveTextField">
+                                <rect key="frame" x="219" y="143" width="145" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="Qst-43-x7E"/>
+                                    <constraint firstAttribute="height" constant="37" id="dBK-zB-goZ"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Did You know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-pa-G6d">
-                                <rect key="frame" x="126" y="282" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBK-A2-CSK">
-                                <rect key="frame" x="236" y="181" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biographical Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQf-zv-HW3">
-                                <rect key="frame" x="119" y="398" width="137" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did You know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-pa-G6d">
+                                <rect key="frame" x="114" y="211" width="144" height="21"/>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                <color key="textColor" red="0.40392156862745099" green="0.54509803921568623" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2eU-By-Rif" firstAttribute="trailing" secondItem="MfT-Mv-WQu" secondAttribute="trailing" id="1fF-Jj-6Ld"/>
+                            <constraint firstItem="Ysa-rJ-vbz" firstAttribute="leading" secondItem="MfT-Mv-WQu" secondAttribute="leading" constant="24" id="8yo-9C-sGK"/>
+                            <constraint firstItem="7YY-w4-IdX" firstAttribute="leading" secondItem="4nB-Sk-Mfd" secondAttribute="leadingMargin" id="BwT-o7-AVK"/>
+                            <constraint firstItem="MfT-Mv-WQu" firstAttribute="trailing" secondItem="y5p-pa-G6d" secondAttribute="trailing" constant="117" id="FJS-4G-vYl"/>
+                            <constraint firstItem="MfT-Mv-WQu" firstAttribute="trailing" secondItem="7YY-w4-IdX" secondAttribute="trailing" constant="19" id="KZW-1w-fIM"/>
+                            <constraint firstItem="7YY-w4-IdX" firstAttribute="top" secondItem="y5p-pa-G6d" secondAttribute="bottom" constant="20" id="Mew-hc-DDw"/>
+                            <constraint firstItem="MfT-Mv-WQu" firstAttribute="bottom" secondItem="7YY-w4-IdX" secondAttribute="bottom" constant="125" id="VjK-bB-eLu"/>
+                            <constraint firstItem="RDG-qo-Mnt" firstAttribute="leading" secondItem="MfT-Mv-WQu" secondAttribute="leading" constant="102" id="WtA-Y7-aDe"/>
+                            <constraint firstItem="MfT-Mv-WQu" firstAttribute="trailing" secondItem="dQm-tE-4Zm" secondAttribute="trailing" constant="11" id="Y1J-Qd-bk9"/>
+                            <constraint firstItem="MfT-Mv-WQu" firstAttribute="trailing" secondItem="RDG-qo-Mnt" secondAttribute="trailing" constant="102" id="ZfG-T7-4CP"/>
+                            <constraint firstItem="RDG-qo-Mnt" firstAttribute="top" secondItem="2eU-By-Rif" secondAttribute="bottom" constant="45" id="dcy-bV-UsW"/>
+                            <constraint firstItem="y5p-pa-G6d" firstAttribute="leading" secondItem="MfT-Mv-WQu" secondAttribute="leading" constant="114" id="isQ-CM-yJ8"/>
+                            <constraint firstItem="2eU-By-Rif" firstAttribute="top" secondItem="MfT-Mv-WQu" secondAttribute="top" id="j0Q-vk-MlM"/>
+                            <constraint firstItem="2eU-By-Rif" firstAttribute="leading" secondItem="MfT-Mv-WQu" secondAttribute="leading" id="noF-wS-QiM"/>
+                            <constraint firstItem="Ysa-rJ-vbz" firstAttribute="top" secondItem="RDG-qo-Mnt" secondAttribute="bottom" constant="21" id="srY-EX-qD0"/>
+                            <constraint firstItem="dQm-tE-4Zm" firstAttribute="leading" secondItem="Ysa-rJ-vbz" secondAttribute="trailing" constant="14" id="tLm-hq-LQu"/>
+                            <constraint firstItem="y5p-pa-G6d" firstAttribute="top" secondItem="Ysa-rJ-vbz" secondAttribute="bottom" constant="39" id="trm-X6-vXU"/>
+                            <constraint firstItem="dQm-tE-4Zm" firstAttribute="top" secondItem="RDG-qo-Mnt" secondAttribute="bottom" constant="13" id="xBy-Q6-Rui"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MfT-Mv-WQu"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="GMe-Vd-vkb" appends="YES" id="dKk-A2-w9e"/>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="biographicalLbl" destination="JQf-zv-HW3" id="NSC-y3-Rn8"/>
+                        <outlet property="BiographicalTextField" destination="7YY-w4-IdX" id="QKu-yn-GHo"/>
                         <outlet property="returnBtn" destination="Jat-xb-qK9" id="Onf-eg-5wP"/>
                         <outlet property="swipe" destination="GMe-Vd-vkb" id="w8L-I1-LM6"/>
-                        <outlet property="yearLbl" destination="ZBK-A2-CSK" id="3OK-qA-4fh"/>
+                        <outlet property="yearActiveTextField" destination="dQm-tE-4Zm" id="Co1-3p-xei"/>
                         <segue destination="2Kx-Le-dP1" kind="show" identifier="InfoVC" customClass="SegueFromLeft" customModule="CFGC" customModuleProvider="target" id="tvg-Mh-GLi"/>
                     </connections>
                 </viewController>
@@ -642,11 +661,10 @@ Wilmington, NC 28403</string>
     <resources>
         <image name="CFGC banner with logo - small" width="375" height="93"/>
         <image name="CarolinaYellowJessamineMed1" width="375" height="281"/>
-        <image name="Star" width="25" height="24"/>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cZF-10-4Rl"/>
+        <segue reference="tvg-Mh-GLi"/>
         <segue reference="yyA-Nf-nzp"/>
     </inferredMetricsTieBreakers>
 </document>

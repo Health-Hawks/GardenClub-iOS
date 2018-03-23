@@ -155,6 +155,9 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
             emailComposeVC.setMessageBody("From my iPhone", isHTML: false)
             //self.presentedViewController (emailComposeVC, animated: true, completion: nil)
         }
+        else {
+            print ("Email unavailble")
+        }
     }
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)

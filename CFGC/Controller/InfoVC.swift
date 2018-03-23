@@ -119,9 +119,36 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     }
     
     @IBAction func callBtnPressed(_ sender: UIBarButtonItem){
-        let telephoneNum = contact.PrimaryContactNo.replacingOccurrences(of: ".", with: "")
         
-        if let url = URL(string: "tel://\(telephoneNum)"), UIApplication.shared.canOpenURL(url) {
+        let primaryNum = contact.PrimaryContactNo.replacingOccurrences(of: ".", with: "")
+        let secondaryNum = contact.SecondaryContactNo.replacingOccurrences(of: ".", with: "")
+        
+        var phoneActionSheet = UIAlertController(title: "Please Select A Number", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+        
+        let primaryPhoneButtonAction = UIAlertAction(title: "Primary Phone: " + contact.PrimaryContactNo, style: UIAlertActionStyle.default){(ACTION) in
+            self.callSelectedNumber(number: primaryNum)
+        }
+        
+        let secondaryPhoneButtonAction = UIAlertAction(title: "Secondary Phone: " + contact.SecondaryContactNo, style: UIAlertActionStyle.default){(ACTION) in
+            self.callSelectedNumber(number: secondaryNum)
+        }
+        
+        let cancelButtonAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default){
+            (ACTION) in
+            print("canceled")
+        }
+        
+        phoneActionSheet.addAction(primaryPhoneButtonAction)
+        phoneActionSheet.addAction(secondaryPhoneButtonAction)
+        phoneActionSheet.addAction(cancelButtonAction)
+        
+        self.present(phoneActionSheet, animated: true, completion: nil)
+        
+    }
+    
+    private func callSelectedNumber(number: String){
+        
+        if let url = URL(string: "tel://\(number)"), UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10, *) {
                 UIApplication.shared.open(url)
             } else {

@@ -1,0 +1,396 @@
+1carter,1,Active,2007,Carter,Vivian,null,4502 Regent Drive,Wilmington,NC,28412,9104703990,null,vcarter88@twc.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,2,Active,2009,Allen,Debby,Randy,5024 Clear Run Drive,Wilmington,NC,28403,9107914545,9104091973,debbyc@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,3,Active,2010,Allison,Penelope,Mark,1323 Futch Creek Road,Wilmington,NC,28411,9106860888,null,PJandMark@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,4,Active,2012,Aluise,Mary Alice,Tom,2547 #8 Croquet Drive,Wilmington,NC,28412,9106160330,null,maaluise@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,6,Active,2010,Anderson,Sarah Craven,Kent,1406 Hollybriar Drive,Wilmington,NC,28412,9106179872,null,Scanderson@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+7arato,7,Active,2002,Arato,Addie,Anthony,7004 W. Creeks Edge Rd,Wilmington,NC,28409,9107916722,9102316723,Addie@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+9barclay,9,Associate,2005,Barclay,Margaret,Ned,1450 Quadrant Circle,Wilmington,NC,28405,9102311496,null,margaretbarclay@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+10beltracchi,10,Active,2005,Beltracchi,Mary Ann,null,636 Wild Dunes Circle,Wilmington,NC,28411,9106863332,null,mabeltracchi@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+11bilzi,11,Active,2001,Bilzi,Sue,Steve,6226 Head Road,Wilmington,NC,28409,9107990200,null,suebilzi5@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+13blacher,13,Active,1999,Blacher,Martha,Richard,1809 Verrazzano Drive,Wilmington,NC,28405,9106171504,9105091777,marthablacher@icloud.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+14black,14,Active,1996,Black,Mary Ellen,D.J.,2614 Hydrangea Place,Wilmington,NC,28403,9107634016,null,mary.black@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+133kozen,133,Active,2006,Kozen,Eric,Gretchen,277 Horse Branch Road,Burgaw,NC,28425,9106122863,null,oakdalecem@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,16,Active,1996,Bolz,Ruth-Anne,Allyn,7109 Grouper Court,Wilmington,NC,28409,9103130517,9105082829,rafb@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,17,Active,2012,Bradley,Joyce,null,1218 Two Mile Circle West,Wilmington,NC,28405,9102564835,9106174348,joycebradley08@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+18brantham,18,Active,2014,Brantham,Mary Rose,Tom,6206 Tree Lake Court,Wilmington,NC,28411,9106125405,9106860915,mrbrantham@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+19broadwater,19,Active,1998,Broadwater,Bettye,Alan,7512 Elkmont Court,Wilmington,NC,28411,9106865520,null,albetvol63@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,21,Active,2004,Brown,Pamela,Greg,4612 Serenity Point,Wilmington,NC,28409,9102974748,9103993124,pbrown15@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,22,Active,2014,Burrell,Tara,Buddy,2230 Waverly Drive,Wilmington,NC,28403,9102793383,null,burrell7969@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,24,Associate,2012,Butler,Caroline,null,11 East Bell Road, #234,Phoenix,AZ,85022,8182989115,null,CarolineBinNC@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+25butts,25,Active,2015,Butts,Margie,Jamie,2014 Hawthorne Road,Wilmington,NC,28403,9102622766,null,margiebutts@icloud.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,26,Active,2013,Caison,Nan,Hugh,8212 Bald Eagle Lane,Wilmington,NC,28411,9105248885,null,efcaison@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,27,Active,2009,Cameron,Nancy,Rick,3901 Sweetbriar Road,Wilmington,NC,28403,9103955228,9102311224,rcameron1@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,28,Active,2015,Campbell,Jean,Steve,8441 Ventana Drive,Wilmington,NC,28411,9108210095,5402208494,jean76.campbell@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,29,Active,1994,Canada,Wanda,null,8324 Bald Eagle Lane,Wilmington,NC,28411,9106869490,null,wcanada@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,30,Active,2015,Carter,Betty,null,644 Tanbridge Road,Wilmington,NC,20405,9106850664,null,bettybcarter@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,31,Active,2015,Carter,Connie,Ken,1636 Sound Watch Drive,Wilmington,NC,28409,4407857255,null,beachgirl.ccc@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,32,Active,2001,Carter,Lorraine,null,1614 Jettynulls Reach,Wilmington,NC,28409,9103970456,null,lajcarter@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,33,Emeritus,1993,Cartier,Marjorie,null,7321 Gray Gables Lane,Wilmington,NC,28403,9102566756,null,GrGbls2@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,34,Active,2003,Chadwick,Beth,George,2331 Waverly Drive,Wilmington,NC,28403,9107631724,9105208542,BHChad@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+35chapman,35,Active,2015,Chapman,Morgan,Wilbur,341 Azalea Drive,Wilmington,NC,28409,9107908598,9198155812,chapmanw@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,36,Active,2015,Chisholm,Sheri,Brock,1313 Old Lamplighter Way,Wilmington,NC,28403,9105384089,null,sheri@floralandscapes.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,37,Active,2003,Clarke,Candus,null,306 Smallwood Court,Wilmington,NC,28411,9106861566,9102334045,candus@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+38cline,38,Active,2004,Cline,Angela,Bill,321 Donald E. Gore Drive,Wilmington,NC,28412,9103950581,null,acline@vol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,39,Associate,2007,Coble,Mary,John,1512 Magnolia Place,Wilmington,NC,28403,9107633588,null,johnmarycoble@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+40colwell,40,Active,2014,Colwell,Mary Beth,Stephen,536 Sea Castle Court,Wilmington,NC,28412,9107919092,2035600089,mbcolwell@snet.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,41,Active,2012,Cook,Dana,Jeff,125 Skystasail Drive,Wilmington,NC,28409,9107919600,null,dana@juliasflorist.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,42,Active,1996,Cooke,Jackie,Quinton,4002 Chapra Drive,Wilmington,NC,28412,9107998640,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+46cyphers,46,Active,2015,Cyphers,Sandy,Ray Spitz,PO Box 3523,Wilmington,NC,28406,9103673295,null,scyphers@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+47cunningham,47,Active,2006,Cunningham,Joan,Albert,1929 Glen Meade Road,Wilmington,NC,28403,9102511242,null,maccunningham@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,48,Associate,2010,Dalton,Kim,Tom,812 Forest Hills Drive,Wilmington,NC,28403,9102513665,9102621761,Kdalton1234@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+49davis,49,Active,2011,Davis,Charlotte,null,4921 Montford Drive,Wilmington,NC,28409,9102324030,null,cdavis4921@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+50davis,50,Active,2015,Davis,Julia,Jim,4521 W. Cascade Road,Wilmington,NC,28412,9107910981,9105153776,juliahdavis@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+51deholl,51,Active,2009,de Holl,Sandy,null,8825 Tilbury Drive,Wilmington,NC,28411,9106326033,6102472922,salkelddeholl@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,52,Active,1999,Degnan,Gloria,Murray,1940 Deep Creek Run,Wilmington,NC,28411,9102324778,null,gjd101@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+55dickey,55,Active,1997,Dickey,Janice,Thomas,151 Ginger Road,Wilmington,NC,28405,9107913072,9106120789,dickeyj@uncw.edu,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,56,Active,2012,Douglas,Marie,Tom,209 Cavalier Drive,Wilmington,NC,28403,9106173371,null,marieedouglas@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+57downing,57,Active,2015,Downing,Barbara,Ronald,6604 Cove Point Drive,Wilmington,NC,28409,9107993116,null,bdowning789@outlook.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,303,Emeritus,1995,Hunnicutt,Nell,Richard,800 Cape Fear Blvd,Carolina Beach,NC,28428,9102004300,null,hunninell@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,404,Active,2016,Maher,Erin,Steve Hundley,330 South Third Street,Kure Beach,NC,28449,7037534469,null,erin@lpromos.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+60eader,60,Active,2015,Eader,Marlene,Harvey,4224 Stratton Village Lane,Wilmington,NC,28409,6142966007,null,marlene.eader@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+61edwards,61,Active,2014,Edwards,Kim,Mark,5005 Montford Drive,Wilmington,NC,28409,9102315147,9107915044,kmedwards5@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+62edwards,62,Active,2013,Edwards,Suzanne,Les,102 Forest Lane,Wilmington,NC,28401,9102627728,null,suzanneponyclub@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+63ellis,63,Active,2002,Ellis,Carole,null,3817 Sweetbriar Road,Wilmington,NC,28403,9107910922,null,cellis13@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+64exum,64,Active,2010,Exum,Kimberly,Bert,2024 Lynnwood Drive,Wilmington,NC,28403,9107632570,9105400136,Exum5@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+65faler,65,Active,1993,Faler,Bonnie,James,2118 S Live Oak Parkway,Wilmington,NC,28403,9102336252,9107637592,BLFALER@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,66,Active,2009,Fare,Kay,Ed,5913 Hunters Mill Lane,Wilmington,NC,28409,9102325282,null,Kaycfare@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,67,Active,2011,Farrior,Janet Evans,Jim,7105 Rock Creek Circle,Wilmington,NC,28405,9102564137,9102972405,janetcevans@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,68,Active,1987,Fennell,Alma,null,6249 Towles Road,Wilmington,NC,28409,9103500130,9106172722,arfholt@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,69,Associate,2011,Fennell,Ginger,Don, Jr.,6248 Towles Road,Wilmington,NC,28409,9105389153,9102621191,pursuitofh22@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+70fisher,70,Active,2008,Fisher,Julie,Carlton,1941 Hawthorne Road,Wilmington,NC,28403,9103431941,9104718899,gogomom927@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,71,Active,2007,Fitzgerald,Nancy,Art,400 Wild Dunes Circle,Wilmington,NC,28411,9106861119,9106176150,nafitz@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,72,Active,2007,Fitzgerald,Pat,null,41 Pelican Point Road,Wilmington,NC,28409,9103920839,null,pfitzgerald@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+73ford,73,Active,2009,Ford,Pat,Tim,1217 Country Club Road,Wilmington,NC,28403,9105084599,null,patfordnc@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,74,Active,2015,Fox,Amanda,Matthew,4212 Crockette Road,Wilmington,NC,28409,9103868840,null,amandagfox@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,75,Active,1991,Gaither,Dorothy,null,982 Birch Creek Drive,Wilmington,NC,28403,9107910505,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,76,Active,2011,Galloway,Joyce,Phillip,4530 W. Cascade Road,Wilmington,NC,28412,9106173444,9107996240,jcgalloway@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,77,Active,2014,Garrison,Brenda,Ken,1844 S. Churchhill Drive,Wilmington,NC,28403,9196191633,null,brendaken@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,78,Active,2015,Gerl,Susan,Wayne,2514 Oleander Drive,Wilmington,NC,28403,5618896199,null,mopsiegerl@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+79giannini,79,Active,2011,Giannini,Cathy,John,5916 Saltaire Village Court,Wilmington,NC,28412,9107996088,9102624170,thegianninis@earthlink.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,80,Active,2012,Gibson,Debra,Charles,605 Salo St,Wilmington,NC,28411,9106860272,9105401801,debgibson605@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,81,Active,2006,Ginna,Colleen,William,1104 Turnberry Lane,Wilmington,NC,28405,9105097449,null,ginna@mindspring.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+83godwin,83,Active,2001,Godwin,Cindy,Rickey,1532 Black Chestnut Drive,Wilmington,NC,28405,9106199444,null,cingodwin@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,84,Active,2014,Goodson,Phyllis,David Eckles,312 S. 6th Street,Wilmington,NC,28401,9106169160,null,pgoodson3@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,85,Active,2014,Goolsby,Rachael,Thom,2408 Ocean Point Place,Wilmington,NC,28405,9104659684,null,rachaelmove@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,86,Active,2014,Grange,Holly,David,8316 Bald Eagle Lane,Wilmington,NC,28411,9106866360,6306616035,dhgrange@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,87,Active,2008,Greene,Karen,Andy,3321 Amber Drive,Wilmington,NC,28409,9106208683,9103927364,gagreene@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,88,Active,2006,Griffin,Millie,Harry,733 Scorpion Drive,Wilmington,NC,28411,9105400216,9106861393,milliesbloomers@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+89grimes,89,Active,1998,Grimes,Sherri,Wayne,1612 Softwind Way,Wilmington,NC,28403,9106171368,9103952264,medclean@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+90grimes,90,Active,2014,Grimes,Wayne,Sherri,1612 Softwind Way,Wilmington,NC,28403,9106171420,9103952264,medclean@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+91griswold,91,Active,2006,Griswold,Eugenia,Dennis,3404 Red Berry Drive,Wilmington,NC,28409,9107993629,null,euggriz@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+92grose,92,Active,1997,Grose,Ann,Victor,2401 Robert Hoke Road,Wilmington,NC,28412,9106177037,null,ann_grose@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+93halderson,93,Active,2014,Halderson,Jan,null,2102 Graywalsh Drive,Wilmington,NC,28405,9102399067,9105085924,JanMHal@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+94haley,94,Active,2008,Haley,Eileen,null,5024 Pine Street,Wilmington,NC,28403,9103681577,null,eileenhaleync@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+95haley,95,Active,2002,Haley,Elizabeth,Eugene,1508 Meridian Terrace,Wilmington,NC,28411,9103197212,null,EHaley3@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,96,Active,2014,Halligan,Cathy,null,1162 Forest Hills Drive,Wilmington,NC,28403,9103991517,5857340846,cathyfhalligan@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,97,Active,2014,Hanykova,Linda,null,311 St. Annnulls Moor,Wilmington,NC,28412,9102024028,null,linda@capefearsolarsystems.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+98hardee,98,Active,1993,Hardee,Shirley,Jabe,409 Highgreen Drive,Wilmington,NC,28411,9106867305,9106174231,sealady@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,99,Active,2014,Harris,Stephanie,Ben,300 Smilax Lane,Wilmington,NC,28412,6193952541,null,harris.sj@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,100,Active,2006,Harshbarger,Jane,John,7119 East Creeks Edge Dr,Wilmington,NC,28409,9107992326,9105202101,jane.harshbarger@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+101harvey,101,Active,2006,Harvey,Bobby Jean,Chet,8916 Shipwatch Drive,Wilmington,NC,28412,9104718224,null,bobbysundrop@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+102hauge,102,Emeritus,1998,Hauge,Sally,Chris,79 Cavalier Drive,Wilmington,NC,28409,9102399679,null,chrisally.hauge@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,103,Active,2014,Hawes,Delores,Maurice,214 Quail Ridge Road,Wilmington,NC,28409,9102318788,9107913923,deloreshawes@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,104,Active,2014,Heenan,Deane,Jim,909 Saltwood Lane,Wilmington,NC,28411,9106850805,9106864481,deanejim2@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+105hendrickson,105,Active,2015,Hendrickson,Stephanie,Steven,305 Locksley Court,Wilmington,NC,28405,9104700052,9106192496,sbhlocksley@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+15blackburn,15,Active,2015,Blackburn,Bess,Terry,232 Morning View Way,Leland,NC,28451,9102622532,null,bessbblackburn@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,169,Associate,2001,Mees,Nancy,null,1105 Brook Crossing Lane,Leland,NC,28451,9103836200,null,jimmees@msn.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+108henson,108,Active,1999,Henson,Elaine,Skip,210 Colonial Drive,Wilmington,NC,28403,9107638056,9106172606,skipelainehenson@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,109,Active,2009,Herr,Susanne,David,5609 Ruxton Way,Wilmington,NC,28409,9107991809,null,susanneherr@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+110hickman,110,Active,2004,Hickman,Susan,Dan,1504 Bexley Drive,Wilmington,NC,28412,9107631900,9102645125,susan.hickman2@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+111hiles,111,Active,2006,Hiles,Sharon Gray,Thomas,7526 Masonboro Sound Rd,Wilmington,NC,28409,9103954132,9106128011,sghdesigns@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+112hill,112,Active,1989,Hill,Betty,null,4810 Wilderness Road,Wilmington,NC,28412,9103952920,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+113hill,113,Active,2015,Hill,Patti,David,1724 Azalea Drive,Wilmington,NC,28403,9105206742,null,patti91551@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,114,Active,1998,Hill,Teresa,null,537 Wayne Drive,Wilmington,NC,28403,9102335330,null,teresahill.nc@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,115,Active,2007,Howard,Barbara,Kirk,1019 Windlea Run,Wilmington,NC,28409,9107919387,9106170823,bhoward1019@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+116howard,116,Active,2009,Howard,Johnnie C.,Louis,4633 Riplee Drive,Wilmington,NC,28405,9107910668,9106120447,LHOWARDJR@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+117huffman,117,Active,2007,Huffman,Kathryn,null,1935 Glen Meade Road,Wilmington,NC,28403,9107981966,null,kphkat@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+118hunt,118,Active,2014,Hunt,Schaum,Scott,1813 S. Churchill Drive,Wilmington,NC,28403,9103438720,9106191654,slhunt@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,119,Active,2009,Hunter,Cheryl D.,Matt,4501 W. Cascade Road,Wilmington,NC,28412,9103921803,9105124496,chunter@cape-fear.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,120,Active,2015,Hyatt,Judy,null,8608 Fazio Drive,Wilmington,NC,28411,9108218401,3016415909,judykhyatt@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,121,Associate,2006,Hyman,Jane,David,2102 South Live Oak Parkway,Wilmington,NC,28403,9102510845,null,janehyman@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+122jaffe,122,Active,2013,Jaffe,Sonda,Ira,1806 Odyssey Drive,Wilmington,NC,28405,9106851190,9102560848,sonda9@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,123,Active,1994,James,Barbara,null,1207 Two Mile Circle West,Wilmington,NC,28405,9102562157,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,124,Active,2012,Johnsen,Gwendolyn,null,1131 Forest Hills Drive,Wilmington,NC,28403,9107621446,9102644233,ghj@coastalnet.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,125,Active,2013,Johnson,Kara,null,505 Wayne Drive,Wilmington,NC,28403,9102544864,9102323263,Karaandbrianjohnson@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+126kaufman,126,Active,2013,Kaufman,Patty,Jim,241 Chimney Lane,Wilmington,NC,28409,9102323040,9102561881,patriciapkaufman@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+127kelly,127,Active,1987,Kelly,Dianne,Bobby,2309 Knightsbridge Road,Wilmington,NC,28403,9105202795,9105200723,DRKBMW@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+128kimbro,128,Active,2008,Kimbro,Harriet,Steven,1929 Ashbrook Drive,Wilmington,NC,28403,9107625141,9104311404,hhkimbro@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,129,Active,2012,King,Lisa,null,1063 Arboretum Drive,Wilmington,NC,28405,9102645433,9105091563,lisafking@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+131kirby,131,Active,2007,Kirby,Lannie,Ken,5617 Harvest Grove Lane,Wilmington,NC,28409,9107996567,null,Lnnkirb@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+132kittinger,132,Active,2004,Kittinger,Sandra,Joseph,303 Bradley Creek Point Rd,Wilmington,NC,28403,9102001685,9102566675,skittinger@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,282,Emeritus,1987,Bishop,Dorothy Dot,Kenneth,1048 Stonebridge Lane,Leland,NC,28451,9107919559,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,134,Active,2013,Kramer,Christy,null,602 Walston Drive,Wilmington,NC,28412,9105204616,null,Kramer_Christy@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,136,Active,2014,Kraus,Susan L.,Michael,1344 Summer Hideaway Road,Wilmington,NC,28409,9102330995,null,kmichaelsusan@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,137,Active,1994,Lancaster,Connie,George,817 Inlet View Drive,Wilmington,NC,28409,9103500265,9106173091,glancaster002@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,138,Active,2007,Lane,Pamela,Keith,248 Chimney Lane,Wilmington,NC,28409,9104520396,9106190985,the4nclanes@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+139lanzi,139,Active,2013,Lanzi,Jamie,Phillip,3210 Graylyn Terrace,Wilmington,NC,28411,9102972772,null,Jdblanzi@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+140lee,140,Active,2014,Lee,Jerene,Bill,256 Osprey Place,Wilmington,NC,28411,9105034523,null,jerenelee@casvcs.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,141,Active,1999,Lewis,Anita Duren,James,214 Gabriel Street,Wilmington,NC,28412,9103952103,9105470765,prayerfultoo@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+142lewis,142,Active,2013,Lewis,Kristine,Owen,1308 Honor Lane,Wilmington,NC,28412,9106167278,null,kristine.lewis@outlook.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,143,Active,2010,Lewis,Meredith,Lance,708 Forest Hills Drive,Wilmington,NC,28403,9107625913,9105478212,meredithlewis05@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,144,Active,2014,Lewis,Victoria,Robert,1926 Glen Meade Road,Wilmington,NC,28403,9104714185,null,vpridgen@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+145lisk,145,Active,2004,Lisk,Patty,Larry,137 King Arthur Drive,Wilmington,NC,28403,9106177552,null,plisk@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+146losee,146,Active,2014,Losee,Nancy,Geoff,3128 Lantern Way,Wilmington,NC,28409,9103501516,9106205538,nlosee@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,147,Active,2004,Luttmer,Shirley,Eric,3217 Kirby Smith Drive,Wilmington,NC,28409,9102621176,9107993175,ejluttme@att.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,148,Active,1989,Lynch,Dianne,Waylon,115 Borden Avenue,Wilmington,NC,28403,9105387870,null,DianneWLynch@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+149lynch,149,Active,2014,Lynch,Joan,null,5338 Megans Place Drive,Wilmington,NC,28409,9105389397,null,joanlynch@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,150,Active,2002,Lyon,Ann,null,6111 Leeward Lane,Wilmington,NC,28409,9103500059,9102321132,lyonspaws@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+151maguire,151,Active,2012,Maguire,Joyce,Bernie,704 Wild Dunes Circle,Wilmington,NC,28411,9106862049,7033954820,ggformica@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+152maready,152,Active,1996,Maready,Millie,Kenan,1320 Honor Lane,Wilmington,NC,28412,9107697610,9105128383,milliemaready@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+152marshall,153,Active,2009,Marshall,Joan,null,3539 Aster Court,Wilmington,NC,28409,9106199251,null,jballmarshall@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+154marshburn,154,Active,2014,Marshburn,Carolyn,Tom,318 Bretonshire Road,Wilmington,NC,28405,9107990314,null,cmar@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+155massengill,155,Active,2012,Massengill,Kary,Wil,5106 Masonboro Harbor Dr,Wilmington,NC,28409,9107919398,9104702111,karymassengill@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,156,Active,1990,Mathis,DeVonna,Bill,151 Carr Avenue,Rocky Point,NC,28457,9106127152,9106753927,mathisbd@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+158mccall,158,Active,1995,McCall,Linda,null,6724 Carolina Beach Road,Wilmington,NC,28412,9103131999,null,lindamccall@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+159mcconahey,159,Active,2006,McConahey,Pat,William,3710 Grantham Court,Wilmington,NC,28409,9103928028,9104311580,atensace@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+160mcdowell,160,Active,2012,McDowell,Lynn,Landis,8617 Plantation Landing Dr,Wilmington,NC,28411,9104713309,null,lynn@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+161mceachern,161,Active,2004,McEachern,Carolyn,null,5624 Woodland Trace,Wilmington,NC,28409,9103922263,9106204183,jammieten@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+162mceachern,162,Active,2012,McEachern,Julia,Hidy,5728 Oak Bluff Lane,Wilmington,NC,28409,9107995354,9104705354,mceache4@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,163,Active,2015,McGee,Susan,null,5218 Marina Club Drive,Wilmington,NC,28409,9106162648,9104520090,cvee3866@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,164,Active,2012,McGowan,Carol,David,2406 Mimosa Place,Wilmington,NC,28403,9102519417,9104700945,cpmc50@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,165,Associate,2011,McKnight,Rachel,Vince,2915 Harvard Drive,Wilmington,NC,28403,9107620290,9103520257,mcvl@mail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+167mcneir,167,Active,1994,McNeir,Hillary,George,106 N Water Street, Ste #810,Wilmington,NC,28401,9104311737,9102549960,hillarymcneir@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,346,Emeritus,1972,Bowden,Elma,null,Autumn Care of Shallotte, Room 611, 237 Mulberry Street,Shallotte,NC,28470,9107548858,null,elmaporter@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,59,Active,2014,Durjava,Beth,Bill,2378 St. James Drive,Southport,NC,28461,9106194882,null,edurjava@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+170meitrodt,170,Active,2009,Meitrodt,Cheryl,Lee,8700 Pinkerton Drive,Wilmington,NC,28411,9106866246,9103523521,Chmeitrodt@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,171,Active,1996,Melton,Marty,Norman,3314 Tipton Court,Wilmington,NC,28409,9107996105,null,norm_melton@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,172,Active,2014,Middleton,PJ,Allan,1930 London Lane,Wilmington,NC,28405,9105205557,9106176818,allanpj@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,173,Active,2013,Mihle,Nancy,Tim,800 Oak Creek Place,Wilmington,NC,28405,9102561210,9102313255,Nancymihle@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+174miller,174,Active,2010,Miller,Denise H.,null,1148 Edgewater Club Rd,Wilmington,NC,28411,9105406857,9106860901,denise_28411@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+175moles,175,Active,2012,Moles,Frances,Jeff,4200 Forwalt Place,Wilmington,NC,28409,9105387942,9102544243,frances.moles@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,176,Active,2012,Moore,Elizabeth,Richard,2238 Tattersalls Dr,Wilmington,NC,28403,9103620881,9102623878,ecm42566@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,177,Active,2013,Musselwhite,Wanda,Jeff,7804 Sanderling Place,Wilmington,NC,28411,9108210025,null,musselwhitew@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,178,Active,2005,Nabell,Cheryl,Mark,218 Cabbage Inlet Lane,Wilmington,NC,28409,9102628797,null,cnabell@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+179nettleman,179,Active,2004,Nettleman,Susan,Thomas,4307 Gainsford Court,Wilmington,NC,28412,9102331329,null,susannettleman@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,180,Emeritus,1987,Newton,Ida,Jack,2499 Kirkley Court,Wilmington,NC,28409,9107915138,9106127325,idanjack@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+181norris,181,Active,2007,Norris,Betty V.,Greg,4105 Buffington Place,Wilmington,NC,28409,9102624734,9103923736,bvnorris@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,182,Associate,2009,Norris,Catherine,Keith,105 Trail in the Pines,Wilmington,NC,28409,9103977758,9106176271,catkeith@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+183norwood,183,Active,2011,Norwood,Jina Shea,JJ,6002 Park Avenue,Wilmington,NC,28403,9103527641,null,jinashea@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+184odaniell,184,Active,2012,OnullDaniell,Sherry,Rob Moore,6227 Tortoise Lane,Wilmington,NC,28409,9107944174,9105389747,sherryodaniell@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,185,Active,2013,Oden,Jan,Bill,110 N. 15th Street,Wilmington,NC,28401,9107634249,9105121275,janoden3@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,186,Active,1995,OnullDonnell,Shirena,Jonathan,512 Goldeneye Court,Wilmington,NC,28411,9102978449,null,SAHardee@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,187,Active,2014,Oehrlein,Miriam,Lance,312 Wayne Drive,Wilmington,NC,28403,6462442511,9103438997,miriam@newelementsgallery.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,188,Active,1994,OnullMalley,Anne,Thomas,5085 Edinboro Lane,Wilmington,NC,28409,9103130679,9105402340,aomalley@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,189,Active,2002,Orski,Marcella,Ed,8300 Fazio Drive,Wilmington,NC,28411,9106860727,null,eorski@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,190,Emeritus,1994,Parnell,Frances,James,6451 Quail Run Road,Wilmington,NC,28409,9107911365,null,fbparnell1937@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,191,Active,2002,Parrett,Bette,null,3917 Westover Road,Wilmington,NC,28403,9106179615,null,Bette.Parrett@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,192,Active,2015,Patterson,Laurie,Phil Furia,4511 Regent Drive,Wilmington,NC,28412,9102978916,null,Patterson.laurie.j@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,193,Active,2012,Peak,Nixie Nunnalee,null,1919 S. Live Oak Prkwy,Wilmington,NC,28403,9107627105,9105120227,npeak@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+194penny,194,Active,2011,Penny,Sydney,Robert Powers,322 S. 5th Avenue,Wilmington,NC,28401,3104805768,null,sydneypenny@mac.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,195,Active,2014,Peters,Laura,null,214 Tanbridge Road,Wilmington,NC,28405,9106854665,null,laurabpeters@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,196,Active,2010,Peters-Dolezal,Joan,Frank,914 Royal Bonnet Drive,Wilmington,NC,28405,9103991823,null,joanandfrank16@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,197,Active,1995,Phillips,Dianne,null,405 Strada Street,Wilmington,NC,28409,9107947138,9104715028,dsp1008@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,198,Active,2002,Philpott,Rebecca,Bob,5614 Chancery Place,Wilmington,NC,28409,9104529844,9103523886,raphilpott25@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+199plaskett,199,Active,2001,Plaskett,Pat,Tom,7204 Sanctuary Drive,Wilmington,NC,28411,9164088697,9105471895,plaskett123@me.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,200,Active,1995,Pottle,Beth,Tom,6 Cedar Island,Wilmington,NC,28409,9103921455,9102976104,bpottle@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+201poulos,201,Active,1998,Poulos,Cathy,George,104 Mullington Lane,Wilmington,NC,28409,9105385550,null,cpoulos56@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,202,Active,2012,Powell,Janine,Sterling,5459 Eastwind Road,Wilmington,NC,28403,9106127854,null,JPowell@nhcgov.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,204,Active,2002,Pyle,Linda,null,4209 Cravennulls Point Road,Wilmington,NC,28409,9107981712,9103786243,lpyle@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,205,Active,2014,Reiser,Carey,Andr?,402 Black Diamond Drive,Wilmington,NC,28411,9106866994,9106207370,creiser10@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+206richardson,206,Active,2006,Richardson,Ann,Greg,407 West Renovah Circle,Wilmington,NC,28403,9103431260,9106128795,annkindtrichardson@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,207,Active,1987,Richardson,Jeannie,Jimmy,5091 Edinboro Lane,Wilmington,NC,28409,9107918777,null,mumsiegrand@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+208rippy,208,Active,2011,Rippy,Jenny,Bob,100 Windlass Drive,Wilmington,NC,28409,9105203554,null,jennyrippy@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+209root,209,Active,2004,Root,Karen,Chuck,602 Dundee Drive,Wilmington,NC,28405,9105092055,9102330341,karensroot@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,210,Associate,1992,Rose,Betty,Albert,205 Friendly Lane,Wilmington,NC,28409,9107913106,9104701378,bvc.rose@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+211russ,211,Active,2010,Russ,Linda,David,4007 Chapra Drive,Wilmington,NC,28412,9104524969,9105203111,lindapruss@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+212sanders,212,Active,2003,Sanders,Amy,Hank,6941 Running Brook Terrace,Wilmington,NC,28411,9106869010,9106204568,demarest2@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,213,Associate,2008,Schramm,Cheryll,null,8903 Mahogany Run,Wilmington,NC,28411,9103193169,4045833282,LC1schramm@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,107,Active,2001,Hensley,C.C.,John,P.O. Box 885,Supply,NC,28462,9104702550,null,cgull1957@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+215shea,215,Active,2009,Shea,Irene,Ken,PO Box 15481,Wilmington,NC,28408,9103955731,null,ishea@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,216,Active,2012,Sheehan,Debbie,Tommy,7336 Quail Woods Road,Wilmington,NC,28411,9103952176,9106120696,dwsheehan1960@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,217,Active,2015,Sheehan,Patricia Ann Patti,Gerald,634 Wild Dunes Circle,Wilmington,NC,28411,9103197749,5707623639,patriciaasheehan@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,218,Active,2002,Shumpert,Pamela,David,911 Royal Bonnet Drive,Wilmington,NC,28405,9107941635,9102316009,PAShumpert@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,219,Active,2015,Singletary,Elizabeth,null,1809 Trey Court,Wilmington,NC,28403,9106171111,null,eysingletary@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+221smith,221,Active,2006,Smith,Diane M.,Michael,3421 Amber Drive,Wilmington,NC,28409,9103958448,9104706238,aliasmith@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,222,Active,1997,Smith,Karen,Douglas,1309 Honor Lane,Wilmington,NC,28412,9106206958,9103920941,karen.smith1309@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,223,Active,2008,Smith,Mary,Gilbert,3300 Greyleaf Drive,Wilmington,NC,28409,9107941348,null,Dr.Gpaul@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,224,Active,2010,Smith,Miriam E.,Charlie, Jr,114 Martingale Lane,Wilmington,NC,28409,9103996542,null,smithmiriam73@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,225,Active,2014,Smith,Pamela,Burrows,131 Skystasail Drive,Wilmington,NC,28409,9103954033,9106173074,pamfsmith50@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,226,Active,2014,Smith,Peggy Ann,Brian,2323 Foundry Court,Wilmington,NC,28412,9103991978,9102626839,peggybysea@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,227,Active,2012,Smith,Sandy,null,3901 Botsford Court  #101,Wilmington,NC,28412,9102330310,null,sandysmith@seacoastrealty.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+228smoot,228,Active,2005,Smoot,Marjie,Peter,1800 Odyssey Drive,Wilmington,NC,28405,9102560801,9105122995,ptsmoot@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+229snider,229,Active,2009,Snider,Linda,Tom,202 Lawton Court,Wilmington,NC,28412,9106203756,null,snidersnc@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,230,Active,2003,Stalvey,Signa,Wray,313 Cavalier Drive,Wilmington,NC,28403,9106123157,null,signastalvey@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,231,Active,2012,Stetler,Paula,David A.,394 Shorepoint Drive,Wilmington,NC,28411,9106869044,5103398720,pstetler@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,232,Active,2002,Stetten,Goldie,Michael,1704 Verrazzano Drive,Wilmington,NC,28405,9102641343,null,goldiestetten@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+233stirewalt,233,Active,2014,Stirewalt,Diane,null,1 Lake Forest Parkway,Wilmington,NC,28401,9105204971,null,dsvalhalla@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,234,Active,2013,Summerlin,Fran,Jim,2312 New Orleans Place,Wilmington,NC,28403,9102560307,2055663285,fransumm3447@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,236,Active,2014,Sutton,Babs,Robert,2005 Spinnaker Place,Wilmington,NC,28405,9104090530,null,bbsutton9@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+237sweeney,237,Active,2014,Sweeney,Rhonda,Mark,2240 Deepwood Drive,Wilmington,NC,28405,9105472272,null,sweeneyct@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+106henry,106,Active,1998,Henry,Cynthia,Frank,310 Green Hill Road, NE,Winnabow,NC,28479,9102536261,9106203805,chenry@atmc.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+239talley,239,Active,2006,Talley,Melissa B.,null,2400 Metts Avenue,Wilmington,NC,28403,9107626107,null,talleyjm@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,240,Active,2001,Taylor,Jo B.,Charles,1607 Quail Roost Circle,Wilmington,NC,28403,9102566424,null,JBT6424@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+241taylor,241,Active,2013,Taylor,Laurie,Lance,312 Bristol Road,Wilmington,NC,28409,9104710972,9107967944,Laurie.Taylor@LCFH.org,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+243thompson,243,Active,2011,Thompson,Donna,Steve,5637 Chelon Avenue,Wilmington,NC,28409,9103955431,9102794627,dontaycha2@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+244tinga,244,Active,2012,Tinga,Linda,Eelco,6601 Providence Road,Wilmington,NC,28411,9106862719,9106171692,ltinga@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,245,Active,2007,Trask,Frankie,Bill,5519 Bavarian Lane,Wilmington,NC,28405,9102625521,null,frankietrask1@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,246,Active,2009,Trask,Jan,Allen,4209 Red Bird Road,Wilmington,NC,28412,9105241066,null,janstrask@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+247trice,247,Active,2013,Trice,Beth,Berry,3100 Welcome Lane,Wilmington,NC,28409,9107916644,9102321179,Btrice5@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+248turner,248,Active,2009,Turner,Mary Kathryn,Ron,205 Yorkshire Lane,Wilmington,NC,28409,9102312454,9103922017,sisteraz@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,249,Active,2014,Tyndall,Darlene,Jim,301 N 23rd Street,Wilmington,NC,28405,9103439581,9106174011,dtyndall@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,251,Active,1990,Varner,Becky,Wayne,346 Honeycutt Drive,Wilmington,NC,28412,9103954161,9105202284,BeckyVar@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+252vayo,252,Active,2015,Vayo,Christine,null,306 Henry H. Watters Drive,Wilmington,NC,28412,9104319034,null,cvayo@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,253,Active,2012,Vineyard,Peggy,Jim Pruitt,1700 Verrazzano Place,Wilmington,NC,28405,7135697229,null,pmvineyard1@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,254,Active,2015,Volz,Susan,Douglas,2220 Bel Arbor Place,Wilmington,NC,28403,9102560094,9107423536,svolz@triad.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+255waldkirch,255,Active,2012,Waldkirch,Carol,Richard,7704 Masonboro Sound Rd,Wilmington,NC,28409,9107994529,9107778725,waldkirchc@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,256,Active,2011,Waldrep,Heda,null,4316 Winforde Road,Wilmington,NC,28412,9104311126,null,hwbydc@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+258ward,258,Active,1996,Ward,Gayle,David R.,5500 Woodland Trace,Wilmington,NC,28409,9107995701,3107487936,gaylelongward@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,259,Active,1992,Warren,Janet,null,1413  Country Club Road,Wilmington,NC,28403,9102519821,9105127771,jwarren8@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,372,Emeritus,1974,Pence,Joan,null,514 Horton Place,Winnabow,NC,28479,9103832599,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,58,Active,2003,Duncan,LeNeve,Gary,P.O. Box 153,Wrightsville Beach,NC,28480,9102623019,null,lenevept@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,262,Active,2014,Wayne,Marianne,Greg,1935 Knollwood Road,Wilmington,NC,28403,9107639639,9105200794,mcwayne@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,263,Active,2005,Weinel,Patsy,Robert Thurston,2321 Lynnwood Drive,Wilmington,NC,28403,9107622813,9102330440,pweinel@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+264west,264,Active,2002,West,Patsy,Eddie,7311 Masonboro Sound Road,Wilmington,NC,28409,9107915478,9102326667,pwestwest@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,265,Active,2005,Whitehurst,Shellie,Walter,5627 Oak Bluff Lane,Wilmington,NC,28409,9103132665,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,266,Active,2002,Whitford,Miriam Burns,Rick,1417 Hawthorne Road,Wilmington,NC,28403,9102621097,null,mwhitford1@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,267,Active,2002,Whitted,Lynda M.,Joe,2208 Waverly Drive,Wilmington,NC,28403,9107636926,null,LyndaWhitted@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,268,Active,2008,Williams,Kathy,Jeff,1221 Essex Drive,Wilmington,NC,28403,9106202212,null,jkmdwilliams@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,168,Active,2007,Mead,Elisabeth,William,115 Driftwood Circle,Wrightsville Beach,NC,28480,9102286049,null,elisabeth.mead@nhcs.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,270,Active,2007,Willis,Gloria,Stanley,509 Long Leaf Acres Drive,Wilmington,NC,28405,9106175301,null,willis-wilmington@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,271,Active,2015,Wilson,Terry,Lee,6700 Piedmont Place,Wilmington,NC,28411,9102627475,null,teresawilson363@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+272woodruff,272,Active,2010,Woodruff,Beth,Ben,908 Cedar Ramble Lane,Wilmington,NC,28411,9106860004,9104652959,bethwoodruff@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,273,Active,2013,Young,Bonnie,Roger,609 Dundee Drive,Wilmington,NC,28405,9193444001,null,bonnie@rogerlyoung.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,274,Associate,2011,Young,Porter,Vance,1052 Ocean Ridge Drive,Wilmington,NC,28405,9102561052,9102975254,poyoung@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+275zigler,275,Active,1994,Zigler,Nancy,Rick,1914 Le Gare Court,Wilmington,NC,28403,9103415726,9103862300,ncnanz@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,276,Associate,1995,Allison,Karen,William,1970 Deep Creek Run,Wilmington,NC,28411,9106860043,null,allisonsurfboards@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,278,Associate,2002,Andrews,Teresa,Scot,2210 Tattersalls Drive,Wilmington,NC,28403,9107630240,null,sandrews4@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,279,Associate,2005,Ballantine,Lisa,Patrick,6109 Old Branch Road,Wilmington,NC,28409,9107930505,9102970505,lisamarie@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,280,Associate,1981,Barker,Rosalind,James,1646 Country Club Road,Wilmington,NC,28403,9103431420,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,281,Associate,2003,Bauereis,Bette,David,416 Black Diamond Drive,Wilmington,NC,28411,9106869616,9106851334,drbee@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+214searson,214,Active,2014,Searson,Mary Jo,Michael,8 Raleigh Street,Wrightsville Beach,NC,28480,9106507814,9102565775,mjsearson@mac.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,283,Associate,1991,Block,Susan,null,1908 Colleton Court,Wilmington,NC,28403,9107622979,9106190819,sblock@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,284,Associate,2002,Bridger,Mary Ann,Dewey,417 W. Blackbeard Road,Wilmington,NC,28409,9103503592,9103522410,maryann.bridger@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,285,Associate,2004,Bryand,Cathy,null,3724 Merestone Drive,Wilmington,NC,28412,9102336007,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,286,Associate,1993,Butler,Susan,Algernon,7413 Masonboro Sound Road,Wilmington,NC,28409,9107999567,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,287,Associate,2003,Bush,Barbara,Cameron,2208 S. Canterbury Road,Wilmington,NC,28403,9105388606,null,bbushcpa@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,288,Associate,1982,Cherry,Beth,William,1731 Azalea Drive,Wilmington,NC,28403,9103439608,null,BethCherry@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,289,Associate,2003,Copley,Wanda,Ron,2328 Lynnwood Drive,Wilmington,NC,28403,9103526838,null,wandacopley@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,290,Associate,2008,Corbett,Paula,Albert,6604 Spring Garden Drive,Wilmington,NC,28403,9102564361,9102314770,paulahcorbett@me.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,291,Associate,2001,Curia,Rena,John,426 Foxcroft Lane,Wilmington,NC,28409,9102646370,null,rcuria@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,292,Associate,2007,Davenport,Joanne,Jim Cushing,705 Airlie Road,Wilmington,NC,28405,9102560210,9105246565,joannegdavenport@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,293,Associate,2006,Fisher,Dana,null,721 Pine Valley Drive,Wilmington,NC,28403,9103430987,9102793867,danafisher@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,294,Associate,1990,Gainey,Laura,Charles,2335 Tattersalls Drive,Wilmington,NC,28403,9107628647,null,lag@andrewsmortuary.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,295,Associate,1989,Gresham,Alida,Samuel,4107 Red Bird Road,Wilmington,NC,28412,9107910904,null,alidagresham@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,296,Associate,1979,Greer,Lou,Robert,8735 Ramsbury Way,Wilmington,NC,28411,9106861703,9104090896,lougreer4@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,297,Emeritus,2006,Harrelson,Estell Lee,Bobby,2318 Parham Drive,Wilmington,NC,28403,9107626110,null,elee@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,299,Associate,2002,Herring,Gail,Chip,8128 Mason Ridge Lane,Wilmington,NC,28409,9102973272,null,cherring@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,300,Associate,2009,Holladay,Libby,Jim,4 Forest Hills Drive,Wilmington,NC,28403,9102324337,null,TVSjim@earthlink.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+301howle,301,Associate,2003,Howle,Rita Corbett,null,6600 Spring Garden Road,Wilmington,NC,28403,9102560906,9105124343,ritahowle@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,302,Associate,2003,Humphries,Andrea,John,404 Venus Court,Wilmington,NC,28405,9107698894,null,ahumphries@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+238taber,238,Active,2014,Taber,Jill,Don,616 Coburn Avenue,Wrightsville Beach,NC,28480,9102900875,null,kjilltaber@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,304,Associate,1989,Hutteman,Ann,null,1213 Country Club Road,Wilmington,NC,28403,9107624647,null,ahutteman@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,305,Active,2004,Keith,Alicia,Robert,1633 Country Club Road,Wilmington,NC,28403,9107620459,9102621272,aliciackeith@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,306,Emeritus,1985,Knox,June,Joseph,4224 Tillison Road,Wilmington,NC,28412,9107968801,null,junerknox@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,308,Associate,1996,Lessing,Jeanie,Henry,820 Everettnulls Creek Drive,Wilmington,NC,28411,9106869419,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,309,Associate,1993,Maus,Shannon,Bill,308 Grayhawk Circle,Wilmington,NC,28411,9106195758,null,scmaus@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,310,Associate,2001,Mink,Betty,Joe,6313 Shinn Creek Lane,Wilmington,NC,28409,9103970963,null,minksmail@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+311moore,311,Associate,1996,Moore,Brenda,Robert III,PO Box 4052,Wilmington,NC,28406,9102003134,null,eroomkb@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+312mosely,312,Emeritus,1994,Mosely,Mae Omie,Graham,2137 Auburn Lane,Wilmington,NC,28405,9102564564,null,mgmosely@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,314,Associate,2004,Neal,Caroline,Charles,5509 Chelon Avenue,Wilmington,NC,28409,9103952399,null,chneal@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+315nix,315,Associate,1985,Nix,Mary,null,6211-156 Wrightsville Avenue,Wilmington,NC,28403,8047120477,null,marybnix45@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+316overton,316,Associate,2004,Overton,Diana,Dennis,4318 Ashley Park Drive,Wilmington,NC,28405,9105401510,null,L8dy-di@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,317,Associate,1987,Parker,Ann,John,518 Macon Court,Wilmington,NC,28412,9107993702,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,318,Associate,2008,Pasin,Helene,null,1433 S. Moorings Drive,Wilmington,NC,28405,9102560772,9102567229,helene910@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,319,Associate,2010,Pasin,Tamara,Rick,109 Windlass Drive,Wilmington,NC,28409,9102620122,null,tamtamz@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,320,Associate,2005,Pearson,Muriel,null,324 South Fifth Avenue,Wilmington,NC,28401,9107630000,9102001694,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,321,Associate,2002,Pendergrast,Donna,Walter,2806 Park Avenue,Wilmington,NC,28403,9102623036,null,DPend58@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+322phillips,322,Associate,2001,Phillips,Becky,null,1409 Futch Creek Road,Wilmington,NC,28411,9106869038,9105159213,beckyluv2cook@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,324,Associate,2003,Purdum,Pauline,Gary,836 Arboretum Drive,Wilmington,NC,28405,9102562178,null,paulinepdm@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+325renzaglia,325,Associate,2007,Renzaglia,Linda,Gene,1310 Spotswood Court,Wilmington,NC,28409,9103950509,9103524710,LRenzag@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+326rivenbark,326,Associate,1998,Rivenbark,Lola,null,701 Sea Castle Court,Wilmington,NC,28412,9102320085,null,rivenbark@charter.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+327simmons,327,Active,1997,Simmons,Wendy,null,1608 Aurora Place,Wilmington,NC,28405,9106123387,null,wendywsimmons@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+328simpson,328,Associate,1985,Simpson,Sandra,O.R.,405 Venus Court,Wilmington,NC,28405,9108332468,null,sssimpson44@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,329,Associate,2002,Sprunt,Gloria,Kenneth,2111 South Churchill Drive,Wilmington,NC,28403,9105200574,null,gsprunt@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,330,Associate,2004,Squire,Anne,Bill,1744 South Live Oak Parkway,Wilmington,NC,28403,9107638911,null,asquire1744@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,331,Associate,2006,Stewart,Melinda,John,5084 Edinboro Lane,Wilmington,NC,28409,9104521616,null,JohnandmelindaS@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,333,Associate,2006,Sweeny,June,Chuck,533 Dungannon Blvd.,Wilmington,NC,28403,9106177687,null,beautifulbyjune@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,260,Active,2007,Warren,Kay,Rudy,402 North Channel Drive,Wrightsville Beach,NC,28480,9102313667,null,kwarren51@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,337,Associate,2008,Warren,Kathy,null,832 Robert E. Lee Drive,Wilmington,NC,28412,9106173507,null,KOWarren3@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,338,Associate,2004,Weaver,Sherry,Edward,1535 Magnolia Place,Wilmington,NC,28403,9106203243,null,eandsweaver@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+339whitehurst,339,Associate,2003,Whitehurst,Mary,Buddy,5809 Meadow Brook Court,Wilmington,NC,28409,9103130784,null,scarrymary10@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,340,Associate,2002,Williams,Paige,Jim,214 Forest Hills Drive,Wilmington,NC,28403,9107639302,null,Paigewms67@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,341,Associate,1985,Zimmer,Ronna,Herbert,2002 Gillette Drive,Wilmington,NC,28403,9107630488,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,342,Emeritus,1957,Andrews,Joan,null,2304 Foundry Court,Wilmington,NC,28412,9103954495,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+343augustine,343,Emeritus,1992,Augustine,Carolyn,Joseph,6318 Fox Run Road,Wilmington,NC,28409,9107911911,null,augie27@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,344,Emeritus,1990,Avery,Grace,null,407 Grandiflora Court,Wilmington,NC,28405,9105382930,null,ggavery@juno.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,261,Active,2004,Way,Marjorie,null,223 Seacrest Drive,Wrightsville Beach,NC,28480,9102562814,9102004927,way7627@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,269,Active,2012,Williams,Sandra,Bart,608 North Channel Drive,Wrightsville Beach,NC,28480,9104718811,null,smckwms@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,349,Emeritus,1974,Bullock,Jean,null,7115 E. Creeks Edge Drive,Wilmington,NC,28409,9107636800,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,350,Emeritus,1975,Byrnes,June,null,7 Cedar Island,Wilmington,NC,28409,9107916007,null,Bjbhoenig@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,351,Emeritus,1963,Chadwick,Jo,null,1817 S. Live Oak Parkway,Wilmington,NC,28403,9107828020,null,jbeattychad@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,352,Emeritus,1979,Christopher,Joyce,null,1906 Colleton Court,Wilmington,NC,28403,9107631008,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,353,Emeritus,2006,Coscarelli,Regina,Wally,8600 Fazio Drive,Wilmington,NC,28411,9103193077,null,wallyre@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,354,Emeritus,1976,Crawley,Sherria,Lawrence,4618 Spring View Drive,Wilmington,NC,28405,9107914843,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,355,Emeritus,2008,Dineen,Emma,null,109 Abalone Drive,Wilmington,NC,28411,9106861045,null,emmamdineen@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,356,Emeritus,2003,Fauser,Nancy,Frank,835 Ruffin Street,Wilmington,NC,28412,9107911403,9104094146,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,357,Emeritus,2006,Gardner,Vivian,null,2922 Newkirk Avenue,Wilmington,NC,28412,9107919073,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,358,Emeritus,1975,Gorham,Louise,Dumay,2551 Croquet Drive, Unit 11,Wilmington,NC,28412,9107626341,null,Louise.Gorham@icloud.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,359,Emeritus,1970,Hunt,Eleanor,null,846 Kingsbrook Road,Culpeper,VA,22701,5404455960,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+360jefferies,360,Emeritus,2005,Jefferies,Carolyn,null,414 Wayne Drive,Wilmington,NC,28403,9102519203,9102648180,jessejefferies@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,361,Emeritus,1997,Jenkins,Suzanne,David,8506 Hammock Dunes Drive,Wilmington,NC,28411,9106869495,null,suzanne_jenkins@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,365,Emeritus,1989,Mathews,Betty,E.L.,3232 Kirby Smith Drive,Wilmington,NC,28409,9107905500,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,366,Emeritus,1998,McIver,Gladys,null,2320 South 41st Street, Rm 38,Wilmington,NC,28403,9107692747,null,gsmciver123@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+367moore,367,Emeritus,2007,Moore,Alma,null,6809 Mayfaire Club Dr, #101,Wilmington,NC,28405,9103997516,9106191490,amoore6@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,368,Emeritus,1994,Moore,Jean,Samuel,301 Pettigrew Drive,Wilmington,NC,28412,9107995212,null,samueldmoore@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,370,Emeritus,1985,OnullBrien,Sarah,Frank,2324 South 41st Street, Apt. 264,Wilmington,NC,28403,9105205028,null,sarahobrien0@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,371,Emeritus,1975,Parker,Connie,null,1901 South Live Oak Parkway,Wilmington,NC,28403,9103430724,9103522203,connieparker88@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,336,Associate,2004,Thomas,Katherine,null,P.O. Box 1626,Wrightsville Beach,NC,28480,9102568858,9105402244,katherinethomasm@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,374,Emeritus,1997,Schumacher,Mary,Wally,1810 Cross Staff Road,Wilmington,NC,28405,9102560811,null,hazel52@bellsouth.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,376,Emeritus,1998,Sillars,Barbara J.,null,8117 Blue Heron Drive, # 209,Wilmington,NC,28411,9106863371,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,377,Emeritus,2011,Smith,Evelyn M.,null,325 East Renovah Circle,Wilmington,NC,28403,9102549254,9105080691,emsmith@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+378smith,378,Emeritus,1976,Smith,Jenene,null,5620 Green Turtle Lane,Wilmington,NC,28409,9107990839,null,jenenesmith@msn.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,380,Emeritus,1993,Stokes,Lydia,Bill,2013 S. Churchill Drive,Wilmington,NC,28403,9107632841,null,landbstokes@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,381,Emeritus,1982,Symmes,Nancy,John,40 Beauregard Drive,Wilmington,NC,28412,9107911734,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,382,Emeritus,1976,Thompson,Louise,James,2406 Market Street,Wilmington,NC,28403,9107627468,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,383,Emeritus,1997,Warren,Betty,null,2017 S Churchill Drive,Wilmington,NC,28403,9107634314,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,384,Emeritus,1971,Whedbee,Lucile,null,2301 Lynnwood Drive,Wilmington,NC,28403,9107634235,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,386,1.Honorary,1986,Causey,J.D.,Naomi,302 Wimbleton Court,Wilmington,NC,28412,9107988612,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,387,1.Honorary,2013,Collogan,Matt,null,180 Arlington Drive,Wilmington,NC,28401,2404985413,null,mcollogan@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,388,1.Honorary,2001,Glaspie,Percy,Sarah,443 Henry Street,Wilmington,NC,28405,9107627550,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,389,1.Honorary,1999,Golder,Walker,null,7741 Market Street,Wilmington,NC,28411,9106867527,null,wgolder@audubon.org,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,390,1.Honorary,2015,Hight,Al,Melissa,6206 Oleander Drive,Wilmington,NC,28403,9107987666,null,al_hight@ncsu.edu,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,391,1.Honorary,2006,Parnell,James,Frances,6451 Quail Run Road,Wilmington,NC,28409,9107911365,null,fbparnell1937@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,392,Active,2016,Anthony,Annie,null,3201 Jared Court,Wilmington,NC,28409,9102002201,9103928180,a.anthony944@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+393barker,393,Active,2016,Barker,Brenda,Bill,309 Bradley Drive,Wilmington,NC,28409,9105123057,null,brendabarker@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+394caulder,394,Active,2016,Caulder,Debbie,Mike,6206 Mallard Drive,Wilmington,NC,28403,9107626457,9102331709,dcaulder53@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,395,Active,2016,Coon,Martha,John,6100 Wolfhead Court,Wilmington,NC,28411,9106865328,9102281875,terps65@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,396,Active,2016,Curtis,Maggie,null,8410 Emerald Dunes Road,Wilmington,NC,28411,9198013785,null,maggiecurtis3@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,397,Active,2016,Dotson,Cathy,Harold,5824 Hyatt Lane,Wilmington,NC,28411,9102748361,null,cdotson@wilmingtonchristian.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,398,Active,2016,Dowdy,Katie,Trey,6907 Haberdeen Drive,Wilmington,NC,28411,9102024084,9284206814,dowdykatie@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+399haley,399,Active,2016,Haley,Rahel,Steve,805 Pine Forest Road,Wilmington,NC,28409,4254665936,null,Rahel@Rhoriginals.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+401hopper,401,Active,2016,Hopper,Debbie,Jay,4300 Gainesford Court,Wilmington,NC,28412,9102641508,null,debbiehopper@seacoastrealty.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,403,Active,2016,Luna,Catherine Ann,Lohrli,2002 Perry Avenue,Wilmington,NC,20403,9105401593,null,cathey@lunaad.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,347,Emeritus,1970,Bryant,Dot,null,10 East Columbia Street,Wrightsville Beach,NC,28480,9102562415,null,dotsbeach@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,405,Active,2016,Patel,Shital,Henry,2314 Tattersalls Drive,Wilmington,NC,28403,9105388747,null,ctalpatel@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,406,Active,2016,Pearson,April,Chad,1004 Ocean Ridge Drive,Wilmington,NC,28405,9102335056,null,aprillmegan@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,407,Active,2016,Phelps,Lisa E.,Daniel,1305 Spotswood Court,Wilmington,NC,28409,9106203847,null,drlisa@phelpsdental.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,408,Active,2016,Pollak,Meredith,Mike,6450 Shinnwood Road,Wilmington,NC,28409,7135984313,null,mpollak@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+409smith,409,Active,2016,Smith,Roberta,Earl,111 Forest Hills Drive,Wilmington,NC,28403,9105400567,9107691855,lablov13@msn.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+411teachey,411,Active,2016,Teachey,Virginia,Gary,8713 Champion Hills Drive,Wilmington,NC,28411,9106810320,9105200414,vatgigi@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+412weaver,412,Active,2016,Weaver,Ann,David,2134 Harborway Drive,Wilmington,NC,28405,9102002056,9102564626,aeweaver@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+413wehner,413,Active,2016,Wehner,Susie,Joe,2301 Ocean Point Drive,Wilmington,NC,28405,9102975869,null,susiewehner@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+415woodbury,415,Active,2016,Woodbury,Diane,David,2308 Waverly Drive,Wilmington,NC,28403,9102310956,null,dianewoodbury@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,416,Active,2016,Woodruff,Ginny,Ron,406 West Renovah Circle,Wilmington,NC,28403,9107636236,9106200077,ginny@vcwoodruff.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+419quarton,419,Active,2017,Quarton,Roberta,Tom,6604 Pleasant Pines Court,Wilmington,NC,28403,4157176995,null,rquarton1@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+420bordeaux,420,Active,2017,Bordeaux,Shanda W.,null,605 Everbreeze Lane,Wilmington,NC,28411,9102288631,null,sbordeaux70@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,421,Active,2017,Sheridan,Judith,Don,492 McQuillan Drive,Wilmington,NC,28412,5712170044,null,dsjs25@netzero.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,422,Active,2017,Scott-Finan,Nancy,null,8909 Champion Hills Drive,Wilmington,NC,28411,9103197724,7037955850,nsf@verizon.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,423,Active,2017,Brown,Nina,null,113 Cypress Avenue,Wrightsville Beach,NC,28480,9105380109,null,nina@stonegarden-nc.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+424meyerson,424,Active,2017,Meyerson,Martin,Deborah,5559 Peden Point Road,Wilmington,NC,28409,9106175023,9102006984,mmeyerson@nhroc.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+425thibault,425,Active,2017,Thibault,Pam,null,4407 Cascade Road,Wilmington,NC,28409,9107994216,9104718177,crabbychic@att.net,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+426degroote,426,Active,2017,DeGroote,Susan,null,6304 Hawksbill Drive,Wilmington,NC,28409,9103500183,9102623106,susandegroote@hotmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,427,Active,2017,Stanley,Claire,null,5008 Monck Court,Wilmington,NC,28409,9105081682,null,stanleyc1957@aol.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,428,Active,2017,Penna-Welch,Regina,null,216 Colquitt Drive,Wilmington,NC,28412,9259849374,null,regina_penna@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+429harris,429,Active,2017,Harris,Jonnie B.,null,1701 Softwind Way,Wilmington,NC,28403,9105206947,9107941357,Tharrisjr1@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+430wishart,430,Active,2017,Wishart,Michelle,null,8107 Mainsail Lane,Wilmington,NC,28412,9106208032,null,michelle.wishart69@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,431,Active,2017,Evans,Donna,null,2614 Mimosa Place,Wilmington,NC,28403,9106177928,null,dwe5evans@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,432,Active,2017,Ezzell,Gloria,null,133 Middle Oaks Drive,Wilmington,NC,28409,9106208985,null,gloria.ezzell@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+433earey,433,Active,2017,Earey,Carol C.,null,2009 Marsh Harbor Place,Wilmington,NC,28405,9102560395,3363125020,cearey01@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+434eakins,434,Active,2017,Eakins,Annamarie,null,8311 Vintage Club Circle,Wilmington,NC,28411,9106868733,8433338442,annamarieeakins@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+435escales,435,Active,2017,Escales,Sharon,null,2103 Graywalsh Drive,Wilmington,NC,28405,9106794008,5166956011,seescales@icloud.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+436thomas,436,Active,2017,Thomas,Carolyn,null,251 Two Chopt Road,Wilmington,NC,28405,9102644354,null,gardensbydesign@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,437,Active,2017,Tidd,Becky,null,7745 Bonaventure Drive,Wilmington,NC,28411,9106171587,null,beckyblacher@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+438blacher,438,Active,2017,Blacher,Jessica,null,626 Winery Way,Wilmington,NC,28411,9102002109,null,jessicacasey2003@yahoo.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+439baker,439,Active,2017,Baker,Bernadette,null,4939 Woods Edge Road,Wilmington,NC,28409,9106121912,9107998358,BBaker17@ec.rr.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+440respet,440,Active,2017,Respet,Kathy,null,3136 Kirby Smith Drive,Wilmington,NC,28409,9106209942,9107915101,kathy.respet@gmail.com,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null
+null,441,Active,2017,Baker,Elizabeth White,David,5608 Surrey Downs Court,Wilmington,NC,28403,3366181185,9109623895,bakere@uncw.edu,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null

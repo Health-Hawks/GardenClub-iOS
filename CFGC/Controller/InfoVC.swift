@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class InfoVC: UIViewController {
+import MessageUI
+class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate{
     
     var contact: ContactCard!
     
@@ -128,6 +128,41 @@ class InfoVC: UIViewController {
                 UIApplication.shared.openURL(url)
             }
         }
+    }
+    
+    @IBAction func textMessagePressed(_ sender: Any) {
+        let textMessageRecipients = [contact.PrimaryContactNo]
+        if MFMessageComposeViewController.canSendText(){
+            let messageComposeVC = MFMessageComposeViewController()
+            messageComposeVC.messageComposeDelegate = self
+            messageComposeVC.recipients = textMessageRecipients
+            messageComposeVC.body = "Sending from my iPhone"
+            self.present(messageComposeVC, animated: true, completion: nil)
+        }
+        else {
+            print ("SMS service is not available")
+        }
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func emailPressed(_ sender: Any) {
+        let emailMessageRecipients = [contact.ContactEmail]
+        if MFMailComposeViewController.canSendMail(){
+            let emailComposeVC = MFMailComposeViewController()
+            emailComposeVC.mailComposeDelegate = self as! MFMailComposeViewControllerDelegate
+            emailComposeVC.setToRecipients(emailMessageRecipients)
+            emailComposeVC.setSubject("Hello!")
+            emailComposeVC.setMessageBody("From my iPhone", isHTML: false)
+            self.present(emailComposeVC, animated: true, completion: nil)
+        }
+        else {
+            print ("Email unavailble")
+        }
+    }
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

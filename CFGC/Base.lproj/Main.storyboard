@@ -348,13 +348,21 @@
                                     <constraint firstAttribute="height" constant="44" id="4k6-2E-3EV"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Text Message" width="128" id="W2U-fz-Le5"/>
+                                    <barButtonItem title="Text Message" width="128" id="W2U-fz-Le5">
+                                        <connections>
+                                            <action selector="textMessagePressed:" destination="2Kx-Le-dP1" id="2cn-P0-0pU"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Call" width="126" id="0UD-Qp-REG">
                                         <connections>
                                             <action selector="callBtnPressed:" destination="2Kx-Le-dP1" id="ckh-C1-HIh"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Email" width="131" id="dqn-CY-ncp"/>
+                                    <barButtonItem title="Email" width="131" id="dqn-CY-ncp">
+                                        <connections>
+                                            <action selector="emailPressed:" destination="2Kx-Le-dP1" id="onY-YH-fie"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elizabeth White Baker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-3f-xvn">
@@ -664,7 +672,8 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ZLJ-nP-i28"/>
         <segue reference="tvg-Mh-GLi"/>
-        <segue reference="yyA-Nf-nzp"/>
+        <segue reference="eqM-Mc-gli"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -139,8 +139,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     */
     
-    @IBAction func skipBtnPressed(_ sender: UIButton){
-        performSegue(withIdentifier: "ContactVC", sender: nil)
-    }
 
 }

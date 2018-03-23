@@ -92,16 +92,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Sf5-tL-v7Z"/>
                                 </connections>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-UC-7Ju">
-                                <rect key="frame" x="286" y="544" width="89" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Cory's Skip"/>
-                                <connections>
-                                    <action selector="skipBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQA-DT-FOv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.83921568627450982" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -128,7 +118,6 @@
                     </view>
                     <connections>
                         <outlet property="password" destination="igp-cs-h5e" id="Im8-oZ-sZL"/>
-                        <outlet property="skipBtn" destination="Es5-UC-7Ju" id="sb9-0p-d9g"/>
                         <outlet property="submitBtn" destination="ixd-b3-o3O" id="ZiV-JN-SVC"/>
                         <outlet property="userName" destination="Szi-jh-rhl" id="txu-Fw-xwZ"/>
                         <segue destination="O3Q-4l-Vd9" kind="show" identifier="ContactVC" customClass="SegueFromRight" customModule="CFGC" customModuleProvider="target" id="yyA-Nf-nzp"/>
@@ -259,7 +248,7 @@
                         <outlet property="logoutBtn" destination="9gC-Wd-sN0" id="YMT-kS-9ny"/>
                         <outlet property="searchBar" destination="oOR-vh-FUx" id="OTS-v4-4aL"/>
                         <outlet property="tableView" destination="prq-jr-TSG" id="hdr-gc-NlB"/>
-                        <segue destination="2Kx-Le-dP1" kind="show" identifier="InfoVC" id="cZF-10-4Rl"/>
+                        <segue destination="2Kx-Le-dP1" kind="show" identifier="InfoVC" customClass="SegueFromRight" customModule="CFGC" customModuleProvider="target" id="cZF-10-4Rl"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="LoginVC" customClass="SegueFromLeft" customModule="CFGC" customModuleProvider="target" id="zjO-Lx-Eqy"/>
                     </connections>
                 </viewController>
@@ -552,7 +541,7 @@ Wilmington, NC 28403</string>
                         <outlet property="secondaryConLbl" destination="B4Q-T0-3Qe" id="wal-8o-nnM"/>
                         <outlet property="spouseLbl" destination="HBg-ZM-3sk" id="f4a-am-3jL"/>
                         <outlet property="txtMsgBtn" destination="W2U-fz-Le5" id="8yn-1h-yal"/>
-                        <segue destination="O3Q-4l-Vd9" kind="show" identifier="ContactVC" id="eqM-Mc-gli"/>
+                        <segue destination="O3Q-4l-Vd9" kind="show" identifier="ContactVC" customClass="SegueFromLeft" customModule="CFGC" customModuleProvider="target" id="eqM-Mc-gli"/>
                         <segue destination="Bc1-di-6Rq" kind="show" identifier="BiographicalVC" customClass="SegueFromRight" customModule="CFGC" customModuleProvider="target" id="ZLJ-nP-i28"/>
                     </connections>
                 </viewController>
@@ -671,8 +660,7 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZLJ-nP-i28"/>
-        <segue reference="tvg-Mh-GLi"/>
-        <segue reference="eqM-Mc-gli"/>
+        <segue reference="cZF-10-4Rl"/>
+        <segue reference="yyA-Nf-nzp"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -295,250 +296,197 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-4F-ey4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <items>
-                                    <navigationItem id="om0-lA-Mjz">
-                                        <barButtonItem key="leftBarButtonItem" title="Members" id="Ba6-qe-8R3">
-                                            <connections>
-                                                <action selector="membersBackBtnPressed:" destination="2Kx-Le-dP1" id="TwC-th-Bb6"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-CN-dJ0">
-                                <rect key="frame" x="10" y="323" width="143" height="21"/>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spouse Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-7M-nkd">
-                                <rect key="frame" x="10" y="372" width="127" height="21"/>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxu-TV-Egz">
-                                <rect key="frame" x="10" y="419" width="76" height="21"/>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beh-DG-HPf">
-                                <rect key="frame" x="219" y="314" width="145" height="37"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Yba-0Q-bZu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-wL-QMh">
-                                        <rect key="frame" x="10" y="0.0" width="135" height="37"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Ja1-wL-QMh" firstAttribute="top" secondItem="beh-DG-HPf" secondAttribute="top" id="2tH-sy-E2F"/>
-                                    <constraint firstAttribute="trailing" secondItem="Ja1-wL-QMh" secondAttribute="trailing" id="Jwj-Iu-OVl"/>
-                                    <constraint firstAttribute="bottom" secondItem="Ja1-wL-QMh" secondAttribute="bottom" id="MOY-Wo-iQe"/>
-                                    <constraint firstItem="Ja1-wL-QMh" firstAttribute="leading" secondItem="beh-DG-HPf" secondAttribute="leading" constant="10" id="oSE-El-kfs"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Contact Number" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-ST-Exu">
-                                <rect key="frame" x="10" y="481" width="160" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="0zs-jz-qSb"/>
-                                    <constraint firstAttribute="height" constant="42" id="uK9-Z1-gKd"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary Contact Number" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG9-H4-rZJ">
-                                <rect key="frame" x="10" y="533" width="182" height="48"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="jCS-d9-U7x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zk2-9n-pRq">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="4k6-2E-3EV"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem title="Text Message" width="128" id="W2U-fz-Le5"/>
-                                    <barButtonItem title="Call" width="126" id="0UD-Qp-REG">
-                                        <connections>
-                                            <action selector="callBtnPressed:" destination="2Kx-Le-dP1" id="ckh-C1-HIh"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem title="Email" width="131" id="dqn-CY-ncp"/>
-                                </items>
-                            </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elizabeth White Baker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-3f-xvn">
-                                <rect key="frame" x="10" y="265" width="355" height="40"/>
-                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loh-bI-GFa">
-                                <rect key="frame" x="10" y="586" width="60" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="fgB-gf-oJR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFD-ZL-V1t" userLabel="SpouseViewRect">
-                                <rect key="frame" x="178" y="364" width="185" height="37"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="David" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBg-ZM-3sk">
-                                        <rect key="frame" x="10" y="0.0" width="135" height="37"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="HBg-ZM-3sk" secondAttribute="trailing" constant="41" id="4qm-zG-ob4"/>
-                                    <constraint firstItem="HBg-ZM-3sk" firstAttribute="top" secondItem="SFD-ZL-V1t" secondAttribute="top" id="GNM-iL-WiX"/>
-                                    <constraint firstItem="HBg-ZM-3sk" firstAttribute="leading" secondItem="SFD-ZL-V1t" secondAttribute="leading" constant="10" id="LIA-gQ-epw"/>
-                                    <constraint firstAttribute="bottom" secondItem="HBg-ZM-3sk" secondAttribute="bottom" id="WYQ-VX-BS9"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agY-xi-Vbg" userLabel="AddressViewRect">
-                                <rect key="frame" x="132" y="414" width="232" height="53"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZb-EL-v9A">
-                                        <rect key="frame" x="10" y="0.0" width="220" height="50"/>
-                                        <string key="text">5608 Surrey Downs Court
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-4F-ey4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <items>
+                                            <navigationItem id="om0-lA-Mjz">
+                                                <barButtonItem key="leftBarButtonItem" title="Members" id="Ba6-qe-8R3">
+                                                    <connections>
+                                                        <action selector="membersBackBtnPressed:" destination="2Kx-Le-dP1" id="TwC-th-Bb6"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F7U-rp-12U">
+                                        <rect key="frame" x="0.0" y="54" width="375" height="279"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-uo-vMj">
+                                                <rect key="frame" x="111" y="0.0" width="153" height="153"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="153" id="5Vs-eK-rpg"/>
+                                                    <constraint firstAttribute="width" constant="153" id="i4A-dS-4Dj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Elizabeth White Baker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-tp-0fZ">
+                                                <rect key="frame" x="8" y="163" width="359" height="116"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kxU-bR-GBC">
+                                        <rect key="frame" x="0.0" y="343" width="375" height="250"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tME-NO-ZPC">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-CN-dJ0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mbrStatus" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Kw-cw2">
+                                                        <rect key="frame" x="243" y="0.0" width="132" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="RSZ-Rd-PWe">
+                                                <rect key="frame" x="0.0" y="35" width="375" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spouse Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-7M-nkd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="David" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TG-KQ-gYh" userLabel="Spouse Txt">
+                                                        <rect key="frame" x="176.5" y="0.0" width="198.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-i6-kAY">
+                                                <rect key="frame" x="0.0" y="70" width="375" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxu-TV-Egz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-0b-w2g" userLabel="Address Txt">
+                                                        <rect key="frame" x="86" y="0.0" width="289" height="53"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <string key="text">5608 Surrey Downs Court
 Wilmington, NC 28403</string>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="53" id="py8-c7-f3J"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IXf-57-O0Z">
+                                                <rect key="frame" x="0.0" y="128" width="375" height="37"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Contact Number" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-ST-Exu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="37"/>
+                                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="336.618.1185" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-qc-Zlo" userLabel="primaryConTxt">
+                                                        <rect key="frame" x="212.5" y="0.0" width="162.5" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="FYD-tY-jTh"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zzF-YF-cbz">
+                                                <rect key="frame" x="0.0" y="170" width="375" height="45"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary Contact Number" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG9-H4-rZJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="41"/>
+                                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="910.962.3895" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-1b-lBI" userLabel="secondaryConTxt">
+                                                        <rect key="frame" x="212.5" y="0.0" width="162.5" height="37"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="37" id="AMS-KP-LiC"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="aSJ-uA-UPi"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-89-bhk">
+                                                <rect key="frame" x="0.0" y="220" width="375" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loh-bI-GFa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bakere@uncw.edu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoG-Iu-zfX">
+                                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="htA-bk-1BU"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tME-NO-ZPC" secondAttribute="trailing" id="0D5-LB-P3L"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tph-i6-kAY" secondAttribute="trailing" id="0Tz-f5-aaq"/>
+                                            <constraint firstItem="XaF-89-bhk" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="1bN-Jh-E0Y"/>
+                                            <constraint firstItem="Tph-i6-kAY" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="5HR-f9-6RH"/>
+                                            <constraint firstAttribute="width" constant="375" id="6TD-He-61T"/>
+                                            <constraint firstAttribute="trailing" secondItem="RSZ-Rd-PWe" secondAttribute="trailing" id="EQL-Jd-hFf"/>
+                                            <constraint firstAttribute="trailing" secondItem="XaF-89-bhk" secondAttribute="trailing" id="qcd-ZB-MNr"/>
+                                            <constraint firstItem="tME-NO-ZPC" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="wwW-BH-ywp"/>
+                                            <constraint firstAttribute="trailing" secondItem="zzF-YF-cbz" secondAttribute="trailing" id="xIa-fQ-8A9"/>
+                                            <constraint firstItem="zzF-YF-cbz" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="zrV-Cd-YX6"/>
+                                        </constraints>
+                                    </stackView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zk2-9n-pRq">
+                                        <rect key="frame" x="0.0" y="603" width="375" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Text Message" width="128" id="W2U-fz-Le5"/>
+                                            <barButtonItem title="Call" width="126" id="0UD-Qp-REG">
+                                                <connections>
+                                                    <action selector="callBtnPressed:" destination="2Kx-Le-dP1" id="ckh-C1-HIh"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Email" width="131" id="dqn-CY-ncp"/>
+                                        </items>
+                                    </toolbar>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="gZb-EL-v9A" firstAttribute="leading" secondItem="agY-xi-Vbg" secondAttribute="leading" constant="10" id="8uo-xT-5HW"/>
-                                    <constraint firstAttribute="bottom" secondItem="gZb-EL-v9A" secondAttribute="bottom" constant="3" id="bPv-GB-Gr8"/>
-                                    <constraint firstItem="gZb-EL-v9A" firstAttribute="top" secondItem="agY-xi-Vbg" secondAttribute="top" id="kfd-bF-Zhf"/>
-                                    <constraint firstAttribute="trailing" secondItem="gZb-EL-v9A" secondAttribute="trailing" constant="2" id="rMB-cv-pOX"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bF6-KR-QG6" userLabel="PrimaryContactViewRect">
-                                <rect key="frame" x="219" y="479" width="145" height="37"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="336.618.1185" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdH-Yp-fVm">
-                                        <rect key="frame" x="10" y="0.0" width="135" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ieF-nG-Zev" userLabel="SecondaryContactViewRect">
-                                <rect key="frame" x="219" y="529" width="145" height="21"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="910.962.3895" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4Q-T0-3Qe">
-                                        <rect key="frame" x="10" y="0.0" width="135" height="21"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="B4Q-T0-3Qe" secondAttribute="bottom" id="71m-Te-vgD"/>
-                                    <constraint firstItem="B4Q-T0-3Qe" firstAttribute="top" secondItem="ieF-nG-Zev" secondAttribute="top" id="V5X-t4-f03"/>
-                                    <constraint firstAttribute="trailing" secondItem="B4Q-T0-3Qe" secondAttribute="trailing" id="djg-lN-cFz"/>
-                                    <constraint firstItem="B4Q-T0-3Qe" firstAttribute="leading" secondItem="ieF-nG-Zev" secondAttribute="leading" constant="10" id="qSW-dS-gkq"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UID-tS-WP5" userLabel="EmailViewRect">
-                                <rect key="frame" x="103" y="580" width="261" height="32"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bakere@uncw.edu" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tw-Ha-3VO">
-                                        <rect key="frame" x="10" y="0.0" width="251" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-uo-vMj">
-                                <rect key="frame" x="111" y="74" width="153" height="153"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="153" id="GcF-D5-tQT"/>
-                                    <constraint firstAttribute="width" secondItem="g5o-uo-vMj" secondAttribute="height" multiplier="1:1" id="gUa-vm-Hg9"/>
-                                </constraints>
-                            </imageView>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="SFD-ZL-V1t" firstAttribute="top" secondItem="beh-DG-HPf" secondAttribute="bottom" constant="13" id="048-t0-ck8"/>
-                            <constraint firstItem="bF6-KR-QG6" firstAttribute="trailing" secondItem="ieF-nG-Zev" secondAttribute="trailing" id="0Kc-6x-lav"/>
-                            <constraint firstItem="loh-bI-GFa" firstAttribute="top" secondItem="dG9-H4-rZJ" secondAttribute="bottom" constant="5" id="0a3-5O-Nd9"/>
-                            <constraint firstItem="beh-DG-HPf" firstAttribute="leading" secondItem="lfY-CN-dJ0" secondAttribute="trailing" constant="66" id="2Xg-8O-LjF"/>
-                            <constraint firstItem="agY-xi-Vbg" firstAttribute="leading" secondItem="Kxu-TV-Egz" secondAttribute="trailing" constant="46" id="7L2-nN-4fm"/>
-                            <constraint firstItem="vpe-ST-Exu" firstAttribute="top" secondItem="agY-xi-Vbg" secondAttribute="bottom" constant="14" id="7a0-Jn-Z9T"/>
-                            <constraint firstItem="zk2-9n-pRq" firstAttribute="top" secondItem="UID-tS-WP5" secondAttribute="bottom" constant="11" id="85g-Ax-lHB"/>
-                            <constraint firstItem="beh-DG-HPf" firstAttribute="top" secondItem="nfC-3f-xvn" secondAttribute="bottom" constant="9" id="8TB-aQ-lR5"/>
-                            <constraint firstItem="g5o-uo-vMj" firstAttribute="centerX" secondItem="jAU-4F-ey4" secondAttribute="centerX" id="8cm-ct-6kR"/>
-                            <constraint firstItem="ieF-nG-Zev" firstAttribute="leading" secondItem="dG9-H4-rZJ" secondAttribute="trailing" constant="27" id="8fF-uV-9Q2"/>
-                            <constraint firstItem="Kxu-TV-Egz" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" constant="10" id="94f-Jz-R6N"/>
-                            <constraint firstItem="bF6-KR-QG6" firstAttribute="leading" secondItem="ieF-nG-Zev" secondAttribute="leading" id="B2X-r9-ZOD"/>
-                            <constraint firstItem="dG9-H4-rZJ" firstAttribute="top" secondItem="vpe-ST-Exu" secondAttribute="bottom" constant="10" id="C0B-wK-fi8"/>
-                            <constraint firstItem="g5o-uo-vMj" firstAttribute="top" secondItem="jAU-4F-ey4" secondAttribute="bottom" constant="10" id="CAy-Fb-DV0"/>
-                            <constraint firstItem="nfC-3f-xvn" firstAttribute="centerX" secondItem="yFS-1W-GBf" secondAttribute="centerX" id="DKj-Qm-g7Z"/>
-                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="trailing" secondItem="ieF-nG-Zev" secondAttribute="trailing" constant="11" id="Eap-OW-iSj"/>
-                            <constraint firstItem="bF6-KR-QG6" firstAttribute="leading" secondItem="beh-DG-HPf" secondAttribute="leading" id="F4d-cs-6bg"/>
-                            <constraint firstItem="SFD-ZL-V1t" firstAttribute="leading" secondItem="ytP-7M-nkd" secondAttribute="trailing" constant="41" id="FGA-qY-Agf"/>
-                            <constraint firstItem="zk2-9n-pRq" firstAttribute="leading" secondItem="jAU-4F-ey4" secondAttribute="leading" id="FTP-4K-sTE"/>
-                            <constraint firstItem="ieF-nG-Zev" firstAttribute="top" secondItem="bF6-KR-QG6" secondAttribute="bottom" constant="13" id="FX6-IQ-uYv"/>
-                            <constraint firstItem="Kxu-TV-Egz" firstAttribute="top" secondItem="ytP-7M-nkd" secondAttribute="bottom" constant="26" id="G82-bz-lsk"/>
-                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="trailing" secondItem="agY-xi-Vbg" secondAttribute="trailing" constant="11" id="Ica-bC-nut"/>
-                            <constraint firstItem="SFD-ZL-V1t" firstAttribute="leading" secondItem="ytP-7M-nkd" secondAttribute="trailing" constant="41" id="IxQ-WP-nkO"/>
-                            <constraint firstItem="vpe-ST-Exu" firstAttribute="leading" secondItem="Kxu-TV-Egz" secondAttribute="leading" id="Jcs-6I-mVS"/>
-                            <constraint firstItem="zk2-9n-pRq" firstAttribute="bottom" secondItem="tUr-Rs-x6h" secondAttribute="bottom" id="Mvx-xe-jMQ"/>
-                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="trailing" secondItem="nfC-3f-xvn" secondAttribute="trailing" constant="10" id="OUb-rk-p4z"/>
-                            <constraint firstItem="ytP-7M-nkd" firstAttribute="top" secondItem="lfY-CN-dJ0" secondAttribute="bottom" constant="28" id="QFA-5a-tno"/>
-                            <constraint firstItem="agY-xi-Vbg" firstAttribute="top" secondItem="SFD-ZL-V1t" secondAttribute="bottom" constant="13" id="Ts1-TJ-bHs"/>
-                            <constraint firstItem="jAU-4F-ey4" firstAttribute="trailing" secondItem="tUr-Rs-x6h" secondAttribute="trailing" id="UB4-iA-Ki5"/>
-                            <constraint firstItem="bF6-KR-QG6" firstAttribute="leading" secondItem="vpe-ST-Exu" secondAttribute="trailing" constant="49" id="Wxb-dA-Sx8"/>
-                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="trailing" secondItem="SFD-ZL-V1t" secondAttribute="trailing" constant="12" id="adJ-sc-dTi"/>
-                            <constraint firstItem="jAU-4F-ey4" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" id="arG-7U-M94"/>
-                            <constraint firstItem="SFD-ZL-V1t" firstAttribute="centerY" secondItem="ytP-7M-nkd" secondAttribute="centerY" id="bhh-9R-PYI"/>
-                            <constraint firstItem="ytP-7M-nkd" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" constant="10" id="buF-Dm-qAZ"/>
-                            <constraint firstItem="lfY-CN-dJ0" firstAttribute="top" secondItem="nfC-3f-xvn" secondAttribute="bottom" constant="18" id="e7j-xI-hlD"/>
-                            <constraint firstItem="zk2-9n-pRq" firstAttribute="top" secondItem="loh-bI-GFa" secondAttribute="bottom" constant="17" id="e9p-jX-ZCT"/>
-                            <constraint firstItem="beh-DG-HPf" firstAttribute="top" secondItem="yFS-1W-GBf" secondAttribute="top" constant="314" id="erW-XQ-X4o"/>
-                            <constraint firstItem="SFD-ZL-V1t" firstAttribute="leading" secondItem="yFS-1W-GBf" secondAttribute="leading" constant="178" id="fy9-N5-URR"/>
-                            <constraint firstItem="g5o-uo-vMj" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" constant="111" id="jiX-NT-P4D"/>
-                            <constraint firstItem="SFD-ZL-V1t" firstAttribute="top" secondItem="yFS-1W-GBf" secondAttribute="top" constant="364" id="jlD-ae-XN5"/>
-                            <constraint firstItem="UID-tS-WP5" firstAttribute="top" secondItem="ieF-nG-Zev" secondAttribute="bottom" constant="30" id="jzg-6X-PMa"/>
-                            <constraint firstItem="UID-tS-WP5" firstAttribute="leading" secondItem="loh-bI-GFa" secondAttribute="trailing" constant="33" id="k87-4n-JJE"/>
-                            <constraint firstItem="agY-xi-Vbg" firstAttribute="leading" secondItem="yFS-1W-GBf" secondAttribute="leading" constant="132" id="lvs-p3-R85"/>
-                            <constraint firstItem="ieF-nG-Zev" firstAttribute="top" secondItem="yFS-1W-GBf" secondAttribute="top" constant="529" id="mza-ht-a36"/>
-                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="trailing" secondItem="beh-DG-HPf" secondAttribute="trailing" constant="11" id="q3g-hv-Ozf"/>
-                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="trailing" secondItem="UID-tS-WP5" secondAttribute="trailing" constant="11" id="qct-v1-d9O"/>
-                            <constraint firstItem="dG9-H4-rZJ" firstAttribute="leading" secondItem="loh-bI-GFa" secondAttribute="leading" id="rsa-Cw-rPq"/>
-                            <constraint firstItem="bF6-KR-QG6" firstAttribute="top" secondItem="agY-xi-Vbg" secondAttribute="bottom" constant="12" id="sMn-9h-42E"/>
-                            <constraint firstItem="zk2-9n-pRq" firstAttribute="trailing" secondItem="jAU-4F-ey4" secondAttribute="trailing" id="shI-4K-Rsv"/>
-                            <constraint firstItem="bF6-KR-QG6" firstAttribute="top" secondItem="yFS-1W-GBf" secondAttribute="top" constant="479" id="u7u-bQ-x8O"/>
-                            <constraint firstItem="vpe-ST-Exu" firstAttribute="leading" secondItem="dG9-H4-rZJ" secondAttribute="leading" id="uUt-M3-1CQ"/>
-                            <constraint firstItem="lfY-CN-dJ0" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" constant="10" id="v7Q-Bw-8FS"/>
-                            <constraint firstItem="jAU-4F-ey4" firstAttribute="top" secondItem="tUr-Rs-x6h" secondAttribute="top" id="yb5-wS-2gG"/>
-                            <constraint firstItem="nfC-3f-xvn" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" constant="10" id="yz1-L7-mGl"/>
+                            <constraint firstItem="Yba-0Q-bZu" firstAttribute="leading" secondItem="tUr-Rs-x6h" secondAttribute="leading" id="U0F-ob-pQB"/>
+                            <constraint firstItem="tUr-Rs-x6h" firstAttribute="bottom" secondItem="Yba-0Q-bZu" secondAttribute="bottom" id="fup-1f-wOx"/>
+                            <constraint firstItem="Yba-0Q-bZu" firstAttribute="trailing" secondItem="tUr-Rs-x6h" secondAttribute="trailing" id="jVb-fO-d6e"/>
+                            <constraint firstItem="Yba-0Q-bZu" firstAttribute="top" secondItem="tUr-Rs-x6h" secondAttribute="top" id="qjy-xp-Qkt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tUr-Rs-x6h"/>
                         <connections>
@@ -546,23 +494,17 @@ Wilmington, NC 28403</string>
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="AddressViewRect" destination="agY-xi-Vbg" id="wXG-oI-811"/>
-                        <outlet property="EmailViewRect" destination="UID-tS-WP5" id="CCu-h3-Hau"/>
-                        <outlet property="PrimaryContactViewRect" destination="bF6-KR-QG6" id="wFh-kN-HaL"/>
-                        <outlet property="SecondaryContactViewRect" destination="ieF-nG-Zev" id="gs6-SG-Aoc"/>
-                        <outlet property="SpouseViewRect" destination="SFD-ZL-V1t" id="8u8-jQ-5Lg"/>
-                        <outlet property="addressLbl" destination="gZb-EL-v9A" id="dr5-Xa-xSJ"/>
+                        <outlet property="addressTxt" destination="XTi-0b-w2g" id="qmj-W1-hjh"/>
                         <outlet property="callBtn" destination="0UD-Qp-REG" id="FGG-fF-ywO"/>
                         <outlet property="contactImage" destination="g5o-uo-vMj" id="jeD-y0-gD3"/>
                         <outlet property="emailBtn" destination="dqn-CY-ncp" id="GCo-7a-Q1E"/>
-                        <outlet property="emailLbl" destination="6Tw-Ha-3VO" id="fsQ-Zx-b9i"/>
-                        <outlet property="mbrStatLbl" destination="Ja1-wL-QMh" id="GcX-dV-bfU"/>
-                        <outlet property="mbrStatusRect" destination="beh-DG-HPf" id="CeK-UY-nY6"/>
+                        <outlet property="emailTxt" destination="xoG-Iu-zfX" id="OZK-z1-u8D"/>
+                        <outlet property="mbrStatTxt" destination="0O0-Kw-cw2" id="kHA-kZ-g8z"/>
                         <outlet property="membersBackBtn" destination="Ba6-qe-8R3" id="PLE-R8-Nnj"/>
-                        <outlet property="nameLbl" destination="nfC-3f-xvn" id="xgv-gV-B00"/>
-                        <outlet property="primaryConLbl" destination="HdH-Yp-fVm" id="mJi-Bu-U4l"/>
-                        <outlet property="secondaryConLbl" destination="B4Q-T0-3Qe" id="wal-8o-nnM"/>
-                        <outlet property="spouseLbl" destination="HBg-ZM-3sk" id="f4a-am-3jL"/>
+                        <outlet property="nameTxt" destination="ECM-tp-0fZ" id="uTx-Y0-OLs"/>
+                        <outlet property="primaryConTxt" destination="tfI-qc-Zlo" id="KHZ-kU-gsb"/>
+                        <outlet property="secondaryConTxt" destination="b1z-1b-lBI" id="Xmf-J6-sF5"/>
+                        <outlet property="spouseTxt" destination="0TG-KQ-gYh" id="2jz-65-T4f"/>
                         <outlet property="txtMsgBtn" destination="W2U-fz-Le5" id="8yn-1h-yal"/>
                         <segue destination="O3Q-4l-Vd9" kind="show" identifier="ContactVC" id="eqM-Mc-gli"/>
                         <segue destination="Bc1-di-6Rq" kind="show" identifier="BiographicalVC" customClass="SegueFromRight" customModule="CFGC" customModuleProvider="target" id="ZLJ-nP-i28"/>
@@ -575,7 +517,7 @@ Wilmington, NC 28403</string>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2132" y="132"/>
+            <point key="canvasLocation" x="2132" y="131.78410794602701"/>
         </scene>
         <!--BiographicalVC-->
         <scene sceneID="53h-Gs-xIi">
@@ -683,7 +625,8 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cZF-10-4Rl"/>
-        <segue reference="yyA-Nf-nzp"/>
+        <segue reference="ZLJ-nP-i28"/>
+        <segue reference="tvg-Mh-GLi"/>
+        <segue reference="eqM-Mc-gli"/>
     </inferredMetricsTieBreakers>
 </document>

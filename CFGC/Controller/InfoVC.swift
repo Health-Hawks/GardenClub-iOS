@@ -16,21 +16,21 @@ class InfoVC: UIViewController {
     
     
     @IBOutlet var swipe: UISwipeGestureRecognizer!
+
+    @IBOutlet weak var nameTxt: UITextField!
+
+    @IBOutlet weak var mbrStatTxt: UITextField!
     
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var mbrStatLbl: UILabel!
-    @IBOutlet weak var spouseLbl: UILabel!
-    @IBOutlet weak var addressLbl: UILabel!
-    @IBOutlet weak var primaryConLbl: UILabel!
-    @IBOutlet weak var secondaryConLbl: UILabel!
-    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var spouseTxt: UITextField!
+
+    @IBOutlet weak var addressTxt: UITextView!
+
+    @IBOutlet weak var primaryConTxt: UITextField!
     
-    @IBOutlet weak var mbrStatusRect: UIView!
-    @IBOutlet weak var SpouseViewRect: UIView!
-    @IBOutlet weak var AddressViewRect: UIView!
-    @IBOutlet weak var PrimaryContactViewRect: UIView!
-    @IBOutlet weak var SecondaryContactViewRect: UIView!
-    @IBOutlet weak var EmailViewRect: UIView!
+    @IBOutlet weak var secondaryConTxt: UITextField!
+    
+    @IBOutlet weak var emailTxt: UITextField!
+    
     
     @IBOutlet weak var membersBackBtn: UIBarButtonItem!
     
@@ -72,7 +72,7 @@ class InfoVC: UIViewController {
         contactImage.layer.borderColor = UIColor.black.cgColor
         
         
-        
+        /*
         mbrStatusRect.layer.borderColor = UIColor.black.cgColor
         mbrStatusRect.layer.borderWidth = 1.0
         mbrStatusRect.layer.cornerRadius = 20
@@ -96,14 +96,21 @@ class InfoVC: UIViewController {
         EmailViewRect.layer.borderColor = UIColor.black.cgColor
         EmailViewRect.layer.borderWidth = 1.0
         EmailViewRect.layer.cornerRadius = 20
+        */
         
-        nameLbl.text = contact.FirstName + " " + contact.LastName
-        spouseLbl.text = contact.Spouse
-        mbrStatLbl.text = contact.MbrStatus
-        addressLbl.text = contact.StreetAddress
-        primaryConLbl.text = contact.PrimaryContactNo
-        secondaryConLbl.text = contact.SecondaryContactNo
-        emailLbl.text = contact.ContactEmail
+        
+        
+        addressTxt.layer.borderColor = UIColor.black.cgColor
+        addressTxt.layer.borderWidth = 1.0
+        addressTxt.layer.cornerRadius = 20
+        
+        nameTxt.text = contact.FirstName + " " + contact.LastName
+        spouseTxt.text = contact.Spouse
+        mbrStatTxt.text = contact.MbrStatus
+        addressTxt.text = contact.StreetAddress
+        primaryConTxt.text = contact.PrimaryContactNo
+        secondaryConTxt.text = contact.SecondaryContactNo
+        emailTxt.text = contact.ContactEmail
     }
     
     
@@ -123,7 +130,7 @@ class InfoVC: UIViewController {
         let primaryNum = contact.PrimaryContactNo.replacingOccurrences(of: ".", with: "")
         let secondaryNum = contact.SecondaryContactNo.replacingOccurrences(of: ".", with: "")
         
-        var phoneActionSheet = UIAlertController(title: "Please Select A Number", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let phoneActionSheet = UIAlertController(title: "Please Select A Number", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
         
         let primaryPhoneButtonAction = UIAlertAction(title: "Primary Phone: " + contact.PrimaryContactNo, style: UIAlertActionStyle.default){(ACTION) in
             self.callSelectedNumber(number: primaryNum)

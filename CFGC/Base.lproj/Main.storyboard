@@ -9,7 +9,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -93,7 +92,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Sf5-tL-v7Z"/>
                                 </connections>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-UC-7Ju">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-UC-7Ju">
                                 <rect key="frame" x="286" y="544" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -312,28 +311,32 @@
                                         </items>
                                     </navigationBar>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F7U-rp-12U">
-                                        <rect key="frame" x="0.0" y="54" width="375" height="279"/>
+                                        <rect key="frame" x="0.0" y="54" width="375" height="203"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="g5o-uo-vMj">
                                                 <rect key="frame" x="111" y="0.0" width="153" height="153"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="153" id="5Vs-eK-rpg"/>
+                                                    <constraint firstAttribute="width" secondItem="g5o-uo-vMj" secondAttribute="height" multiplier="1:1" id="grf-EN-8WK"/>
                                                     <constraint firstAttribute="width" constant="153" id="i4A-dS-4Dj"/>
                                                 </constraints>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Elizabeth White Baker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-tp-0fZ">
-                                                <rect key="frame" x="8" y="163" width="359" height="116"/>
+                                                <rect key="frame" x="8" y="163" width="359" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="glV-xJ-heI"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="36"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kxU-bR-GBC">
-                                        <rect key="frame" x="0.0" y="343" width="375" height="250"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="kxU-bR-GBC">
+                                        <rect key="frame" x="0.0" y="267" width="375" height="257"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tME-NO-ZPC">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="tME-NO-ZPC">
+                                                <rect key="frame" x="0.0" y="0.0" width="348" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfY-CN-dJ0">
                                                         <rect key="frame" x="0.0" y="0.0" width="143" height="30"/>
@@ -342,7 +345,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mbrStatus" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Kw-cw2">
-                                                        <rect key="frame" x="243" y="0.0" width="132" height="30"/>
+                                                        <rect key="frame" x="243" y="0.0" width="105" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -350,7 +353,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="RSZ-Rd-PWe">
-                                                <rect key="frame" x="0.0" y="35" width="375" height="30"/>
+                                                <rect key="frame" x="0.0" y="37" width="375" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spouse Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytP-7M-nkd">
                                                         <rect key="frame" x="0.0" y="0.0" width="126.5" height="30"/>
@@ -365,18 +368,25 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="Dgb-lC-oII"/>
+                                                    <constraint firstAttribute="height" constant="30" id="lsW-Cs-9sn"/>
+                                                </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-i6-kAY">
-                                                <rect key="frame" x="0.0" y="70" width="375" height="53"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Tph-i6-kAY">
+                                                <rect key="frame" x="0.0" y="74" width="375" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxu-TV-Egz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="78" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="20.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="100" id="kam-1Y-2d8"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-0b-w2g" userLabel="Address Txt">
-                                                        <rect key="frame" x="86" y="0.0" width="289" height="53"/>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-0b-w2g" userLabel="Address Txt">
+                                                        <rect key="frame" x="150" y="0.0" width="225" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <string key="text">5608 Surrey Downs Court
 Wilmington, NC 28403</string>
@@ -385,11 +395,11 @@ Wilmington, NC 28403</string>
                                                     </textView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="53" id="py8-c7-f3J"/>
+                                                    <constraint firstAttribute="height" constant="50" id="g4h-4n-IfS"/>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="IXf-57-O0Z">
-                                                <rect key="frame" x="0.0" y="128" width="375" height="37"/>
+                                                <rect key="frame" x="0.0" y="131" width="375" height="37"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Contact Number" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpe-ST-Exu">
                                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="37"/>
@@ -407,9 +417,12 @@ Wilmington, NC 28403</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="2Ld-sW-iCm"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="zzF-YF-cbz">
-                                                <rect key="frame" x="0.0" y="170" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="175" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary Contact Number" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG9-H4-rZJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="41"/>
@@ -432,7 +445,7 @@ Wilmington, NC 28403</string>
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-89-bhk">
-                                                <rect key="frame" x="0.0" y="220" width="375" height="30"/>
+                                                <rect key="frame" x="0.0" y="227" width="375" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loh-bI-GFa">
                                                         <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
@@ -447,26 +460,23 @@ Wilmington, NC 28403</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="375" id="htA-bk-1BU"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="tME-NO-ZPC" secondAttribute="trailing" id="0D5-LB-P3L"/>
-                                            <constraint firstAttribute="trailing" secondItem="Tph-i6-kAY" secondAttribute="trailing" id="0Tz-f5-aaq"/>
-                                            <constraint firstItem="XaF-89-bhk" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="1bN-Jh-E0Y"/>
-                                            <constraint firstItem="Tph-i6-kAY" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="5HR-f9-6RH"/>
+                                            <constraint firstItem="XaF-89-bhk" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="0Td-U6-zQp"/>
                                             <constraint firstAttribute="width" constant="375" id="6TD-He-61T"/>
                                             <constraint firstAttribute="trailing" secondItem="RSZ-Rd-PWe" secondAttribute="trailing" id="EQL-Jd-hFf"/>
-                                            <constraint firstAttribute="trailing" secondItem="XaF-89-bhk" secondAttribute="trailing" id="qcd-ZB-MNr"/>
-                                            <constraint firstItem="tME-NO-ZPC" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="wwW-BH-ywp"/>
+                                            <constraint firstAttribute="trailing" secondItem="XaF-89-bhk" secondAttribute="trailing" id="KAt-yU-Flh"/>
+                                            <constraint firstAttribute="trailing" secondItem="RSZ-Rd-PWe" secondAttribute="trailing" id="PAw-tG-EJH"/>
+                                            <constraint firstItem="IXf-57-O0Z" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="fvL-uK-d0H"/>
+                                            <constraint firstItem="RSZ-Rd-PWe" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="ilH-z3-5nH"/>
+                                            <constraint firstAttribute="trailing" secondItem="IXf-57-O0Z" secondAttribute="trailing" id="mf6-U5-4YW"/>
                                             <constraint firstAttribute="trailing" secondItem="zzF-YF-cbz" secondAttribute="trailing" id="xIa-fQ-8A9"/>
                                             <constraint firstItem="zzF-YF-cbz" firstAttribute="leading" secondItem="kxU-bR-GBC" secondAttribute="leading" id="zrV-Cd-YX6"/>
                                         </constraints>
                                     </stackView>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zk2-9n-pRq">
-                                        <rect key="frame" x="0.0" y="603" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="534" width="375" height="113"/>
                                         <items>
                                             <barButtonItem title="Text Message" width="128" id="W2U-fz-Le5"/>
                                             <barButtonItem title="Call" width="126" id="0UD-Qp-REG">
@@ -478,6 +488,10 @@ Wilmington, NC 28403</string>
                                         </items>
                                     </toolbar>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kxU-bR-GBC" firstAttribute="leading" secondItem="Yba-0Q-bZu" secondAttribute="leading" constant="10" id="xNM-ys-dNV"/>
+                                    <constraint firstAttribute="trailing" secondItem="kxU-bR-GBC" secondAttribute="trailing" constant="10" id="y1J-o8-JgR"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -625,8 +639,7 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZLJ-nP-i28"/>
-        <segue reference="tvg-Mh-GLi"/>
+        <segue reference="cZF-10-4Rl"/>
         <segue reference="eqM-Mc-gli"/>
     </inferredMetricsTieBreakers>
 </document>

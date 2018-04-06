@@ -67,7 +67,7 @@ class InfoVC: UIViewController {
         
         contactImage.layer.borderWidth = 1
         contactImage.layer.masksToBounds = false
-        contactImage.layer.cornerRadius = contactImage.frame.width/1.6 //dont know why 1.6 look better than 2
+        contactImage.layer.cornerRadius = contactImage.frame.width/2 //dont know why 1.6 look better than 2
         contactImage.clipsToBounds = true;
         contactImage.layer.borderColor = UIColor.black.cgColor
         

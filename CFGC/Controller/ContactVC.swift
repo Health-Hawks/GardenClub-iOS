@@ -14,7 +14,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     var currentUser: User!
-    var userDictionary = [String: [String]]()
+    var userDictionary = [String: [ContactCard]]()
     var userSectionTitles = [String]()
     var possibleDuplicate = 0;
     private var login_url = "http://satoshi.cis.uncw.edu/~jbr5433/GardenClub/login.php";
@@ -87,11 +87,11 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
             //print(user.LastName)
             if var userValues = userDictionary[userKey] {
-                userValues.append(user.LastName + user.FirstName)
+                userValues.append(user)
                 //print(userValues[0],userValues[1])
                 userDictionary[userKey] = userValues
             } else {
-                userDictionary[userKey] = [user.LastName + user.FirstName]
+                userDictionary[userKey] = [user]
             }
         }
         /*
@@ -201,6 +201,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
             
             var contact: ContactCard!
+            /*
             let userKey = userSectionTitles[indexPath.section]
             var sectionSum = 0
             
@@ -212,8 +213,14 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
             
             contact = contactCards[sectionSum+indexPath.row]
+            */
+            
+            //SUCCESS
+            let testSection = userSectionTitles[indexPath.section]
+            contact = userDictionary[testSection]?[indexPath.row]
             
             cell.updateUI(contactCard: contact)
+
             return cell
         }
         return UITableViewCell();
@@ -283,11 +290,11 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         }else {
             
             inSearchMode = true
-            print("insearchmode")
+            //print("insearchmode")
             let lower = String(searchBar.text!.lowercased())
-            print(lower.uppercased().hasPrefix("B"))
+            //print(lower.uppercased().hasPrefix("B"))
             let pre = lower.prefix(1)
-            print(pre)
+            //print(pre)
             /*
             for section in userSectionTitles{
                 print(String(section))

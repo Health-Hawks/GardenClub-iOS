@@ -107,7 +107,7 @@ class InfoVC: UIViewController {
         nameTxt.text = contact.FirstName + " " + contact.LastName
         spouseTxt.text = contact.Spouse
         mbrStatTxt.text = contact.MbrStatus
-        addressTxt.text = contact.StreetAddress
+        addressTxt.text = contact.StreetAddress + " " + contact.City + ", " + contact.State + " " + contact.ZipCode
         primaryConTxt.text = contact.PrimaryContactNo
         secondaryConTxt.text = contact.SecondaryContactNo
         emailTxt.text = contact.ContactEmail

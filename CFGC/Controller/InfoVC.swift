@@ -102,9 +102,10 @@ class InfoVC: UIViewController {
         
         addressTxt.layer.borderColor = UIColor.black.cgColor
         addressTxt.layer.borderWidth = 1.0
-        addressTxt.layer.cornerRadius = 20
+        addressTxt.layer.cornerRadius = 25
         
         nameTxt.text = contact.FirstName + " " + contact.LastName
+        nameTxt.allowsEditingTextAttributes = false
         spouseTxt.text = contact.Spouse
         mbrStatTxt.text = contact.MbrStatus
         addressTxt.text = contact.StreetAddress + " " + contact.City + ", " + contact.State + " " + contact.ZipCode

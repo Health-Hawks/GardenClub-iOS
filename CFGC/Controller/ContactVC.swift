@@ -201,19 +201,6 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
             
             var contact: ContactCard!
-            /*
-            let userKey = userSectionTitles[indexPath.section]
-            var sectionSum = 0
-            
-            for section in userSectionTitles{
-                let userValues = userDictionary[section]
-                if(userKey > section){
-                    sectionSum += userValues!.count
-                }
-            }
-            
-            contact = contactCards[sectionSum+indexPath.row]
-            */
             
             //SUCCESS
             let testSection = userSectionTitles[indexPath.section]
@@ -253,16 +240,8 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         var contact: ContactCard!
         let userKey = userSectionTitles[indexPath.section]
-        var sectionSum = 0
         
-        for section in userSectionTitles{
-            let userValues = userDictionary[section]
-            if(userKey > section){
-                sectionSum += userValues!.count
-            }
-        }
-        
-        contact = contactCards[sectionSum+indexPath.row]
+        contact = userDictionary[userKey]?[indexPath.row]
         
         performSegue(withIdentifier: "InfoVC", sender: contact)
     }

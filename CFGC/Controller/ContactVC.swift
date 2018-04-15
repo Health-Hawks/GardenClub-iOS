@@ -13,32 +13,37 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    var currentUser: User!
+    var currentUser: User?
     var userDictionary = [String: [ContactCard]]()
     var userSectionTitles = [String]()
     var possibleDuplicate = 0;
+    
     private var login_url = "http://satoshi.cis.uncw.edu/~jbr5433/GardenClub/login.php";
     
     @IBOutlet weak var searchBar: UISearchBar!
     var inSearchMode = false;
+    
     //var users = [String]()
     
-    var conCellModels = [ContactModel]()        // model
+    //var conCellModels = [ContactModel]()        // model
     
     var contactCards = [ContactCard]()
+    
     var filteredContacts = [ContactCard]()
     var filteredUserSectionTitles = [String]()
     
+    //going to try a dictionary of filtered items
     
-    
+    var filteredDictionary = [String: [ContactCard]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /* Future JSON Decoder Call to class Background
+        /*///////////////////////////////////////////////////////
+        Future JSON Decoder Call to class Background
         let backG = Background(login: true)
         contactCards = backG.contactCards
-        */
+        *////////////////////////////////////////////////////////
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
@@ -70,7 +75,6 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                     let c1 = ContactCard(PhotoID: contactData[0], UserID: contactData[1], MbrStatus: contactData[2], YearTurnedActive: contactData[3], LastName: contactData[4], FirstName: contactData[5], Spouse: contactData[6], StreetAddress: contactData[7], City: contactData[8], State: contactData[9], ZipCode: contactData[10], PrimaryContactNo: contactData[11], SecondaryContactNo: contactData[12], ContactEmail: contactData[13], TypeofPrimaryContactNo: contactData[14], TypeofSecondaryContactNo: contactData[15], Officer: contactData[16], OfficerTitle: contactData[17], ExcecutiveBdMbrship: contactData[18], CurrentCmteAssignment1: contactData[19], CmteAssign1Chair: contactData[20], CmteAssign1CoChair: contactData[21], CurrentCmteAssignment2: contactData[22], CmteAssign2Chair: contactData[23], CmteAssign2CoChair: contactData[24], CurrentCmteAssignment3: contactData[25], CmteAssign3Chair: contactData[26], CmteAssign3CoChair: contactData[27], BiographicalInfo: contactData[28])
                     
                     contactCards.append(c1); //append to array of contacts
-                    //print(c1.LastName)
                 }
                 
             }catch let error as NSError{
@@ -85,82 +89,24 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             if (userKey == userKey.lowercased()){
                 userKey = userKey.uppercased()
             }
-            //print(user.LastName)
+            
             if var userValues = userDictionary[userKey] {
                 userValues.append(user)
-                //print(userValues[0],userValues[1])
+                
                 userDictionary[userKey] = userValues
             } else {
                 userDictionary[userKey] = [user]
             }
         }
-        /*
-        for section in userDictionary{
-            print(section.key + " " + String(section.value.count))
-        }
-        */
-        /*
-        let p1 = ContactModel(imageURL: "test", firstName: "Elizabeth",lastName: "White Baker", mbrStat: "Active")
-        let p2 = ContactModel(imageURL: "test", firstName: "Cory",lastName: "Shrum", mbrStat: "Inactive")
-        let p3 = ContactModel(imageURL: "test", firstName: "Test",lastName: "Test", mbrStat: "Active")
-        let p4 = ContactModel(imageURL: "test", firstName: "John",lastName: "Doe", mbrStat: "Active")
-        let p5 = ContactModel(imageURL: "test", firstName: "Jane",lastName: "Doe", mbrStat: "Active")
-        let p6 = ContactModel(imageURL: "test", firstName: "Jennifer",lastName: "Doe", mbrStat: "Active")
-
-        conCellModels.append(p1)
-        conCellModels.append(p2)
-        conCellModels.append(p3)
-        conCellModels.append(p4)
-        conCellModels.append(p5)
-        conCellModels.append(p6)
         
-        conCellModels.sort { ($0.lastName.prefix(1) < $1.lastName.prefix(1)) } //sort array
-        
-        for user in conCellModels {
-            let userKey = String(user.lastName.prefix(1))
-            if var userValues = userDictionary[userKey] {
-                userValues.append(user.lastName)
-                userDictionary[userKey] = userValues
-            } else {
-                userDictionary[userKey] = [user.lastName]
-            }
-        }
-        */
         
         userSectionTitles = [String](userDictionary.keys)
         userSectionTitles = userSectionTitles.sorted(by: { $0 < $1 })
         
         
-        
-        //print(userSectionTitles)
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-
-    /*
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier:"ContactCell", for: indexPath) as? ContactCell{
-            
-            let contactModel = conCellModels[indexPath.row]
-            
-            cell.updateUI(contactModel: contactModel)
-            
-            return cell
-        }
-        
-        else {
-            return UITableViewCell()
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return conCellModels.count
-    }
-    **/
  
     func numberOfSections(in tableView: UITableView) -> Int {
         // 1
@@ -174,7 +120,10 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // 2
         if(inSearchMode){
-            return filteredContacts.count
+            let userKey = filteredUserSectionTitles[section]
+            if let userValues = filteredDictionary[userKey]{
+                return userValues.count
+            }
         }
         
         let userKey = userSectionTitles[section]
@@ -193,7 +142,9 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 var contact: ContactCard!
                 let userKey = filteredUserSectionTitles[indexPath.section]
 
-                contact = filteredContacts[indexPath.row]
+                //contact = filteredContacts[indexPath.row]
+                
+                contact = filteredDictionary[userKey]?[indexPath.row]
                 
                 cell.updateUI(contactCard: contact)
                 
@@ -232,13 +183,15 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         if(inSearchMode){
             var contact: ContactCard!
+            let userKey = filteredUserSectionTitles[indexPath.section]
             
-            contact = filteredContacts[indexPath.row]
+            contact = filteredDictionary[userKey]?[indexPath.row]
             
             performSegue(withIdentifier: "InfoVC", sender: contact)
         }
         
         var contact: ContactCard!
+        
         let userKey = userSectionTitles[indexPath.section]
         
         contact = userDictionary[userKey]?[indexPath.row]
@@ -269,22 +222,79 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         }else {
             
             inSearchMode = true
-            //print("insearchmode")
+            
             let lower = String(searchBar.text!.lowercased())
-            //print(lower.uppercased().hasPrefix("B"))
-            let pre = lower.prefix(1)
-            //print(pre)
+            
+            filteredDictionary.removeAll() // clear dictionary for identifying new entry
+            filteredUserSectionTitles.removeAll() // clear section titles
+            
+            //Build filtered dictionary via matching first and last name components
+            //sift through first name & last name possiblities
+            
+                for (section, contacts) in userDictionary{ //steps through data within the main dictionary
+                    
+                    var firstNameCounted = false // identifier for adding a new section based on first name
+                    var lastNameCounted = false // identifier for adding a new section based on last name
+                    
+                    for contact in contacts{ //pulls each individual contact within the section
+                        
+                        if (contact.FirstName.lowercased().range(of: lower) != nil) {
+                            if var filtContacts = filteredDictionary[section] {
+                                filtContacts.append(contact) //add matched contact to the section
+                                filteredDictionary[section] = filtContacts
+                                
+                            }
+                            
+                            else if !firstNameCounted{
+                                filteredDictionary[section] = [contact] //creates a section for the contact match
+                                filteredUserSectionTitles.append(section)
+                                firstNameCounted = true
+                            }
+                            
+                            
+                        }
+                        //same as above but for all last name matches
+                        else if (contact.LastName.lowercased().range(of: lower) != nil){
+                            if var filtContacts = filteredDictionary[section] {
+                                filtContacts.append(contact)
+                                filteredDictionary[section] = filtContacts
+                                
+                            }
+                            
+                            else if !lastNameCounted{
+                                filteredDictionary[section] = [contact]
+                                filteredUserSectionTitles.append(section)
+                                lastNameCounted = true
+                            }
+                            
+                            
+                        }
+                        
+                    }
+                }
+            
+            filteredUserSectionTitles = filteredUserSectionTitles.sorted(by: { $0 < $1 }) //sort sections
             /*
-            for section in userSectionTitles{
-                print(String(section))
+            //testing the evolution of the filtered dictionary for each new search entry
+            print("/////////////////////////////////new")
+            var count = 0
+            for (section, contacts) in filteredDictionary{
+                //var response = "no"
+                //if (filteredUserSectionTitles[count] != ""){
+                   // response = "Yes"
+                //}
+                print(section, ": ") //response)
+                count = count + 1
+                for contact in contacts{
+                    print(contact.FirstName, " ", contact.LastName)
+                    
+                }
             }
- */
-            
-            filteredUserSectionTitles = userSectionTitles.filter({ $0.range(of: lower.uppercased().prefix(1)) != nil})
-            
-            filteredContacts = contactCards.filter({$0.LastName.lowercased().range(of: lower) != nil})
-            
-            
+        
+            for userKey in filteredUserSectionTitles{
+                print(userKey)
+            }
+            */
             tableView.reloadData()
         }
     }
@@ -295,6 +305,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             if let infoVC = segue.destination as? InfoVC{
                 if let contact = sender as? ContactCard {
                     infoVC.contact = contact;
+                    infoVC.currentUser = currentUser
                 }
             }
             

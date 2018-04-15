@@ -38,98 +38,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CFGC banner with logo - small" translatesAutoresizingMaskIntoConstraints="NO" id="2Qe-bt-WlD">
-                                <rect key="frame" x="0.0" y="35" width="414" height="93"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Membership Directory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-gt-BpD">
-                                <rect key="frame" x="45.666666666666657" y="150" width="323" height="27"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
-                                <color key="textColor" red="0.18779702289086012" green="0.43214625634517767" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="MX3-pi-Wet">
-                                <rect key="frame" x="0.0" y="209.99999999999997" width="414" height="310.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WdJ-1o-UeW">
+                                <rect key="frame" x="0.0" y="55" width="414" height="671"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-Tw-vN2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="440.66666666666669"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CFGC banner with logo - small" translatesAutoresizingMaskIntoConstraints="NO" id="2Qe-bt-WlD">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Membership Directory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-gt-BpD">
+                                                <rect key="frame" x="0.0" y="113" width="414" height="26.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
+                                                <color key="textColor" red="0.18779702289086012" green="0.43214625634517767" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="MX3-pi-Wet">
+                                                <rect key="frame" x="0.0" y="159.66666666666663" width="414" height="281"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-bP-HWZ">
+                                        <rect key="frame" x="103.33333333333333" y="490.66666666666657" width="207.33333333333337" height="180.33333333333331"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username [Contact Email]" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-jh-rhl">
+                                                <rect key="frame" x="0.0" y="0.0" width="207.33333333333334" height="55.333333333333336"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MiY-RY-FO6"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igp-cs-h5e">
+                                                <rect key="frame" x="0.0" y="62.333333333333371" width="207.33333333333334" height="55.666666666666657"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Sf5-tL-v7Z"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-b3-o3O">
+                                                <rect key="frame" x="0.0" y="124.99999999999999" width="207.33333333333334" height="55.333333333333329"/>
+                                                <color key="backgroundColor" red="0.40392156862745099" green="0.54509803921568623" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submitBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbO-et-qyI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="MX3-pi-Wet" secondAttribute="height" multiplier="375:281" id="DGv-io-OR1"/>
+                                    <constraint firstItem="BXb-Tw-vN2" firstAttribute="top" secondItem="WdJ-1o-UeW" secondAttribute="top" id="808-4M-Cja"/>
+                                    <constraint firstItem="BXb-Tw-vN2" firstAttribute="leading" secondItem="WdJ-1o-UeW" secondAttribute="leading" id="hLg-Y6-5I0"/>
+                                    <constraint firstAttribute="trailing" secondItem="BXb-Tw-vN2" secondAttribute="trailing" id="sld-OP-0CW"/>
                                 </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-b3-o3O">
-                                <rect key="frame" x="96" y="643.33333333333337" width="221" height="45"/>
-                                <color key="backgroundColor" red="0.40392156862745099" green="0.54509803921568623" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="ah7-4V-lnO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbO-et-qyI"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username [Contact Email]" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-jh-rhl">
-                                <rect key="frame" x="96" y="539.33333333333337" width="221" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="qc8-jj-EJg"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MiY-RY-FO6"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igp-cs-h5e">
-                                <rect key="frame" x="96" y="592.33333333333337" width="221" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="5Vw-za-ooZ"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Sf5-tL-v7Z"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-UC-7Ju">
-                                <rect key="frame" x="286" y="544" width="89" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Cory's Skip"/>
-                                <connections>
-                                    <action selector="skipBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EQA-DT-FOv"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.83921568627450982" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="igp-cs-h5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="5eO-Kh-9YI"/>
-                            <constraint firstItem="MX3-pi-Wet" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="88a-5J-esO"/>
-                            <constraint firstItem="2Qe-bt-WlD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="9ik-o1-KTG"/>
-                            <constraint firstItem="2Qe-bt-WlD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ad7-SB-OvM"/>
-                            <constraint firstItem="xmZ-gt-BpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Czj-Tv-Gzf"/>
-                            <constraint firstItem="2Qe-bt-WlD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FfJ-dg-own"/>
-                            <constraint firstItem="igp-cs-h5e" firstAttribute="top" secondItem="Szi-jh-rhl" secondAttribute="bottom" constant="8" id="IId-aN-J5w"/>
-                            <constraint firstItem="igp-cs-h5e" firstAttribute="top" secondItem="Szi-jh-rhl" secondAttribute="bottom" constant="8" id="NgV-VS-Ru8"/>
-                            <constraint firstItem="Szi-jh-rhl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="Sj6-VP-x6x"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ixd-b3-o3O" secondAttribute="trailing" constant="97" id="UkO-Tm-lc9"/>
-                            <constraint firstItem="ixd-b3-o3O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="a8u-he-KTl"/>
-                            <constraint firstItem="MX3-pi-Wet" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="euL-w0-RIK"/>
-                            <constraint firstItem="MX3-pi-Wet" firstAttribute="top" secondItem="xmZ-gt-BpD" secondAttribute="bottom" constant="33" id="heV-cD-i9s"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szi-jh-rhl" secondAttribute="trailing" constant="97" id="owN-B4-eRr"/>
-                            <constraint firstItem="xmZ-gt-BpD" firstAttribute="top" secondItem="2Qe-bt-WlD" secondAttribute="bottom" constant="22" id="r5X-sf-PDL"/>
-                            <constraint firstItem="ixd-b3-o3O" firstAttribute="top" secondItem="igp-cs-h5e" secondAttribute="bottom" constant="6" id="vWM-Be-QH9"/>
-                            <constraint firstItem="Szi-jh-rhl" firstAttribute="top" secondItem="MX3-pi-Wet" secondAttribute="bottom" constant="19" id="vma-SQ-O12"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="igp-cs-h5e" secondAttribute="trailing" constant="97" id="wOW-na-r1L"/>
+                            <constraint firstItem="WdJ-1o-UeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E4K-nw-rGb"/>
+                            <constraint firstItem="WdJ-1o-UeW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="GRP-I3-BQv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WdJ-1o-UeW" secondAttribute="trailing" id="ZMk-bS-C1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WdJ-1o-UeW" secondAttribute="bottom" constant="10" id="mZi-Ve-IAC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="password" destination="igp-cs-h5e" id="Im8-oZ-sZL"/>
-                        <outlet property="skipBtn" destination="Es5-UC-7Ju" id="sb9-0p-d9g"/>
                         <outlet property="submitBtn" destination="ixd-b3-o3O" id="ZiV-JN-SVC"/>
                         <outlet property="userName" destination="Szi-jh-rhl" id="txu-Fw-xwZ"/>
                         <segue destination="O3Q-4l-Vd9" kind="show" identifier="ContactVC" customClass="SegueFromRight" customModule="CFGC" customModuleProvider="target" id="yyA-Nf-nzp"/>
@@ -204,7 +187,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pwS-U5-chL">
-                                                                    <rect key="frame" x="15" y="0.0" width="360" height="42"/>
+                                                                    <rect key="frame" x="15" y="0.0" width="399" height="42"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="L23-eZ-jeg">
                                                                             <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
@@ -214,7 +197,7 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="aa0-U3-qcC">
-                                                                            <rect key="frame" x="47" y="1" width="313" height="40"/>
+                                                                            <rect key="frame" x="47" y="1" width="352" height="40"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[FirstN LastN]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjB-Px-Kav">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="97.666666666666671" height="20"/>
@@ -308,6 +291,7 @@
                                                 <action selector="membersBackBtnPressed:" destination="2Kx-Le-dP1" id="TwC-th-Bb6"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Thj-Qp-BxI"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -331,7 +315,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J4Y-hL-z0I">
                                                 <rect key="frame" x="7.6666666666666572" y="240.66666666666669" width="359" height="37"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Elizabeth White Baker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-tp-0fZ">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Elizabeth White Baker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-tp-0fZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="nd6-ld-c0l"/>
@@ -363,7 +347,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mbrStatus" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Kw-cw2">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mbrStatus" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-Kw-cw2">
                                                         <rect key="frame" x="229" y="0.0" width="145" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="145" id="grB-KC-0fy"/>
@@ -384,7 +368,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="David" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TG-KQ-gYh" userLabel="Spouse Txt">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="David" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0TG-KQ-gYh" userLabel="Spouse Txt">
                                                         <rect key="frame" x="189.66666666666663" y="0.0" width="184.33333333333337" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="8Oy-Cn-3uo"/>
@@ -437,7 +421,7 @@ Wilmington, NC 28403</string>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="336.618.1185" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-qc-Zlo" userLabel="primaryConTxt">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="336.618.1185" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-qc-Zlo" userLabel="primaryConTxt">
                                                         <rect key="frame" x="229" y="2.6666666666667425" width="145" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="whz-n6-aey"/>
@@ -462,7 +446,7 @@ Wilmington, NC 28403</string>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="910.962.3895" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-1b-lBI" userLabel="secondaryConTxt">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="910.962.3895" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1z-1b-lBI" userLabel="secondaryConTxt">
                                                         <rect key="frame" x="229" y="4" width="145" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="AMS-KP-LiC"/>
@@ -490,7 +474,7 @@ Wilmington, NC 28403</string>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bakere@uncw.edu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoG-Iu-zfX">
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bakere@uncw.edu" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xoG-Iu-zfX">
                                                         <rect key="frame" x="112" y="0.0" width="262" height="37.333333333333336"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="1ru-2h-06Q"/>
@@ -562,6 +546,7 @@ Wilmington, NC 28403</string>
                         <outlet property="addressTxt" destination="XTi-0b-w2g" id="qmj-W1-hjh"/>
                         <outlet property="callBtn" destination="0UD-Qp-REG" id="FGG-fF-ywO"/>
                         <outlet property="contactImage" destination="g5o-uo-vMj" id="jeD-y0-gD3"/>
+                        <outlet property="editBtn" destination="Thj-Qp-BxI" id="OZR-ab-KyB"/>
                         <outlet property="emailBtn" destination="dqn-CY-ncp" id="GCo-7a-Q1E"/>
                         <outlet property="emailTxt" destination="xoG-Iu-zfX" id="OZK-z1-u8D"/>
                         <outlet property="mbrStatTxt" destination="0O0-Kw-cw2" id="kHA-kZ-g8z"/>
@@ -690,8 +675,7 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZLJ-nP-i28"/>
-        <segue reference="tvg-Mh-GLi"/>
+        <segue reference="cZF-10-4Rl"/>
         <segue reference="eqM-Mc-gli"/>
     </inferredMetricsTieBreakers>
 </document>

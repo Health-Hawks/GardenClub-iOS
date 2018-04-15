@@ -12,9 +12,12 @@ class InfoVC: UIViewController {
     
     var contact: ContactCard!
     
+    var currentUser: User!
+    
+    @IBOutlet weak var editBtn: UIBarButtonItem!
+    
     @IBOutlet weak var contactImage: UIImageView!
-    
-    
+
     @IBOutlet var swipe: UISwipeGestureRecognizer!
 
     @IBOutlet weak var nameTxt: UITextField!
@@ -46,9 +49,6 @@ class InfoVC: UIViewController {
     }
     
     func buildInfoScreen(){
-        //mbrStatLbl.layer.borderColor = UIColor.black.cgColor
-        //mbrStatLbl.layer.borderWidth = 1.0
-        //mbrStatLbl.layer.cornerRadius = 20
         
         //Get photo from photo ID in recieved contact: ContactCard
         let imageName = contact.PhotoId
@@ -64,6 +64,8 @@ class InfoVC: UIViewController {
             
             contactImage.image = image
         }
+        
+        
         
         contactImage.layer.borderWidth = 1
         contactImage.layer.masksToBounds = true
@@ -99,20 +101,44 @@ class InfoVC: UIViewController {
         EmailViewRect.layer.cornerRadius = 20
         */
         
-        
-        
+        addressTxt.text = contact.StreetAddress + " " + contact.City + ", " + contact.State + " " + contact.ZipCode
         addressTxt.layer.borderColor = UIColor.black.cgColor
         addressTxt.layer.borderWidth = 1.0
         addressTxt.layer.cornerRadius = 25
         
         nameTxt.text = contact.FirstName + " " + contact.LastName
         nameTxt.allowsEditingTextAttributes = false
+        
         spouseTxt.text = contact.Spouse
+        spouseTxt.layer.borderColor = UIColor.black.cgColor
+        spouseTxt.layer.borderWidth = 1.0
+        spouseTxt.layer.cornerRadius = 20
+        
         mbrStatTxt.text = contact.MbrStatus
-        addressTxt.text = contact.StreetAddress + " " + contact.City + ", " + contact.State + " " + contact.ZipCode
+        mbrStatTxt.layer.borderColor = UIColor.black.cgColor
+        mbrStatTxt.layer.borderWidth = 1.0
+        mbrStatTxt.layer.cornerRadius = 20
+        
+        
         primaryConTxt.text = contact.PrimaryContactNo
+        primaryConTxt.layer.borderColor = UIColor.black.cgColor
+        primaryConTxt.layer.borderWidth = 1.0
+        primaryConTxt.layer.cornerRadius = 20
+        
         secondaryConTxt.text = contact.SecondaryContactNo
+        secondaryConTxt.layer.borderColor = UIColor.black.cgColor
+        secondaryConTxt.layer.borderWidth = 1.0
+        secondaryConTxt.layer.cornerRadius = 20
+        
         emailTxt.text = contact.ContactEmail
+        emailTxt.layer.borderColor = UIColor.black.cgColor
+        emailTxt.layer.borderWidth = 1.0
+        emailTxt.layer.cornerRadius = 20
+    }
+    
+    func isCurrentUser (){
+        //check if the current user matches the contact selected
+        contact.UserID
     }
     
     override func viewWillLayoutSubviews() {

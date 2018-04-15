@@ -47,7 +47,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         let path = Bundle.main.path(forResource: "sqlData_1", ofType: "txt") //path to text file
         
         let fileMgr = FileManager.default
-        
+        var numberOfImageNils = 0
         
         if fileMgr.fileExists(atPath: path!){ //if file exists
             do{
@@ -70,7 +70,11 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                     let c1 = ContactCard(PhotoID: contactData[0], UserID: contactData[1], MbrStatus: contactData[2], YearTurnedActive: contactData[3], LastName: contactData[4], FirstName: contactData[5], Spouse: contactData[6], StreetAddress: contactData[7], City: contactData[8], State: contactData[9], ZipCode: contactData[10], PrimaryContactNo: contactData[11], SecondaryContactNo: contactData[12], ContactEmail: contactData[13], TypeofPrimaryContactNo: contactData[14], TypeofSecondaryContactNo: contactData[15], Officer: contactData[16], OfficerTitle: contactData[17], ExcecutiveBdMbrship: contactData[18], CurrentCmteAssignment1: contactData[19], CmteAssign1Chair: contactData[20], CmteAssign1CoChair: contactData[21], CurrentCmteAssignment2: contactData[22], CmteAssign2Chair: contactData[23], CmteAssign2CoChair: contactData[24], CurrentCmteAssignment3: contactData[25], CmteAssign3Chair: contactData[26], CmteAssign3CoChair: contactData[27], BiographicalInfo: contactData[28])
                     
                     contactCards.append(c1); //append to array of contacts
-                    //print(c1.LastName)
+                    
+                    if (c1.PhotoId == ""){
+                        numberOfImageNils = numberOfImageNils + 1
+                    }
+                    
                 }
                 
             }catch let error as NSError{
@@ -79,6 +83,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         }
         
         contactCards = contactCards.sorted{ ($0.LastName < $1.LastName) } //sort array (Seems to be a bug here)
+        //print(numberOfImageNils, " ", contactCards.count)
         
         for user in contactCards {
             var userKey = String(user.LastName.prefix(1))
@@ -261,7 +266,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchBar.text == nil || searchBar.text == "" {
-            
+        
             inSearchMode = false
             tableView.reloadData()
             view.endEditing(true)
@@ -269,16 +274,11 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         }else {
             
             inSearchMode = true
-            //print("insearchmode")
+            
             let lower = String(searchBar.text!.lowercased())
-            //print(lower.uppercased().hasPrefix("B"))
+            
             let pre = lower.prefix(1)
-            //print(pre)
-            /*
-            for section in userSectionTitles{
-                print(String(section))
-            }
- */
+            
             
             filteredUserSectionTitles = userSectionTitles.filter({ $0.range(of: lower.uppercased().prefix(1)) != nil})
             

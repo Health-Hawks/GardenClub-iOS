@@ -56,7 +56,7 @@ class InfoVC: UIViewController {
         if(image != nil){
             print("Image found!")
             contactImage.image = image
-            contactImage.frame = CGRect(x: 0, y: 0, width: 153, height: 153)
+            
         }
         else{ //Pull stock flower image
             //print("Clear")
@@ -66,8 +66,9 @@ class InfoVC: UIViewController {
         }
         
         contactImage.layer.borderWidth = 1
-        contactImage.layer.masksToBounds = false
-        contactImage.layer.cornerRadius = contactImage.frame.width/2 //dont know why 1.6 look better than 2
+        contactImage.layer.masksToBounds = true
+        //contactImage.layer.cornerRadius = contactImage.frame.width/1.5 //dont know why 1.6 look better than 2
+        viewWillLayoutSubviews()
         contactImage.clipsToBounds = true;
         contactImage.layer.borderColor = UIColor.black.cgColor
         
@@ -114,7 +115,10 @@ class InfoVC: UIViewController {
         emailTxt.text = contact.ContactEmail
     }
     
-    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        contactImage.layer.cornerRadius = contactImage.frame.height / 2.0
+    }
     
     @IBAction func membersBackBtnPressed(_ sender: UIBarButtonItem){
         performSegue(withIdentifier: "ContactVC", sender: nil)

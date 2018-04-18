@@ -11,6 +11,7 @@ import UIKit
 class BiographicalVC: UIViewController, UITextFieldDelegate {
     
     var contactCard: ContactCard!
+    var contactCards: [ContactCard]!
     
     //@IBOutlet weak var yearLbl: UILabel!
     //@IBOutlet weak var biographicalLbl: UILabel!
@@ -67,6 +68,7 @@ class BiographicalVC: UIViewController, UITextFieldDelegate {
             if let infoVC = segue.destination as? InfoVC{
                 if let contact = sender as? ContactCard {
                     infoVC.contact = contact;
+                    infoVC.contactCards = contactCards
                 }
             }
         }

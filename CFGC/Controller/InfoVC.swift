@@ -11,26 +11,29 @@ import MessageUI
 class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate{
     
     var contact: ContactCard!
+    var contactCards: [ContactCard]!
+    var currentUser: User!
+    
+    @IBOutlet weak var editBtn: UIBarButtonItem!
     
     @IBOutlet weak var contactImage: UIImageView!
-    
-    
+
     @IBOutlet var swipe: UISwipeGestureRecognizer!
+
+    @IBOutlet weak var nameTxt: UITextField!
+
+    @IBOutlet weak var mbrStatTxt: UITextField!
     
-    @IBOutlet weak var nameLbl: UILabel!
-    @IBOutlet weak var mbrStatLbl: UILabel!
-    @IBOutlet weak var spouseLbl: UILabel!
-    @IBOutlet weak var addressLbl: UILabel!
-    @IBOutlet weak var primaryConLbl: UILabel!
-    @IBOutlet weak var secondaryConLbl: UILabel!
-    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var spouseTxt: UITextField!
+
+    @IBOutlet weak var addressTxt: UITextView!
+
+    @IBOutlet weak var primaryConTxt: UITextField!
     
-    @IBOutlet weak var mbrStatusRect: UIView!
-    @IBOutlet weak var SpouseViewRect: UIView!
-    @IBOutlet weak var AddressViewRect: UIView!
-    @IBOutlet weak var PrimaryContactViewRect: UIView!
-    @IBOutlet weak var SecondaryContactViewRect: UIView!
-    @IBOutlet weak var EmailViewRect: UIView!
+    @IBOutlet weak var secondaryConTxt: UITextField!
+    
+    @IBOutlet weak var emailTxt: UITextField!
+    
     
     @IBOutlet weak var membersBackBtn: UIBarButtonItem!
     
@@ -46,9 +49,6 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     }
     
     func buildInfoScreen(){
-        //mbrStatLbl.layer.borderColor = UIColor.black.cgColor
-        //mbrStatLbl.layer.borderWidth = 1.0
-        //mbrStatLbl.layer.cornerRadius = 20
         
         //Get photo from photo ID in recieved contact: ContactCard
         let imageName = contact.PhotoId
@@ -56,7 +56,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         if(image != nil){
             print("Image found!")
             contactImage.image = image
-            contactImage.frame = CGRect(x: 0, y: 0, width: 153, height: 153)
+            
         }
         else{ //Pull stock flower image
             //print("Clear")
@@ -65,14 +65,17 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
             contactImage.image = image
         }
         
+        
+        
         contactImage.layer.borderWidth = 1
-        contactImage.layer.masksToBounds = false
-        contactImage.layer.cornerRadius = contactImage.frame.width/1.6 //dont know why 1.6 look better than 2
+        contactImage.layer.masksToBounds = true
+        //contactImage.layer.cornerRadius = contactImage.frame.width/1.5 //dont know why 1.6 look better than 2
+        viewWillLayoutSubviews()
         contactImage.clipsToBounds = true;
         contactImage.layer.borderColor = UIColor.black.cgColor
         
         
-        
+        /*
         mbrStatusRect.layer.borderColor = UIColor.black.cgColor
         mbrStatusRect.layer.borderWidth = 1.0
         mbrStatusRect.layer.cornerRadius = 20
@@ -96,17 +99,52 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         EmailViewRect.layer.borderColor = UIColor.black.cgColor
         EmailViewRect.layer.borderWidth = 1.0
         EmailViewRect.layer.cornerRadius = 20
+        */
         
-        nameLbl.text = contact.FirstName + " " + contact.LastName
-        spouseLbl.text = contact.Spouse
-        mbrStatLbl.text = contact.MbrStatus
-        addressLbl.text = contact.StreetAddress
-        primaryConLbl.text = contact.PrimaryContactNo
-        secondaryConLbl.text = contact.SecondaryContactNo
-        emailLbl.text = contact.ContactEmail
+        addressTxt.text = contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
+        addressTxt.layer.borderColor = UIColor.black.cgColor
+        addressTxt.layer.borderWidth = 1.0
+        addressTxt.layer.cornerRadius = 25
+        
+        nameTxt.text = contact.FirstName + " " + contact.LastName
+        nameTxt.allowsEditingTextAttributes = false
+        
+        spouseTxt.text = contact.Spouse
+        spouseTxt.layer.borderColor = UIColor.black.cgColor
+        spouseTxt.layer.borderWidth = 1.0
+        spouseTxt.layer.cornerRadius = 20
+        
+        mbrStatTxt.text = contact.MbrStatus
+        mbrStatTxt.layer.borderColor = UIColor.black.cgColor
+        mbrStatTxt.layer.borderWidth = 1.0
+        mbrStatTxt.layer.cornerRadius = 20
+        
+        
+        primaryConTxt.text = contact.PrimaryContactNo
+        primaryConTxt.layer.borderColor = UIColor.black.cgColor
+        primaryConTxt.layer.borderWidth = 1.0
+        primaryConTxt.layer.cornerRadius = 20
+        
+        secondaryConTxt.text = contact.SecondaryContactNo
+        secondaryConTxt.layer.borderColor = UIColor.black.cgColor
+        secondaryConTxt.layer.borderWidth = 1.0
+        secondaryConTxt.layer.cornerRadius = 20
+        
+        emailTxt.text = contact.ContactEmail
+        emailTxt.layer.borderColor = UIColor.black.cgColor
+        emailTxt.layer.borderWidth = 1.0
+        emailTxt.layer.cornerRadius = 20
     }
     
+    func isCurrentUser (){
+        //check if the current user matches the contact selected
+        contact.UserID
+    }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        contactImage.layer.cornerRadius = contactImage.frame.height / 2.0
+    }
     
     @IBAction func membersBackBtnPressed(_ sender: UIBarButtonItem){
         performSegue(withIdentifier: "ContactVC", sender: nil)
@@ -123,7 +161,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         let primaryNum = contact.PrimaryContactNo.replacingOccurrences(of: ".", with: "")
         let secondaryNum = contact.SecondaryContactNo.replacingOccurrences(of: ".", with: "")
         
-        var phoneActionSheet = UIAlertController(title: "Please Select A Number", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
+        let phoneActionSheet = UIAlertController(title: "Please Select A Number", message: "", preferredStyle: UIAlertControllerStyle.actionSheet)
         
         let primaryPhoneButtonAction = UIAlertAction(title: "Primary Phone: " + contact.PrimaryContactNo, style: UIAlertActionStyle.default){(ACTION) in
             self.callSelectedNumber(number: primaryNum)
@@ -195,13 +233,16 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
             
-            var contVC = segue.destination as? ContactVC
+            if let contVC = segue.destination as? ContactVC{
+                contVC.contactCards = contactCards
+            }
         }
         
         else if segue.identifier == "BiographicalVC"{
             if let bioVC = segue.destination as? BiographicalVC{
                 if let contact = sender as? ContactCard{
                     bioVC.contactCard = contact
+                    bioVC.contactCards = contactCards
                 }
             }
         }

@@ -13,6 +13,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
     var activeTextField: UITextField!
+    var conCardsJson : [ContactCard]!
+    private var _backGround : Background!
     /*
     //////////////////REMOVE ME WHEN DONE//////////////////
     */
@@ -27,11 +29,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var submitBtn: UIButton!
     
-    
+    func pullContacts(){
+        let backG = Background(login: true)
+        _backGround = backG
+        print("Check")
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        pullContacts()
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -85,9 +92,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func submitBtnPressed(_ sender: UIButton){
-    
+        
         currentUser = User(userName: userName.text!, password: password.text!)
         if (verifyLogin(userName: currentUser.userName, password: password.text!)){
+            conCardsJson = _backGround.contactCards
             performSegue(withIdentifier: "ContactVC", sender: currentUser)
         }
         else{
@@ -123,6 +131,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if let contVC = segue.destination as? ContactVC{
                     if let user = sender as? User {
                         contVC.currentUser = user;
+                        contVC.contactCards = conCardsJson
                     }
                 }
             
@@ -130,6 +139,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+<<<<<<< HEAD
+=======
+    //initial load in of contacts
+    
+    
+>>>>>>> Cory-working-branch
     /*
     // MARK: - Navigation
 
@@ -139,6 +154,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+<<<<<<< HEAD
     
 
+=======
+    /*
+    @IBAction func skipBtnPressed(_ sender: UIButton){
+        performSegue(withIdentifier: "ContactVC", sender: nil)
+    }
+    */
+>>>>>>> Cory-working-branch
 }

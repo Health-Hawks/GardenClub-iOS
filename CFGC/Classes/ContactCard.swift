@@ -18,15 +18,24 @@ class ContactCard {
     private var _FirstName: String!
     private var _Spouse: String!
     private var _StreetAddress: String!
-    private var _City: String!
-    private var _State: String!
+    private var _CityAndState: String!          //May want to change this in the future
+    //private var _City: String!
+    //private var _State: String!
     private var _ZipCode: String!
     private var _PrimaryContactNo: String!
     private var _SecondaryContactNo: String!
     private var _ContactEmail: String!
-    private var _TypeofPrimaryContactNo: String!
-    private var _TypeofSecondaryContactNo: String!
-    private var _Officer: String!
+    
+    //new variables:
+    private var _WorkNum: String!
+    private var _Officers: String!
+    private var _Committee: String!
+    private var _CommitteeTitle: String!
+    private var _AzaleaGardenTourCommittees: String!
+    private var _AzaleaGardenTourCommitteesTitles: String!
+    private var _BiographicalInfo: String!
+    
+    /* No longer relevant data
     private var _OfficerTitle: String!
     private var _ExcecutiveBdMbrship: String!
     private var _CurrentCmteAssignment1: String!
@@ -38,7 +47,11 @@ class ContactCard {
     private var _CurrentCmteAssignment3: String!
     private var _CmteAssign3Chair: String!
     private var _CmteAssign3CoChair: String!
-    private var _BiographicalInfo: String!
+     //private var _TypeofPrimaryContactNo: String!
+     //private var _TypeofSecondaryContactNo: String!
+     
+     */
+    
     
     var UserID: String {
         return _UserID
@@ -64,12 +77,20 @@ class ContactCard {
     var StreetAddress: String {
         return _StreetAddress
     }
+    
+    var CityAndState: String{ //new variable
+        return _CityAndState
+    }
+    
+    /*
     var City: String {
         return _City
     }
     var State: String {
         return _State
     }
+    */
+    
     var ZipCode: String {
         return _ZipCode
     }
@@ -82,15 +103,31 @@ class ContactCard {
     var ContactEmail: String {
         return _ContactEmail
     }
-    var TypeofPrimaryContactNo: String {
-        return _TypeofPrimaryContactNo
+    
+    //New Variables
+    var Officers: String { //change made from officer to officers
+        return _Officers
     }
-    var TypeofSecondaryContactNo: String {
-        return _TypeofSecondaryContactNo
+    var WorkNum: String{
+        return _WorkNum
     }
-    var Officer: String {
-        return _Officer
+    var Committee: String{
+        return _Committee
     }
+    var CommitteeTitle: String{
+        return _CommitteeTitle
+    }
+    var AzaleaGardenTourCommittees: String{
+        return _AzaleaGardenTourCommittees
+    }
+    var AzaleaGardenTourCommitteesTitles: String{
+        return _AzaleaGardenTourCommitteesTitles
+    }
+    var BiographicalInfo: String {
+        return _BiographicalInfo
+    }
+    
+    /* Old variable retrieval code
     var OfficerTitle: String {
         return _OfficerTitle
     }
@@ -124,40 +161,135 @@ class ContactCard {
     var CmteAssign3CoChair: String {
         return _CmteAssign3CoChair
     }
-    var BiographicalInfo: String {
-        return _BiographicalInfo
+    var TypeofPrimaryContactNo: String {
+        return _TypeofPrimaryContactNo
     }
+    var TypeofSecondaryContactNo: String {
+        return _TypeofSecondaryContactNo
+    }
+    */
     
+    /*
     init(PhotoID: String, UserID: String, MbrStatus: String, YearTurnedActive: String, LastName: String, FirstName: String, Spouse: String, StreetAddress: String, City: String, State: String, ZipCode: String, PrimaryContactNo: String, SecondaryContactNo: String?, ContactEmail: String?, TypeofPrimaryContactNo: String?, TypeofSecondaryContactNo: String?, Officer: String?, OfficerTitle: String?, ExcecutiveBdMbrship: String?, CurrentCmteAssignment1: String?, CmteAssign1Chair: String?, CmteAssign1CoChair: String?, CurrentCmteAssignment2: String?, CmteAssign2Chair: String?, CmteAssign2CoChair: String?, CurrentCmteAssignment3: String?, CmteAssign3Chair: String?, CmteAssign3CoChair: String?, BiographicalInfo: String?) {
+        */
+    init(PhotoID: String?, UserID: String, MbrStatus: String?, YearTurnedActive: String?, LastName: String?, FirstName: String?, Spouse: String?, StreetAddress: String?, CityAndState: String?, ZipCode: String?, PrimaryContactNo: String?, SecondaryContactNo: String?, ContactEmail: String?, Officers: String?, WorkNum: String?, Committee: String?, CommitteeTitle: String?, AzaleaGardenTourCommittees: String?, AzaleaGardenTourCommitteesTitles: String?, BiographicalInfo: String?) {
         
-        _PhotoID = PhotoID;
+        
+        if PhotoID == nil{
+            _PhotoID = ""
+        }
+        else {
+            _PhotoID = PhotoID
+        }
+        if ContactEmail == nil{
+            _ContactEmail = ""
+        }
+        else {
+            _ContactEmail = ContactEmail
+        }
+        if Spouse == nil{
+            _Spouse = ""
+        }
+        else {
+            _Spouse = Spouse
+        }
+        if StreetAddress == nil{
+            _StreetAddress = ""
+        }
+        else {
+            _StreetAddress = StreetAddress
+        }
+        if CityAndState == nil{
+            _CityAndState = ""
+        }
+        else {
+            _CityAndState = CityAndState
+        }
+        if ZipCode == nil{
+            _ZipCode = ""
+        }
+        else {
+            _ZipCode = ZipCode
+        }
+        if PrimaryContactNo == nil{
+            _PrimaryContactNo = ""
+        }
+        else {
+            _PrimaryContactNo = PrimaryContactNo
+        }
+        if SecondaryContactNo == nil{
+            _SecondaryContactNo = ""
+        }
+        else {
+            _SecondaryContactNo = SecondaryContactNo
+        }
+        if Officers == nil{
+            _Officers = ""
+        }
+        else {
+            _Officers = Officers
+        }
+        if Committee == nil{
+            _Committee = ""
+        }
+        else{
+            _Committee = Committee
+        }
+        if WorkNum == nil {
+            _WorkNum = ""
+        }
+        else{
+            _WorkNum = WorkNum
+        }
+        if CommitteeTitle == nil{
+            _CommitteeTitle = ""
+        }
+        else{
+            _CommitteeTitle = CommitteeTitle
+        }
+        if AzaleaGardenTourCommittees == nil{
+            _AzaleaGardenTourCommittees = ""
+        }
+        else {
+            _AzaleaGardenTourCommittees = AzaleaGardenTourCommittees
+        }
+        if AzaleaGardenTourCommitteesTitles == nil{
+            _AzaleaGardenTourCommitteesTitles = ""
+        }
+        else {
+            _AzaleaGardenTourCommitteesTitles = AzaleaGardenTourCommitteesTitles
+        }
+        if BiographicalInfo == nil{
+            _BiographicalInfo = ""
+        }
+        else {
+            _BiographicalInfo = BiographicalInfo
+        }
+        
         _UserID = UserID;
         _MbrStatus = MbrStatus;
         _YearTurnedActive = YearTurnedActive;
         _LastName = LastName;
         _FirstName = FirstName;
-        _Spouse = Spouse;           //may be null
-        _StreetAddress = StreetAddress;
-        _City = City;
-        _State = State;
-        _ZipCode = ZipCode;
-        _PrimaryContactNo = PrimaryContactNo;
-        _SecondaryContactNo = SecondaryContactNo; //may be null
-        _ContactEmail = ContactEmail; //may be null
-        _TypeofPrimaryContactNo = TypeofPrimaryContactNo; //may be null
-        _TypeofSecondaryContactNo = TypeofSecondaryContactNo; //may be null
-        _Officer = Officer; //may be null
-        _OfficerTitle = OfficerTitle; //may be null
-        _ExcecutiveBdMbrship = ExcecutiveBdMbrship; //may be null
-        _CurrentCmteAssignment1 = CurrentCmteAssignment1; //may be null
-        _CmteAssign1Chair = CmteAssign1Chair; //may be null
-        _CmteAssign1CoChair = CmteAssign1CoChair; //may be null
-        _CurrentCmteAssignment2 = CurrentCmteAssignment2; //may be null
-        _CmteAssign2Chair = CmteAssign2Chair; //may be null
-        _CmteAssign2CoChair = CmteAssign2CoChair; //may be null
-        _CurrentCmteAssignment3 = CurrentCmteAssignment3; //may be null
-        _CmteAssign3Chair = CmteAssign3Chair; //may be null
-        _CmteAssign3CoChair = CmteAssign3CoChair; //may be null
-        _BiographicalInfo = BiographicalInfo; //may be null
+        
+        //variables at risk of nil
+        
+        //_PhotoID = PhotoID
+        //_Spouse = Spouse;           //may be null
+        //_StreetAddress = StreetAddress;
+        //_CityAndState = CityAndState;
+        //_City = City;
+        //_State = State;
+        //_ZipCode = ZipCode; //may be null
+        //_PrimaryContactNo = PrimaryContactNo; //may be null
+        //_SecondaryContactNo = SecondaryContactNo; //may be null
+        //_ContactEmail = ContactEmail;
+        //_Officers = Officers; //may be null
+        //_WorkNum = WorkNum //may be null
+        //_Committee = Committee //may be null
+        //_CommitteeTitle = CommitteeTitle //may be null
+        //_AzaleaGardenTourCommittees = AzaleaGardenTourCommittees //may be null
+        //_AzaleaGardenTourCommitteesTitles = AzaleaGardenTourCommitteesTitles //may be null
+        //_BiographicalInfo = BiographicalInfo; //may be null
     }
 }

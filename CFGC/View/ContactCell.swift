@@ -35,7 +35,7 @@ class ContactCell: UITableViewCell {
         let imageName = contactCard.PhotoId
         let image = UIImage(named: imageName)
         if(image != nil){
-            print("Image found!")
+            //print("Image found!")
             contactImg.image = image
             contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
                 

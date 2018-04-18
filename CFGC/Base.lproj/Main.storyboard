@@ -393,7 +393,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-0b-w2g" userLabel="Address Txt">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTi-0b-w2g" userLabel="Address Txt">
                                                         <rect key="frame" x="144" y="0.0" width="230" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
@@ -404,7 +404,6 @@
 Wilmington, NC 28403</string>
                                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        <dataDetectorType key="dataDetectorTypes" address="YES"/>
                                                     </textView>
                                                 </subviews>
                                             </stackView>
@@ -676,6 +675,6 @@ Wilmington, NC 28403</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cZF-10-4Rl"/>
-        <segue reference="eqM-Mc-gli"/>
+        <segue reference="yyA-Nf-nzp"/>
     </inferredMetricsTieBreakers>
 </document>

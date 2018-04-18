@@ -18,7 +18,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var userSectionTitles = [String]()
     var possibleDuplicate = 0;
     
-    private var login_url = "http://satoshi.cis.uncw.edu/~jbr5433/GardenClub/login.php";
+    private var login_url = "http://capefeargardenclub.org/get_json_data.php";
     
     @IBOutlet weak var searchBar: UISearchBar!
     var inSearchMode = false;
@@ -27,7 +27,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     
     //var conCellModels = [ContactModel]()        // model
     
-    var contactCards = [ContactCard]()
+    var contactCards : [ContactCard]!
     
     var filteredContacts = [ContactCard]()
     var filteredUserSectionTitles = [String]()
@@ -38,50 +38,15 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*///////////////////////////////////////////////////////
-        Future JSON Decoder Call to class Background
-        let backG = Background(login: true)
-        contactCards = backG.contactCards
-        *////////////////////////////////////////////////////////
+        //pullContacts()
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
         
-        
-        let path = Bundle.main.path(forResource: "sqlData_1", ofType: "txt") //path to text file
-        
-        let fileMgr = FileManager.default
-        
-        
-        if fileMgr.fileExists(atPath: path!){ //if file exists
-            do{
-                let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8) // gets entire text document
-                
-                let readings = fullText.components(separatedBy: "\n"); //array of lines in text file
-                
-                for i in 0..<readings.count-1 {
-                    
-                    var contactData = readings[i].components(separatedBy: ",") //delineated by commas
-                    
-                    for x in 0...contactData.count-1 {
-                        
-                        if (contactData[x] == "null"){
-                            contactData[x] = ""
-                        }
-                        
-                    }
-                    
-                    let c1 = ContactCard(PhotoID: contactData[0], UserID: contactData[1], MbrStatus: contactData[2], YearTurnedActive: contactData[3], LastName: contactData[4], FirstName: contactData[5], Spouse: contactData[6], StreetAddress: contactData[7], City: contactData[8], State: contactData[9], ZipCode: contactData[10], PrimaryContactNo: contactData[11], SecondaryContactNo: contactData[12], ContactEmail: contactData[13], TypeofPrimaryContactNo: contactData[14], TypeofSecondaryContactNo: contactData[15], Officer: contactData[16], OfficerTitle: contactData[17], ExcecutiveBdMbrship: contactData[18], CurrentCmteAssignment1: contactData[19], CmteAssign1Chair: contactData[20], CmteAssign1CoChair: contactData[21], CurrentCmteAssignment2: contactData[22], CmteAssign2Chair: contactData[23], CmteAssign2CoChair: contactData[24], CurrentCmteAssignment3: contactData[25], CmteAssign3Chair: contactData[26], CmteAssign3CoChair: contactData[27], BiographicalInfo: contactData[28])
-                    
-                    contactCards.append(c1); //append to array of contacts
-                }
-                
-            }catch let error as NSError{
-                print("Error \(error)")
-            }
+        buildContacts()
         }
-        
+    
+    func buildContacts(){
         contactCards = contactCards.sorted{ ($0.LastName < $1.LastName) } //sort array (Seems to be a bug here)
         
         for user in contactCards {
@@ -106,8 +71,9 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         
         tableView.delegate = self
         tableView.dataSource = self
+
     }
- 
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // 1
         if (inSearchMode){
@@ -306,6 +272,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 if let contact = sender as? ContactCard {
                     infoVC.contact = contact;
                     infoVC.currentUser = currentUser
+                    infoVC.contactCards = contactCards
                 }
             }
             

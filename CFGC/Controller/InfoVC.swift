@@ -11,7 +11,7 @@ import UIKit
 class InfoVC: UIViewController {
     
     var contact: ContactCard!
-    
+    var contactCards: [ContactCard]!
     var currentUser: User!
     
     @IBOutlet weak var editBtn: UIBarButtonItem!
@@ -101,7 +101,7 @@ class InfoVC: UIViewController {
         EmailViewRect.layer.cornerRadius = 20
         */
         
-        addressTxt.text = contact.StreetAddress + " " + contact.City + ", " + contact.State + " " + contact.ZipCode
+        addressTxt.text = contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
         addressTxt.layer.borderColor = UIColor.black.cgColor
         addressTxt.layer.borderWidth = 1.0
         addressTxt.layer.cornerRadius = 25
@@ -198,13 +198,16 @@ class InfoVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
             
-            var contVC = segue.destination as? ContactVC
+            if let contVC = segue.destination as? ContactVC{
+                contVC.contactCards = contactCards
+            }
         }
         
         else if segue.identifier == "BiographicalVC"{
             if let bioVC = segue.destination as? BiographicalVC{
                 if let contact = sender as? ContactCard{
                     bioVC.contactCard = contact
+                    bioVC.contactCards = contactCards
                 }
             }
         }

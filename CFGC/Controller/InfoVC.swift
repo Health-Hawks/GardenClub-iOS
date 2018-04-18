@@ -101,7 +101,10 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         EmailViewRect.layer.cornerRadius = 20
         */
         
+        
         addressTxt.text = contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
+        addressTxt = adjustUITextViewHeight(arg: addressTxt)
+
         addressTxt.layer.borderColor = UIColor.black.cgColor
         addressTxt.layer.borderWidth = 1.0
         addressTxt.layer.cornerRadius = 25
@@ -139,6 +142,19 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     func isCurrentUser (){
         //check if the current user matches the contact selected
         contact.UserID
+    }
+    
+    func adjustUITextViewHeight(arg : UITextView) -> UITextView
+    {
+        arg.translatesAutoresizingMaskIntoConstraints = true
+        let fixedWidth = arg.frame.size.width
+        arg.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        let newSize = arg.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+        var newFrame = arg.frame
+        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+        arg.frame = newFrame
+        arg.isScrollEnabled = false
+        return arg
     }
     
     override func viewWillLayoutSubviews() {

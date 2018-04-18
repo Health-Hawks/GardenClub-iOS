@@ -137,14 +137,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-    
-    
-<<<<<<< HEAD
-=======
-    //initial load in of contacts
-    
-    
->>>>>>> Cory-working-branch
     /*
     // MARK: - Navigation
 
@@ -154,14 +146,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-<<<<<<< HEAD
-    
 
-=======
-    /*
-    @IBAction func skipBtnPressed(_ sender: UIButton){
-        performSegue(withIdentifier: "ContactVC", sender: nil)
-    }
-    */
->>>>>>> Cory-working-branch
 }

@@ -72,10 +72,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     }
     
     @IBAction func submitBtnPressed(_ sender: UIButton){
-        
+        conCardsJson = _backGround.contactCards
         currentUser = User(userName: userName.text!, password: password.text!)
         if (verifyLogin(userName: currentUser.userName, password: password.text!)){
-            conCardsJson = _backGround.contactCards
+            
             performSegue(withIdentifier: "ContactVC", sender: currentUser)
         }
         else{
@@ -99,8 +99,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     }
     
     func verifyLogin(userName: String, password: String) -> Bool{
-        if (userName == "test" && password == "testing"){
-            return true;
+        
+        for x in conCardsJson{
+            if x.ContactEmail == userName{
+                return true
+            }
         }
         return false
     }

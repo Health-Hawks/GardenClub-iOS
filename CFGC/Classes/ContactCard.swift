@@ -127,6 +127,42 @@ class ContactCard {
         return _BiographicalInfo
     }
     
+    func setFirstName(fName: String){
+        _FirstName = fName
+    }
+    
+    func setLastName(lstName: String){
+        _LastName = lstName
+    }
+    
+    func setMbrStatus(mStatus: String){
+        _MbrStatus = mStatus
+    }
+    
+    func setAddress(address: String){
+        _StreetAddress = address
+    }
+    
+    func setCityAndState(city_state: String){
+        _CityAndState = city_state
+    }
+    
+    func setSpouse(newSpouse: String){
+        _Spouse = newSpouse
+    }
+    
+    func setContactEmail(newEmail: String){
+        _ContactEmail = newEmail
+    }
+    
+    func setPrimaryPhone(primPhone: String) {
+        _PrimaryContactNo = primPhone
+    }
+    
+    func setSecondaryPhone(secPhone: String){
+        _SecondaryContactNo = secPhone
+    }
+    
     /* Old variable retrieval code
     var OfficerTitle: String {
         return _OfficerTitle

@@ -8,11 +8,12 @@
 
 import UIKit
 import MessageUI
-class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate{
+class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate,UITextFieldDelegate, UITextViewDelegate {
     
     var contact: ContactCard!
     var contactCards: [ContactCard]!
     var currentUser: User!
+    var activeTextField: UITextField!
     
     @IBOutlet weak var editBtn: UIBarButtonItem!
     
@@ -37,6 +38,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     
     @IBOutlet weak var membersBackBtn: UIBarButtonItem!
     
+    @IBOutlet weak var cancelBtn: UIBarButtonItem!
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     @IBOutlet weak var txtMsgBtn: UIBarButtonItem!
     @IBOutlet weak var callBtn: UIBarButtonItem!
     @IBOutlet weak var emailBtn: UIBarButtonItem!
@@ -44,12 +47,121 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTxt.delegate = self
+        spouseTxt.delegate = self
+        addressTxt.delegate = self
+        mbrStatTxt.delegate = self
+        primaryConTxt.delegate = self
+        secondaryConTxt.delegate = self
+        emailTxt.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+        
+        activateEditBtn()
         buildInfoScreen()
         // Do any additional setup after loading the view.
     }
     
-    func buildInfoScreen(){
+    deinit {
+        NotificationCenter.default.removeObserver(self,name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    @objc func keyboardWillChange(notification: Notification){
+        //print("Keyboard will show: \(notification.name.rawValue)")
         
+        guard let keyboardRect = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
+            return
+        }
+        
+        if notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame{
+            view.frame.origin.y = -keyboardRect.height
+        }
+        else{
+            view.frame.origin.y = 0
+        }
+        
+    }
+    
+    @IBAction func editBtnPressed(_ sender: Any){
+        editBtn.isEnabled = false
+        cancelBtn.isEnabled = true
+        cancelBtn.tintColor = UIColor.blue
+        saveBtn.isEnabled = true
+        saveBtn.tintColor = UIColor.blue
+        enableTextFieldsForEdit()
+        createAlert(title: "Editing Information", message: "Attention:\nChanging information within this application will change your website data as well.")
+    }
+    
+    private func enableTextFieldsForEdit(){
+        nameTxt.isEnabled = true
+        nameTxt.allowsEditingTextAttributes = true
+        mbrStatTxt.isEnabled = true
+        mbrStatTxt.allowsEditingTextAttributes = true
+        spouseTxt.isEnabled = true
+        spouseTxt.allowsEditingTextAttributes = true
+        addressTxt.isEditable = true
+        addressTxt.allowsEditingTextAttributes = true
+        primaryConTxt.isEnabled = true
+        primaryConTxt.allowsEditingTextAttributes = true
+        secondaryConTxt.isEnabled = true
+        secondaryConTxt.allowsEditingTextAttributes = true
+        emailTxt.isEnabled = true
+        emailTxt.allowsEditingTextAttributes = true
+       
+        nameTxt.backgroundColor = UIColor.yellow
+        mbrStatTxt.backgroundColor = UIColor.yellow
+        spouseTxt.backgroundColor = UIColor.yellow
+        addressTxt.backgroundColor = UIColor.yellow
+        primaryConTxt.backgroundColor = UIColor.yellow
+        secondaryConTxt.backgroundColor = UIColor.yellow
+        emailTxt.backgroundColor = UIColor.yellow
+        
+    }
+    @IBAction func saveBtnPressed(_ sender: Any) {
+        
+        let nameParse = nameTxt.text?.split(separator: " ")
+        var firstName = ""
+        var lastName = ""
+        for x in nameParse!{
+            if (x == nameParse?.last){
+                lastName = String(x)
+                contact.setLastName(lstName: lastName)
+            }
+            else{
+                firstName = firstName + String(x)
+            }
+        }
+        contact.setFirstName(fName: firstName)
+        
+        
+    }
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        buildInfoScreen()
+    }
+    
+    func activateEditBtn (){
+        if(contact.ContactEmail != ""){
+            if(contact.ContactEmail == currentUser.userName){
+                editBtn.isEnabled = true;
+            }
+            else{
+                editBtn.isEnabled = false;
+                editBtn.tintColor = UIColor.clear
+            }
+        }
+    }
+    
+    func buildInfoScreen(){
+        print("building info screen")
+        saveBtn.isEnabled = false
+        saveBtn.tintColor = UIColor.clear
+        cancelBtn.isEnabled = false
+        cancelBtn.tintColor = UIColor.clear
         //Get photo from photo ID in recieved contact: ContactCard
         let imageName = contact.PhotoId
         let image = UIImage(named: imageName)
@@ -74,74 +186,63 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         contactImage.clipsToBounds = true;
         contactImage.layer.borderColor = UIColor.black.cgColor
         
-        
-        /*
-        mbrStatusRect.layer.borderColor = UIColor.black.cgColor
-        mbrStatusRect.layer.borderWidth = 1.0
-        mbrStatusRect.layer.cornerRadius = 20
-        
-        SpouseViewRect.layer.borderColor = UIColor.black.cgColor
-        SpouseViewRect.layer.borderWidth = 1.0
-        SpouseViewRect.layer.cornerRadius = 20
-        
-        AddressViewRect.layer.borderColor = UIColor.black.cgColor
-        AddressViewRect.layer.borderWidth = 1.0
-        AddressViewRect.layer.cornerRadius = 20
-        
-        PrimaryContactViewRect.layer.borderColor = UIColor.black.cgColor
-        PrimaryContactViewRect.layer.borderWidth = 1.0
-        PrimaryContactViewRect.layer.cornerRadius = 20
-        
-        SecondaryContactViewRect.layer.borderColor = UIColor.black.cgColor
-        SecondaryContactViewRect.layer.borderWidth = 1.0
-        SecondaryContactViewRect.layer.cornerRadius = 20
-        
-        EmailViewRect.layer.borderColor = UIColor.black.cgColor
-        EmailViewRect.layer.borderWidth = 1.0
-        EmailViewRect.layer.cornerRadius = 20
-        */
-        
-        
         addressTxt.text = " " + contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
         addressTxt = adjustUITextViewHeight(arg: addressTxt)
-
+        addressTxt.backgroundColor = UIColor.clear
         addressTxt.layer.borderColor = UIColor.black.cgColor
         addressTxt.layer.borderWidth = 1.0
         addressTxt.layer.cornerRadius = 25
+        addressTxt.isEditable = false
         
         nameTxt.text = " " + contact.FirstName + " " + contact.LastName
         nameTxt.allowsEditingTextAttributes = false
+        nameTxt.backgroundColor = UIColor.clear
+        nameTxt.isEnabled = false
         
         spouseTxt.text = " " + contact.Spouse
         spouseTxt.layer.borderColor = UIColor.black.cgColor
         spouseTxt.layer.borderWidth = 1.0
         spouseTxt.layer.cornerRadius = 20
+        spouseTxt.backgroundColor = UIColor.clear
+        nameTxt.isEnabled = false
         
         mbrStatTxt.text = " " + contact.MbrStatus
         mbrStatTxt.layer.borderColor = UIColor.black.cgColor
         mbrStatTxt.layer.borderWidth = 1.0
         mbrStatTxt.layer.cornerRadius = 20
-        
+        mbrStatTxt.backgroundColor = UIColor.clear
+        mbrStatTxt.isEnabled = false
         
         primaryConTxt.text = " " + contact.PrimaryContactNo
         primaryConTxt.layer.borderColor = UIColor.black.cgColor
         primaryConTxt.layer.borderWidth = 1.0
         primaryConTxt.layer.cornerRadius = 20
+        primaryConTxt.backgroundColor = UIColor.clear
+        primaryConTxt.isEnabled = false
         
         secondaryConTxt.text = " " + contact.SecondaryContactNo
         secondaryConTxt.layer.borderColor = UIColor.black.cgColor
         secondaryConTxt.layer.borderWidth = 1.0
         secondaryConTxt.layer.cornerRadius = 20
+        secondaryConTxt.backgroundColor = UIColor.clear
+        secondaryConTxt.isEnabled = false
         
         emailTxt.text = " " + contact.ContactEmail
         emailTxt.layer.borderColor = UIColor.black.cgColor
         emailTxt.layer.borderWidth = 1.0
         emailTxt.layer.cornerRadius = 20
+        emailTxt.backgroundColor = UIColor.clear
+        emailTxt.isEnabled = false
     }
     
-    func isCurrentUser (){
-        //check if the current user matches the contact selected
-        contact.UserID
+    func createAlert (title: String!, message: String!){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func adjustUITextViewHeight(arg : UITextView) -> UITextView
@@ -251,6 +352,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
             
             if let contVC = segue.destination as? ContactVC{
                 contVC.contactCards = contactCards
+                contVC.currentUser = currentUser
             }
         }
         
@@ -259,9 +361,12 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
                 if let contact = sender as? ContactCard{
                     bioVC.contactCard = contact
                     bioVC.contactCards = contactCards
+                    bioVC.currentUser = currentUser
                 }
             }
         }
+        
+        
     }
 
     /*
@@ -273,5 +378,46 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         // Pass the selected object to the new view controller.
     }
     */
+    
+    /*
+     @objc func keyboardDidShow(notification: Notification){
+     let info:NSDictionary = notification.userInfo! as NSDictionary
+     let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+     let keyboardY = self.view.frame.size.height - keyboardSize.height
+     
+     let editingTextFieldY: CGFloat! = self.activeTextField?.frame.origin.y
+     
+     if (self.view.frame.origin.y >= 0){
+     //check if the the text field is behind the keyboard
+     if (editingTextFieldY > (keyboardY - 60)) {
+     UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations:{
+     self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y - (editingTextFieldY - (keyboardY - 60)), width: self.view.bounds.width, height: self.view.bounds.height)
+     }, completion: nil)
+     }
+     }
+     }
+     
+     @objc func keyboardWillHide(notification: Notification){
+     UIView.animate(withDuration: 0.25, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations:{
+     self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+     }, completion: nil)
+     
+     }
+     
+     override func viewWillDisappear(_ animated: Bool) {
+     NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+     NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+     
+     }
+     
+     func textFieldDidBeginEditing(_ textField: UITextField) {
+     activeTextField = textField    }
+     
+     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+     textField.resignFirstResponder()
+     return true
+     }
+     */
+
 
 }

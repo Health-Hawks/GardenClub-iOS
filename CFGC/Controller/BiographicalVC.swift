@@ -12,7 +12,7 @@ class BiographicalVC: UIViewController, UITextFieldDelegate {
     
     var contactCard: ContactCard!
     var contactCards: [ContactCard]!
-    
+    var currentUser: User!
     //@IBOutlet weak var yearLbl: UILabel!
     //@IBOutlet weak var biographicalLbl: UILabel!
     @IBOutlet weak var yearActiveTextField: UITextField!
@@ -69,6 +69,7 @@ class BiographicalVC: UIViewController, UITextFieldDelegate {
                 if let contact = sender as? ContactCard {
                     infoVC.contact = contact;
                     infoVC.contactCards = contactCards
+                    infoVC.currentUser = currentUser
                 }
             }
         }

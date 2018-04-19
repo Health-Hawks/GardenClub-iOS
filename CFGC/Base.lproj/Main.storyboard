@@ -21,34 +21,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="WdJ-1o-UeW">
-                                <rect key="frame" x="0.0" y="55" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="17.5" width="375" height="639.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-Tw-vN2">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="403"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-Tw-vN2">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="440.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="CFGC banner with logo - small" translatesAutoresizingMaskIntoConstraints="NO" id="2Qe-bt-WlD">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="CFGC banner with logo - small" translatesAutoresizingMaskIntoConstraints="NO" id="2Qe-bt-WlD">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="93"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Membership Directory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmZ-gt-BpD">
-                                                <rect key="frame" x="0.0" y="75.5" width="375" height="26.5"/>
+                                                <rect key="frame" x="0.0" y="113" width="375" height="26.5"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="22"/>
                                                 <color key="textColor" red="0.18779702289086012" green="0.43214625634517767" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="MX3-pi-Wet">
-                                                <rect key="frame" x="0.0" y="122" width="375" height="281"/>
+                                                <rect key="frame" x="0.0" y="159.5" width="375" height="281"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="CnU-bP-HWZ">
-                                        <rect key="frame" x="96.5" y="453" width="182" height="149"/>
+                                        <rect key="frame" x="84" y="490.5" width="207.5" height="149"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username [Contact Email]" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Szi-jh-rhl">
-                                                <rect key="frame" x="0.0" y="0.0" width="182" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207.5" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="P0f-bs-6Dt"/>
-                                                    <constraint firstAttribute="width" constant="182" id="jZv-Er-tYu"/>
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
@@ -58,7 +57,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="igp-cs-h5e">
-                                                <rect key="frame" x="0.0" y="52" width="182" height="45"/>
+                                                <rect key="frame" x="0.0" y="52" width="207.5" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
@@ -68,7 +67,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixd-b3-o3O">
-                                                <rect key="frame" x="0.0" y="104" width="182" height="45"/>
+                                                <rect key="frame" x="0.0" y="104" width="207.5" height="45"/>
                                                 <color key="backgroundColor" red="0.40392156862745099" green="0.54509803921568623" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="20"/>
                                                 <state key="normal" title="Submit">
@@ -85,14 +84,15 @@
                                     <constraint firstItem="BXb-Tw-vN2" firstAttribute="top" secondItem="WdJ-1o-UeW" secondAttribute="top" id="808-4M-Cja"/>
                                     <constraint firstItem="CnU-bP-HWZ" firstAttribute="top" secondItem="BXb-Tw-vN2" secondAttribute="bottom" constant="50" id="W2R-Cp-m89"/>
                                     <constraint firstItem="BXb-Tw-vN2" firstAttribute="leading" secondItem="WdJ-1o-UeW" secondAttribute="leading" id="hLg-Y6-5I0"/>
+                                    <constraint firstItem="BXb-Tw-vN2" firstAttribute="top" secondItem="WdJ-1o-UeW" secondAttribute="top" id="nM9-D2-oUv"/>
                                     <constraint firstAttribute="trailing" secondItem="BXb-Tw-vN2" secondAttribute="trailing" id="sld-OP-0CW"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.83921568627450982" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WdJ-1o-UeW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="17.5" id="8MM-ez-06Q"/>
                             <constraint firstItem="WdJ-1o-UeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="E4K-nw-rGb"/>
-                            <constraint firstItem="WdJ-1o-UeW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="GRP-I3-BQv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WdJ-1o-UeW" secondAttribute="trailing" id="ZMk-bS-C1o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WdJ-1o-UeW" secondAttribute="bottom" constant="10" id="mZi-Ve-IAC"/>
                         </constraints>
@@ -174,7 +174,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pwS-U5-chL">
-                                                                    <rect key="frame" x="15" y="0.0" width="399" height="42"/>
+                                                                    <rect key="frame" x="15" y="0.0" width="360" height="42"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarolinaYellowJessamineMed1" translatesAutoresizingMaskIntoConstraints="NO" id="L23-eZ-jeg">
                                                                             <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
@@ -184,7 +184,7 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="aa0-U3-qcC">
-                                                                            <rect key="frame" x="47" y="1" width="352" height="40"/>
+                                                                            <rect key="frame" x="47" y="1" width="313" height="40"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[FirstN LastN]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjB-Px-Kav">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="97.5" height="20"/>
@@ -669,8 +669,7 @@ Wilmington, NC 28403</string>
         <image name="ellipse" width="69" height="67"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZLJ-nP-i28"/>
         <segue reference="tvg-Mh-GLi"/>
-        <segue reference="eqM-Mc-gli"/>
+        <segue reference="yyA-Nf-nzp"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -102,38 +102,38 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         */
         
         
-        addressTxt.text = contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
+        addressTxt.text = " " + contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
         addressTxt = adjustUITextViewHeight(arg: addressTxt)
 
         addressTxt.layer.borderColor = UIColor.black.cgColor
         addressTxt.layer.borderWidth = 1.0
         addressTxt.layer.cornerRadius = 25
         
-        nameTxt.text = contact.FirstName + " " + contact.LastName
+        nameTxt.text = " " + contact.FirstName + " " + contact.LastName
         nameTxt.allowsEditingTextAttributes = false
         
-        spouseTxt.text = contact.Spouse
+        spouseTxt.text = " " + contact.Spouse
         spouseTxt.layer.borderColor = UIColor.black.cgColor
         spouseTxt.layer.borderWidth = 1.0
         spouseTxt.layer.cornerRadius = 20
         
-        mbrStatTxt.text = contact.MbrStatus
+        mbrStatTxt.text = " " + contact.MbrStatus
         mbrStatTxt.layer.borderColor = UIColor.black.cgColor
         mbrStatTxt.layer.borderWidth = 1.0
         mbrStatTxt.layer.cornerRadius = 20
         
         
-        primaryConTxt.text = contact.PrimaryContactNo
+        primaryConTxt.text = " " + contact.PrimaryContactNo
         primaryConTxt.layer.borderColor = UIColor.black.cgColor
         primaryConTxt.layer.borderWidth = 1.0
         primaryConTxt.layer.cornerRadius = 20
         
-        secondaryConTxt.text = contact.SecondaryContactNo
+        secondaryConTxt.text = " " + contact.SecondaryContactNo
         secondaryConTxt.layer.borderColor = UIColor.black.cgColor
         secondaryConTxt.layer.borderWidth = 1.0
         secondaryConTxt.layer.cornerRadius = 20
         
-        emailTxt.text = contact.ContactEmail
+        emailTxt.text = " " + contact.ContactEmail
         emailTxt.layer.borderColor = UIColor.black.cgColor
         emailTxt.layer.borderWidth = 1.0
         emailTxt.layer.cornerRadius = 20

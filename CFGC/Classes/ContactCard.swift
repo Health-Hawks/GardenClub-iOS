@@ -147,6 +147,10 @@ class ContactCard {
         _CityAndState = city_state
     }
     
+    func setZipCode(zipCode: String){
+        _ZipCode = zipCode
+    }
+    
     func setSpouse(newSpouse: String){
         _Spouse = newSpouse
     }

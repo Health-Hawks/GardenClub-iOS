@@ -14,6 +14,9 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     var contactCards: [ContactCard]!
     var currentUser: User!
     var activeTextField: UITextField!
+    var shouldRaiseKeyboard: Bool!
+    var addressAlertCount = 0
+    var inEditState = false
     
     @IBOutlet weak var editBtn: UIBarButtonItem!
     
@@ -60,7 +63,6 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
-        activateEditBtn()
         buildInfoScreen()
         // Do any additional setup after loading the view.
     }
@@ -71,6 +73,33 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //print("didBegin editing!")
+        if textField == nameTxt || textField == mbrStatTxt || textField == spouseTxt{
+            shouldRaiseKeyboard = false
+            //print("Did not raise")
+        }
+        else{
+            shouldRaiseKeyboard = true
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        
+        if textView == addressTxt{
+            shouldRaiseKeyboard = true
+            print("startedEditing")
+            addressAlert()
+            addressAlertCount = addressAlertCount + 1
+        }
+    }
+    
+    func addressAlert(){
+        if addressAlertCount < 1{
+            createAlert(title: "Address Change", message: "Ensure your new address conforms to the following format:\n 1234 John Doe Street; Wilmington, NC 28043")
+        }
+    }
+    
     @objc func keyboardWillChange(notification: Notification){
         //print("Keyboard will show: \(notification.name.rawValue)")
         
@@ -78,7 +107,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
             return
         }
         
-        if notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame{
+        if ((notification.name == Notification.Name.UIKeyboardWillShow || notification.name == Notification.Name.UIKeyboardWillChangeFrame) && shouldRaiseKeyboard){
+            
             view.frame.origin.y = -keyboardRect.height
         }
         else{
@@ -86,8 +116,13 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         }
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     @IBAction func editBtnPressed(_ sender: Any){
+        inEditState = true
+        membersBackBtn.isEnabled = false
         editBtn.isEnabled = false
         cancelBtn.isEnabled = true
         cancelBtn.tintColor = UIColor.blue
@@ -105,7 +140,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         spouseTxt.isEnabled = true
         spouseTxt.allowsEditingTextAttributes = true
         addressTxt.isEditable = true
-        addressTxt.allowsEditingTextAttributes = true
+        addressTxt.allowsEditingTextAttributes = false
         primaryConTxt.isEnabled = true
         primaryConTxt.allowsEditingTextAttributes = true
         secondaryConTxt.isEnabled = true
@@ -121,26 +156,110 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         secondaryConTxt.backgroundColor = UIColor.yellow
         emailTxt.backgroundColor = UIColor.yellow
         
-    }
-    @IBAction func saveBtnPressed(_ sender: Any) {
+        //print("name:",nameTxt.frame.origin.y, " mbrStat:",mbrStatTxt.frame.origin.y," spouse:", spouseTxt.frame.origin.y, " Address:", addressTxt.frame.origin.y, " Prim:", primaryConTxt.frame.origin.y, " sec:", secondaryConTxt.frame.origin.y, " email:", emailTxt.frame.origin.y)
         
+    }
+    
+    @IBAction func saveBtnPressed(_ sender: Any) {
+        inEditState = false
+        self.saveName()
+        self.saveSpouse()
+        self.saveMbrStatus()
+        self.saveAddress()
+        self.savePrimNum()
+        self.saveSecNum()
+        self.saveEmail()
+        
+        self.buildInfoScreen()
+    }
+    //Needs error Handling
+    private func saveName(){
+
         let nameParse = nameTxt.text?.split(separator: " ")
         var firstName = ""
         var lastName = ""
         for x in nameParse!{
             if (x == nameParse?.last){
                 lastName = String(x)
-                contact.setLastName(lstName: lastName)
+                contact.setLastName(lstName: lastName.trimmingCharacters(in: NSCharacterSet.whitespaces))
+            }
+            else if firstName == "" {
+                firstName = String(x)
             }
             else{
-                firstName = firstName + String(x)
+                firstName = firstName + " " + String(x)
             }
         }
         contact.setFirstName(fName: firstName)
-        
-        
+        print(contact.FirstName,contact.LastName)
     }
+    //Needs Error Handling
+    private func saveMbrStatus(){
+        let mbrStatusParse = mbrStatTxt.text?.split(separator: " ")
+        var newMbrStatus = ""
+        for x in mbrStatusParse!{
+            newMbrStatus = newMbrStatus + String(x)
+        }
+        
+        contact.setMbrStatus(mStatus: newMbrStatus)
+    }
+    //Needs Error Handling
+    private func saveSpouse(){
+        let spouseParse = spouseTxt.text?.split(separator: " ")
+        var newSpouse = ""
+        
+        for x in spouseParse!{
+            if(newSpouse == ""){
+                newSpouse = String(x)
+            }
+            else{
+                newSpouse = newSpouse + " " + String(x)
+            }
+        }
+        
+        contact.setSpouse(newSpouse: newSpouse)
+    }
+    //Needs Error Handling a bit better
+    private func saveAddress(){
+        
+        if !addressTxt.text.contains(","){
+            createAlert(title: "Incorrect Address Submission", message: "Please ensure you have seperated your City from your State via a comma:\nWilmington, NC")
+        }
+        
+        else if !addressTxt.text.contains(";"){
+            createAlert(title: "Incorrect Address Submission", message: "Please ensure you have seperated your Street Address from your City via a semi colon:\n1234 John Doe Street;Wilmington")
+        }
+        else{
+            let addressParse = addressTxt.text.split(separator: ",")
+            //left side will be the street address, right side will be the state and zipcode
+            let leftAddressParse = addressParse[0].split(separator: ";")
+            let newStreetAddress = String(leftAddressParse[0])
+            let newCity = String(leftAddressParse[1])
+            
+            let rightParse = addressParse[1].split(separator: " ")
+            let newState = String(rightParse[0])
+            let newZipcode = String(rightParse[1])
+            
+            let combinedCityAndState = newCity + ", " + newState
+            contact.setAddress(address: newStreetAddress)
+            contact.setCityAndState(city_state: combinedCityAndState)
+            contact.setZipCode(zipCode: newZipcode)
+        }
+    }
+    //Needs Error Handling
+    private func savePrimNum(){
+        contact.setPrimaryPhone(primPhone: primaryConTxt.text!)
+    }
+    private func saveSecNum(){
+        contact.setSecondaryPhone(secPhone: secondaryConTxt.text!)
+    }
+    private func saveEmail(){
+        contact.setContactEmail(newEmail: emailTxt.text!)
+    }
+    
+    
     @IBAction func cancelBtnPressed(_ sender: Any) {
+        inEditState = false
         buildInfoScreen()
     }
     
@@ -157,7 +276,11 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     }
     
     func buildInfoScreen(){
+        activateEditBtn() //check if edit should be enabled
+        shouldRaiseKeyboard = false
         print("building info screen")
+        membersBackBtn.isEnabled = true
+        
         saveBtn.isEnabled = false
         saveBtn.tintColor = UIColor.clear
         cancelBtn.isEnabled = false
@@ -193,18 +316,21 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         addressTxt.layer.borderWidth = 1.0
         addressTxt.layer.cornerRadius = 25
         addressTxt.isEditable = false
-        
+        addressTxt.allowsEditingTextAttributes = false
+
         nameTxt.text = " " + contact.FirstName + " " + contact.LastName
         nameTxt.allowsEditingTextAttributes = false
         nameTxt.backgroundColor = UIColor.clear
         nameTxt.isEnabled = false
+        nameTxt.allowsEditingTextAttributes = false
         
         spouseTxt.text = " " + contact.Spouse
         spouseTxt.layer.borderColor = UIColor.black.cgColor
         spouseTxt.layer.borderWidth = 1.0
         spouseTxt.layer.cornerRadius = 20
         spouseTxt.backgroundColor = UIColor.clear
-        nameTxt.isEnabled = false
+        spouseTxt.isEnabled = false
+        spouseTxt.allowsEditingTextAttributes = false
         
         mbrStatTxt.text = " " + contact.MbrStatus
         mbrStatTxt.layer.borderColor = UIColor.black.cgColor
@@ -212,6 +338,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         mbrStatTxt.layer.cornerRadius = 20
         mbrStatTxt.backgroundColor = UIColor.clear
         mbrStatTxt.isEnabled = false
+        mbrStatTxt.allowsEditingTextAttributes = false
         
         primaryConTxt.text = " " + contact.PrimaryContactNo
         primaryConTxt.layer.borderColor = UIColor.black.cgColor
@@ -219,6 +346,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         primaryConTxt.layer.cornerRadius = 20
         primaryConTxt.backgroundColor = UIColor.clear
         primaryConTxt.isEnabled = false
+        primaryConTxt.allowsEditingTextAttributes = false
+
         
         secondaryConTxt.text = " " + contact.SecondaryContactNo
         secondaryConTxt.layer.borderColor = UIColor.black.cgColor
@@ -226,13 +355,16 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         secondaryConTxt.layer.cornerRadius = 20
         secondaryConTxt.backgroundColor = UIColor.clear
         secondaryConTxt.isEnabled = false
-        
+        secondaryConTxt.allowsEditingTextAttributes = false
+
         emailTxt.text = " " + contact.ContactEmail
         emailTxt.layer.borderColor = UIColor.black.cgColor
         emailTxt.layer.borderWidth = 1.0
         emailTxt.layer.cornerRadius = 20
         emailTxt.backgroundColor = UIColor.clear
         emailTxt.isEnabled = false
+        emailTxt.allowsEditingTextAttributes = false
+
     }
     
     func createAlert (title: String!, message: String!){
@@ -268,7 +400,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     }
     
     @IBAction func swipeHandler(_ gestureRecognizer : UISwipeGestureRecognizer){
-        if gestureRecognizer.state == .ended{
+        if gestureRecognizer.state == .ended && !inEditState{
             performSegue(withIdentifier: "BiographicalVC", sender: contact)
         }
     }

@@ -364,7 +364,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="J4Y-hL-z0I">
                                                 <rect key="frame" x="0.0" y="163.5" width="359" height="37"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Elizabeth White Baker" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-tp-0fZ">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Elizabeth White Baker" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="ECM-tp-0fZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="359" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="37" id="nd6-ld-c0l"/>

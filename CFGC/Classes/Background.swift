@@ -27,6 +27,38 @@ class Background {
         }
     }
     
+    init(updateBio: Bool!, contact: ContactCard!){
+        print("attempting update /////////////////")
+        updateDB(updateBio: updateBio, contact: contact)
+    }
+    
+    func updateDB(updateBio: Bool!,contact: ContactCard!){
+        var updateBioStr = "no"
+        if(updateBio){
+            updateBioStr = "yes"
+        }
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://capefeargardenclub.org/cfgcTestingJSON/update.php")! as URL)
+        request.httpMethod = "POST"
+        let postString = "userID=\(contact.UserID)&email=\(contact.ContactEmail)&firstName=\(contact.FirstName)&lastName=\(contact.LastName)&spouse=\(contact.Spouse)&streetAddress=\(contact.StreetAddress)&CAS=\(contact.CityAndState)&zipCode=\(contact.ZipCode)&primNum=\(contact.PrimaryContactNo)&secNum=\(contact.SecondaryContactNo)&bio=\(contact.BiographicalInfo)&bioUpdate=\(updateBioStr)"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            print("response = \(response)")
+            
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+    }
+    
     struct Root : Decodable{
         struct contactJson: Decodable{
             var ID: String?

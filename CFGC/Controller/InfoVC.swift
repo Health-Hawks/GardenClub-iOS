@@ -17,6 +17,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     var shouldRaiseKeyboard: Bool!
     var addressAlertCount = 0
     var inEditState = false
+    var initialAddress: String!
+    var updateInstance: Background!
     
     @IBOutlet weak var editBtn: UIBarButtonItem!
     
@@ -125,9 +127,9 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         membersBackBtn.isEnabled = false
         editBtn.isEnabled = false
         cancelBtn.isEnabled = true
-        cancelBtn.tintColor = UIColor.blue
+        cancelBtn.tintColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
         saveBtn.isEnabled = true
-        saveBtn.tintColor = UIColor.blue
+        saveBtn.tintColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
         enableTextFieldsForEdit()
         createAlert(title: "Editing Information", message: "Attention:\nChanging information within this application will change your website data as well.")
     }
@@ -145,16 +147,23 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         primaryConTxt.allowsEditingTextAttributes = true
         secondaryConTxt.isEnabled = true
         secondaryConTxt.allowsEditingTextAttributes = true
-        emailTxt.isEnabled = true
-        emailTxt.allowsEditingTextAttributes = true
+        //Do not want to allow users to change their email.
+        //emailTxt.isEnabled = true
+        //emailTxt.allowsEditingTextAttributes = true
        
         nameTxt.backgroundColor = UIColor.yellow
+        //nameTxt.layer.borderColor = UIColor.blue.cgColor
         mbrStatTxt.backgroundColor = UIColor.yellow
+        mbrStatTxt.layer.borderColor = UIColor.blue.cgColor
         spouseTxt.backgroundColor = UIColor.yellow
+        spouseTxt.layer.borderColor = UIColor.blue.cgColor
         addressTxt.backgroundColor = UIColor.yellow
+        addressTxt.layer.borderColor = UIColor.blue.cgColor
         primaryConTxt.backgroundColor = UIColor.yellow
+        primaryConTxt.layer.borderColor = UIColor.blue.cgColor
         secondaryConTxt.backgroundColor = UIColor.yellow
-        emailTxt.backgroundColor = UIColor.yellow
+        secondaryConTxt.layer.borderColor = UIColor.blue.cgColor
+        //emailTxt.backgroundColor = UIColor.yellow
         
         //print("name:",nameTxt.frame.origin.y, " mbrStat:",mbrStatTxt.frame.origin.y," spouse:", spouseTxt.frame.origin.y, " Address:", addressTxt.frame.origin.y, " Prim:", primaryConTxt.frame.origin.y, " sec:", secondaryConTxt.frame.origin.y, " email:", emailTxt.frame.origin.y)
         
@@ -168,8 +177,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         self.saveAddress()
         self.savePrimNum()
         self.saveSecNum()
-        self.saveEmail()
-        
+        //self.saveEmail() Dont want them to change their email.
+        updateInstance = Background(updateBio: false, contact: contact)
         self.buildInfoScreen()
     }
     //Needs error Handling
@@ -200,7 +209,6 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         for x in mbrStatusParse!{
             newMbrStatus = newMbrStatus + String(x)
         }
-        
         contact.setMbrStatus(mStatus: newMbrStatus)
     }
     //Needs Error Handling
@@ -222,7 +230,11 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     //Needs Error Handling a bit better
     private func saveAddress(){
         
-        if !addressTxt.text.contains(","){
+        if addressTxt.text == initialAddress{
+            addressTxt.text = initialAddress
+        }
+        
+        else if !addressTxt.text.contains(","){
             createAlert(title: "Incorrect Address Submission", message: "Please ensure you have seperated your City from your State via a comma:\nWilmington, NC")
         }
         
@@ -248,15 +260,18 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     }
     //Needs Error Handling
     private func savePrimNum(){
-        contact.setPrimaryPhone(primPhone: primaryConTxt.text!)
+        let primPhone = primaryConTxt.text?.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        contact.setPrimaryPhone(primPhone: primPhone!)
     }
     private func saveSecNum(){
-        contact.setSecondaryPhone(secPhone: secondaryConTxt.text!)
+        let secPhone = primaryConTxt.text?.trimmingCharacters(in: NSCharacterSet.whitespaces)
+        contact.setSecondaryPhone(secPhone: secPhone!)
     }
+    /* Dont want to allow the changing of emails.
     private func saveEmail(){
         contact.setContactEmail(newEmail: emailTxt.text!)
     }
-    
+    *////
     
     @IBAction func cancelBtnPressed(_ sender: Any) {
         inEditState = false
@@ -267,6 +282,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         if(contact.ContactEmail != ""){
             if(contact.ContactEmail == currentUser.userName){
                 editBtn.isEnabled = true;
+                editBtn.tintColor = UIColor(red: 0, green: 122/255, blue: 1, alpha: 1)
             }
             else{
                 editBtn.isEnabled = false;
@@ -277,8 +293,9 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     
     func buildInfoScreen(){
         activateEditBtn() //check if edit should be enabled
+        initialAddress =  " " + contact.StreetAddress + " " + contact.CityAndState + " " + contact.ZipCode
         shouldRaiseKeyboard = false
-        print("building info screen")
+        //print("building info screen")
         membersBackBtn.isEnabled = true
         
         saveBtn.isEnabled = false
@@ -491,7 +508,7 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         else if segue.identifier == "BiographicalVC"{
             if let bioVC = segue.destination as? BiographicalVC{
                 if let contact = sender as? ContactCard{
-                    bioVC.contactCard = contact
+                    bioVC.contact = contact
                     bioVC.contactCards = contactCards
                     bioVC.currentUser = currentUser
                 }

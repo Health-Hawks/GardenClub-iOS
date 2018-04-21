@@ -139,6 +139,10 @@ class ContactCard {
         _MbrStatus = mStatus
     }
     
+    func setYearTA(yearTA: String){
+        _YearTurnedActive = yearTA
+    }
+    
     func setAddress(address: String){
         _StreetAddress = address
     }
@@ -165,6 +169,10 @@ class ContactCard {
     
     func setSecondaryPhone(secPhone: String){
         _SecondaryContactNo = secPhone
+    }
+    
+    func setBiographicalInfo(newBio: String){
+        _BiographicalInfo = newBio
     }
     
     /* Old variable retrieval code

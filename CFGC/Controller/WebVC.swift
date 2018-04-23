@@ -59,17 +59,6 @@ class WebVC: UIViewController, UIWebViewDelegate {
             webView.stringByEvaluatingJavaScript(from: "document.forms[\"loginform\"].submit();")
             
         }
-<<<<<<< HEAD
-        activityIndicator.stopAnimating()
-        activityIndicator.isHidden = true
-        currentURL = webView.request?.url?.absoluteString
-        verifyLogin(url: currentURL)
-=======
-        //activityIndicator.stopAnimating()
-        //activityIndicator.isHidden = true
-        //currentURL = webView.request?.url?.absoluteString
-        //verifyLogin(url: currentURL)
->>>>>>> Cory-working-branch
     }
     
     func verifyLogin(url: String){

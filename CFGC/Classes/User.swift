@@ -18,6 +18,9 @@ class User{
         _password = password;
     }
     
+    var password: String{
+        return _password;
+    }
     var userName: String {
         return _userName;
     }

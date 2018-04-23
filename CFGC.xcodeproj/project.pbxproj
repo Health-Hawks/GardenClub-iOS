@@ -12,6 +12,7 @@
 		0130DC3C2034B06400362B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0130DC3A2034B06400362B90 /* Main.storyboard */; };
 		0130DC3E2034B06400362B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0130DC3D2034B06400362B90 /* Assets.xcassets */; };
 		0130DC412034B06400362B90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0130DC3F2034B06400362B90 /* LaunchScreen.storyboard */; };
+		8B05D0C4208E034200E468F1 /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B05D0C3208E034200E468F1 /* WebVC.swift */; };
 		8B0C5F34208DD33B006FF116 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C5F33208DD33B006FF116 /* UIViewControllerExtensions.swift */; };
 		8B24CBFA2048C93200FE6390 /* ContactCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24CBF92048C93200FE6390 /* ContactCard.swift */; };
 		8B24CBFC2048ECB600FE6390 /* sqlData_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8B24CBFB2048ECB500FE6390 /* sqlData_1.txt */; };
@@ -34,6 +35,7 @@
 		0130DC3D2034B06400362B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0130DC402034B06400362B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0130DC422034B06400362B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B05D0C3208E034200E468F1 /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		8B0C5F33208DD33B006FF116 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		8B24CBF92048C93200FE6390 /* ContactCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCard.swift; sourceTree = "<group>"; };
 		8B24CBFB2048ECB500FE6390 /* sqlData_1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sqlData_1.txt; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				8BB974F1203B5EF1008039BB /* LoginViewController.swift */,
 				8BC643282044F22F00AC8C8C /* InfoVC.swift */,
 				8B639E2E20608ABF00C0D525 /* BiographicalVC.swift */,
+				8B05D0C3208E034200E468F1 /* WebVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BB974F2203B5EF1008039BB /* LoginViewController.swift in Sources */,
+				8B05D0C4208E034200E468F1 /* WebVC.swift in Sources */,
 				8B24CBFA2048C93200FE6390 /* ContactCard.swift in Sources */,
 				8B37B8CF2060C43F00611889 /* SegueFromRight.swift in Sources */,
 				8B0C5F34208DD33B006FF116 /* UIViewControllerExtensions.swift in Sources */,

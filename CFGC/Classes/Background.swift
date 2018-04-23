@@ -32,9 +32,21 @@ class Background {
         updateDB(updateBio: updateBio, contact: contact)
     }
     
-    init(userName: String!, password: String!){
+    init(url: String){
         print("Sending Login Request")
-        wp_login(userName: userName, password: password)
+        print(url)
+        verifyURL(url: url)
+        //wp_login(userName: userName, password: password)
+        
+    }
+    
+    func verifyURL(url:String){
+        if url.contains("wp-login.php"){
+            login_wp = false
+        }
+        else{
+            login_wp = true
+        }
     }
 
     

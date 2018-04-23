@@ -20,12 +20,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     var conCardsJson : [ContactCard]!
     private var _backGround : Background!
     var loginAttempts = 0
-   
+    var authenticated = false
     var currentUser: User!
     
     @IBOutlet weak var submitBtn: UIButton!
     
     func pullContacts(){
+        if (!authenticated && loginAttempts > 0){
+            userName.text = currentUser.userName
+            DispatchQueue.main.asyncAfter(deadline: .now()+2){
+                self.createAlert(title: "Authentication Failed", message: "Incorrect Username or Password")
+            }
+            
+            
+        }
         let backG = Background(login: true)
         _backGround = backG
         print("Check")
@@ -78,6 +86,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         currentUser = User(userName: userName.text!, password: password.text!)
         //let spinner = UIViewController.displaySpinner(onView: self.view)
         //self.startActivity()
+        
+        performSegue(withIdentifier: "WebVC", sender: currentUser)
+        
+        /*
         if (verifyLogin(userName: currentUser.userName, password: password.text!)){
             //UIViewController.removeSpinner(spinner: spinner)
             //self.stopActivity()
@@ -86,6 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         else{
             createAlert(title: "Login Failure", message: "Incorrect Username or Password")
         }
+ */
     }
     
     func createAlert (title: String!, message: String!){
@@ -96,24 +109,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         }))
         
         self.present(alert, animated: true, completion: nil)
-    }
-    
-    
-    
-    func startActivity()
-    {
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
-        
-        activityIndicator.startAnimating()
-        UIApplication.shared.beginIgnoringInteractionEvents()
-    }
-    func stopActivity()
-    {
-        activityIndicator.stopAnimating()
-        UIApplication.shared.endIgnoringInteractionEvents()
     }
     
     override func didReceiveMemoryWarning() {
@@ -130,12 +125,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         }
          */
         
-        let loginBackground = Background(userName: userName, password: password)
+        //let loginBackground = Background(userName: userName, password: password)
         
-        if(loginBackground.login_wp && loginAttempts < 3){
-            return true
-        }
-        else if loginAttempts < 1{
+        //if(loginBackground.login_wp && loginAttempts < 3){
+           // return true
+        //}
+        if loginAttempts < 1{
             createAlert(title: "Failed To Authenticate", message:"For Beta purposes you may log in with password \"testing\"")
             loginAttempts = loginAttempts + 1
         }
@@ -165,6 +160,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
                     }
                 }
             
+        }
+        
+        else if segue.identifier == "WebVC"{
+            if let webVc = segue.destination as? WebVC{
+                if let user = sender as? User{
+                    webVc.currentUser = user
+                    webVc.contactCards = conCardsJson
+                }
+            }
         }
     }
     /*

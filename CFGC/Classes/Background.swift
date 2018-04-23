@@ -12,7 +12,7 @@ class Background {
     private var _login_url = "http://capefeargardenclub.org/cfgcTestingJSON/more_json11.php";
     private var jsonDataSet : Root?
     private var _contactCards = [ContactCard]()
-    
+    var login_wp: Bool!
     
     private var _login: Bool!
     
@@ -28,8 +28,57 @@ class Background {
     }
     
     init(updateBio: Bool!, contact: ContactCard!){
-        print("attempting update /////////////////")
+        //print("attempting update /////////////////")
         updateDB(updateBio: updateBio, contact: contact)
+    }
+    
+    init(userName: String!, password: String!){
+        print("Sending Login Request")
+        wp_login(userName: userName, password: password)
+    }
+
+    
+    private func wp_login(userName: String, password: String){
+        let request = NSMutableURLRequest(url: NSURL(string: "http://www.capefeargardenclub.org/wp-login.php")! as URL)
+        
+        request.httpMethod = "POST"
+        
+        let postString = "user_login=\(userName)&user_pass=\(password)&wp-submit=\("Log in")"
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        var a: Int?
+        let group = DispatchGroup()
+            do{
+                group.enter()
+                let task = URLSession.shared.dataTask(with: request as URLRequest){
+                    data, response, error in
+                    
+                    if error != nil{
+                        print("error =\(error)")
+                        return
+                    }
+                    
+                    print("response =\(response)")
+                    
+                    let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                    print("responseString = \(responseString)")
+                    if (responseString?.contains("Back to Cape Fear Garden Club, Inc."))! || (responseString?.contains("You are temporarily locked out"))!{
+                        self.login_wp = false
+                        print("Sent back to login page - Failed Login")
+                    }
+                    else{
+                        self.login_wp = true
+                    }
+                    group.leave()
+                }
+                task.resume()
+                
+            }
+                catch{
+                    print("An error occurred with login")
+                }
+        group.wait()
+        
     }
     
     func updateDB(updateBio: Bool!,contact: ContactCard!){
@@ -55,9 +104,12 @@ class Background {
             
             let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             print("responseString = \(responseString)")
+            
         }
         task.resume()
     }
+    
+    
     
     struct Root : Decodable{
         struct contactJson: Decodable{

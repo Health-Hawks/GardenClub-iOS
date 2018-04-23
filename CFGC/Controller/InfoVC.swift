@@ -152,7 +152,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         //emailTxt.allowsEditingTextAttributes = true
        
         nameTxt.backgroundColor = UIColor.yellow
-        //nameTxt.layer.borderColor = UIColor.blue.cgColor
+        nameTxt.layer.borderWidth = 1.0
+        nameTxt.layer.borderColor = UIColor.blue.cgColor
         mbrStatTxt.backgroundColor = UIColor.yellow
         mbrStatTxt.layer.borderColor = UIColor.blue.cgColor
         spouseTxt.backgroundColor = UIColor.yellow
@@ -317,7 +318,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
             contactImage.image = image
         }
         
-        
+        nameTxt.layer.borderWidth = 0.0
+        nameTxt.layer.borderColor = UIColor.clear.cgColor
         
         contactImage.layer.borderWidth = 1
         contactImage.layer.masksToBounds = true

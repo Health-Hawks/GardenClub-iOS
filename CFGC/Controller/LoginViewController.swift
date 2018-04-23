@@ -15,9 +15,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     @IBOutlet weak var loginStackView: UIStackView!
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var password: UITextField!
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     var activeTextField: UITextField!
     var conCardsJson : [ContactCard]!
     private var _backGround : Background!
+    var loginAttempts = 0
    
     var currentUser: User!
     
@@ -74,8 +76,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     @IBAction func submitBtnPressed(_ sender: UIButton){
         conCardsJson = _backGround.contactCards
         currentUser = User(userName: userName.text!, password: password.text!)
+        //let spinner = UIViewController.displaySpinner(onView: self.view)
+        //self.startActivity()
         if (verifyLogin(userName: currentUser.userName, password: password.text!)){
-            
+            //UIViewController.removeSpinner(spinner: spinner)
+            //self.stopActivity()
             performSegue(withIdentifier: "ContactVC", sender: currentUser)
         }
         else{
@@ -93,20 +98,62 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    
+    func startActivity()
+    {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        
+        activityIndicator.startAnimating()
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+    func stopActivity()
+    {
+        activityIndicator.stopAnimating()
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func verifyLogin(userName: String, password: String) -> Bool{
-        
+        /*
         for x in conCardsJson{
             if x.ContactEmail == userName{
                 return true
             }
         }
+         */
+        
+        let loginBackground = Background(userName: userName, password: password)
+        
+        if(loginBackground.login_wp && loginAttempts < 3){
+            return true
+        }
+        else if loginAttempts < 1{
+            createAlert(title: "Failed To Authenticate", message:"For Beta purposes you may log in with password \"testing\"")
+            loginAttempts = loginAttempts + 1
+        }
+        else{
+            return betaAuthentication(userName: userName, password: password)
+        }
         return false
     }
+    
+    func betaAuthentication(userName: String, password: String)->Bool{
+        for x in conCardsJson{
+            if x.ContactEmail == userName && password == "testing"{
+                return true
+            }
+        }
+        return false
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
@@ -171,3 +218,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
      }
      */
 }
+
+

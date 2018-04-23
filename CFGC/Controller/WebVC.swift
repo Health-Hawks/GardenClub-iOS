@@ -13,6 +13,7 @@ class WebVC: UIViewController, UIWebViewDelegate {
     var currentUser: User!
     var currentURL: String!
     var contactCards: [ContactCard]!
+    var attempts = 0
     
     @IBOutlet weak var myWebView: UIWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -34,7 +35,15 @@ class WebVC: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        print ("checking site")
+        currentURL = webView.request?.url?.absoluteString
+        if(attempts > 0){
+            activityIndicator.stopAnimating()
+            activityIndicator.isHidden = true
+            verifyLogin(url: currentURL)
+        }
         print("attempting to fill form")
+        attempts = attempts + 1
         // fill data
         let savedUsername = currentUser.userName
         let savedPassword = currentUser.password
@@ -48,11 +57,19 @@ class WebVC: UIViewController, UIWebViewDelegate {
         //submit form
         DispatchQueue.main.asyncAfter(deadline: .now()+2){
             webView.stringByEvaluatingJavaScript(from: "document.forms[\"loginform\"].submit();")
+            
         }
+<<<<<<< HEAD
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
         currentURL = webView.request?.url?.absoluteString
         verifyLogin(url: currentURL)
+=======
+        //activityIndicator.stopAnimating()
+        //activityIndicator.isHidden = true
+        //currentURL = webView.request?.url?.absoluteString
+        //verifyLogin(url: currentURL)
+>>>>>>> Cory-working-branch
     }
     
     func verifyLogin(url: String){

@@ -51,8 +51,8 @@ class WebVC: UIViewController, UIWebViewDelegate {
         }
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
-        //currentURL = webView.request?.url?.absoluteString
-        //verifyLogin(url: currentURL)
+        currentURL = webView.request?.url?.absoluteString
+        verifyLogin(url: currentURL)
     }
     
     func verifyLogin(url: String){

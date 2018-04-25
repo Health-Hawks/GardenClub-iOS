@@ -80,6 +80,7 @@ class Background {
                     }
                     else{
                         self.login_wp = true
+                        
                     }
                     group.leave()
                 }

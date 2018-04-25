@@ -306,9 +306,12 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         //Get photo from photo ID in recieved contact: ContactCard
         let imageName = contact.PhotoId
         let image = UIImage(named: imageName)
-        if(image != nil){
+        if(imageName != ""){
             print("Image found!")
+            let image = UIImage(named: "CarolinaYellowJessamineMed1")
             contactImage.image = image
+            //contactImage.image = image
+            pullPhotoFromURL(imageID: imageName)
             
         }
         else{ //Pull stock flower image
@@ -497,6 +500,53 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func pullPhotoFromURL(imageID: String){
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://capefeargardenclub.org/cfgcTestingJSON/getImage2.php")! as URL)
+        
+        //let imageURL = imageID
+
+        request.httpMethod = "POST"
+        
+        let postString = "userID=\(contact.UserID)&email=\(contact.ContactEmail)&photoID=\(imageID)"
+        request.httpBody = postString.data(using: String.Encoding.ascii)
+        //request.httpBody = postString.data(using: String.Encoding.utf8)
+        request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
+        DispatchQueue.global().async {
+            let task = URLSession.shared.dataTask(with: request as URLRequest) {
+                data, response, error in
+                
+                if error != nil {
+                    print("error=\(error)")
+                    return
+                }
+                
+                print("response = \(response)")
+                
+                let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                print("responseString = \(responseString)")
+                do{
+                    let data = try Data(contentsOf: request.url!)
+                    DispatchQueue.main.sync {
+                        print(data.)
+                        print(request.url?.absoluteString)
+                        print(request.httpBody)
+                        self.contactImage.image = UIImage(data: data)
+                    }
+                } catch{
+                    print("Exception Image")
+                }
+                
+                
+            }
+            task.resume()
+        }
+       
+    }
+
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{

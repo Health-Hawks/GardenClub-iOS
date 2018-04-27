@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 class Background {
     private var _login_url = "http://capefeargardenclub.org/cfgcTestingJSON/more_json11.php";
     private var jsonDataSet : Root?
@@ -49,6 +49,10 @@ class Background {
         }
     }
 
+    init(cards: [ContactCard]) {
+        _contactCards = cards
+        //self.saveImagesAsync(cards: cards)
+    }
     
     private func wp_login(userName: String, password: String){
         let request = NSMutableURLRequest(url: NSURL(string: "http://www.capefeargardenclub.org/wp-login.php")! as URL)
@@ -122,6 +126,62 @@ class Background {
         task.resume()
     }
     
+    
+    
+    func saveImagesAsyncController(){
+        let cards = _contactCards
+        let phase = cards.count/4
+        
+        self.asyncImages(start: 0, phase: phase)
+        self.asyncImages(start: phase, phase: phase*2)
+        self.asyncImages(start: phase*2, phase: phase*3)
+        self.asyncImages(start: phase*3, phase: phase*4)
+        
+    }
+    
+    func asyncImages(start: Int, phase: Int){
+        var i = start
+        print("///////////////////////DISPATCHSTART///////////////////////")
+        DispatchQueue.global().async {
+            while i <= phase{
+                
+                let objectPath = UserDefaults.standard.object(forKey: self._contactCards[i].PhotoId)
+                
+                if objectPath == nil{
+                    let photo = self.pullSimpleFromURL(photoID: self._contactCards[i].PhotoId)
+                    
+                    if photo != nil{
+                        let photoData = UIImageJPEGRepresentation(photo, 0.5) as! NSData
+                        UserDefaults.standard.set(photoData, forKey: self._contactCards[i].PhotoId)
+                        UserDefaults.standard.synchronize()
+                    }
+                }
+                else{
+                    print("There is already a file present at:\(self._contactCards[i].PhotoId)")
+                }
+                i = i + 1
+            }
+        }
+    }
+    
+    
+    func pullSimpleFromURL(photoID: String)->UIImage{
+        print("starting image pull")
+        var contactImg = UIImage(named: "CarolinaYellowJessamineMed1")
+        //var dataReturn: NSData?
+        let urlString = "http://capefeargardenclub.org/cfgcTestingJSON/images_Testing/images/" + photoID + ".jpg"
+        let url = URL(string: urlString)
+        print(photoID+".jpg")
+        do{
+            let data = try Data(contentsOf: url!)
+            contactImg = UIImage(data: data)!
+            //dataReturn = UIImagePNGRepresentation(contactImg!)! as NSData
+            
+        }catch{
+            print("failed")
+        }
+        return contactImg!
+    }
     
     
     struct Root : Decodable{

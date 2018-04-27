@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ContactCell: UITableViewCell {
 
@@ -32,34 +33,45 @@ class ContactCell: UITableViewCell {
     func updateUI(contactCard: ContactCard){
         contactName.text = contactCard.FirstName + " " + contactCard.LastName;
         mbrStat.text = contactCard.MbrStatus;
+        
         let imageName = contactCard.PhotoId
-        if imageName != ""{
+        
+        let objectData = UserDefaults.standard.object(forKey: imageName)
+        if objectData != nil {
+            //print("Found image for ContactVC at \(imageName)")
+            let imageData = objectData as! NSData
+            let image = UIImage(data: imageData as Data)
+            contactImg.image = image
+            contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+        }
+        else{
+            let image = UIImage(named: "CarolinaYellowJessamineMed1")
+            
+            contactImg.image = image
+            contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+            //print("objectData nil at\(imageName)")
+        }
+        
+        
+        //if(image != nil){
+            //print("Image found!")
+            //contactImg.image = image
+            //contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+            
             //print("Image found!")
             //pullPhotoFromURL(imageID: contactCard.PhotoId)
             //pullPhotoFromURL(imageID: imageName)
-            
+            //pullSimpleFromURL(photoID: imageName)
             //contactImg.image = image
-            contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+            //contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
                 
                 
-        }
-        /*
-        else{ //Replace dequeued cell with stock flower image
+        //}
+        //{ //Replace dequeued cell with stock flower image
             //print("Clear")
-            //let image = UIImage(named: "CarolinaYellowJessamineMed1")
-            
-            contactImg.image = image
-            //pullPhotoFromURL(imageID: contactCard.PhotoId)
-            
-            //pullSimpleFromURL(photoID: contactCard.PhotoId)
-            
-            /*
-            
-            contactImg.image = image
-            contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
-             */
-        }
-        */
+        
+        //}
+
     }
     
     func pullPhotoFromURL(imageID: String){
@@ -90,7 +102,7 @@ class ContactCell: UITableViewCell {
                 do{
                     let data = try Data(contentsOf: request.url!)
                     //group.leave()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
                         self.contactImg.image = UIImage(data: data)
                         print(request.url?.absoluteString)
                         print("Success!")
@@ -107,30 +119,21 @@ class ContactCell: UITableViewCell {
     
     func pullSimpleFromURL(photoID: String){
         print("starting image pull")
-        let url = URL(string: "http://capefeargardenclub.org/cfgcTestingJSON/getImage1.php")
-        var didGrab = false
-        var grabbed = false
-        let group = DispatchGroup()
+       
+        let urlString = "http://capefeargardenclub.org/cfgcTestingJSON/images_Testing/images/" + photoID + ".jpg"
+        let url = URL(string: urlString)
+        print(photoID+".jpg")
+        
+        DispatchQueue.global().async {
             do{
-                group.enter()
                 let data = try Data(contentsOf: url!)
-                self.contactImg.image = UIImage(data: data)
-                if self.contactImg.image != nil {
-                    didGrab = true
+                DispatchQueue.main.sync {
+                    self.contactImg.image = UIImage(data: data)
                 }
-                else{
-                    didGrab = false
-                }
-                group.leave()
-            } catch{
-                didGrab = false
+            }catch{
+                print("failed")
             }
-        group.wait()
-        group.notify(queue: .main){
-            grabbed = didGrab
-            print("finished trying")
+            
         }
-        
-        
     }
 }

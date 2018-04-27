@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, NSFetchedResultsControllerDelegate {
     
+    var controller: NSFetchedResultsController<Thumbnail>!
     
     @IBOutlet weak var logoutBtn: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +19,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
     var userDictionary = [String: [ContactCard]]()
     var userSectionTitles = [String]()
     var possibleDuplicate = 0;
+    var filesToDownload = 0
     
     private var login_url = "http://capefeargardenclub.org/get_json_data.php";
     
@@ -46,7 +49,24 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         buildContacts()
         }
     
+    func attemptFetch(){
+        let fetchRequest: NSFetchRequest<Thumbnail> = Thumbnail.fetchRequest()
+        let dataSort = NSSortDescriptor(key: "id", ascending: false)
+        fetchRequest.sortDescriptors = [dataSort]
+        
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        self.controller = controller
+        do{
+            try controller.performFetch()
+        }catch{
+            let error = error as? NSError
+            print("\(error)")
+        }
+        
+    }
+    
     func buildContacts(){
+        
         contactCards = contactCards.sorted{ ($0.LastName < $1.LastName) } //sort array (Seems to be a bug here)
         
         for user in contactCards {
@@ -261,8 +281,16 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
                 print(userKey)
             }
             */
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                if self.filesToDownload > 0{
+                    self.createAlert(title: "Downloading Images", message: "There are \(self.filesToDownload) left to download, please be patient")
+                }
+            }
             tableView.reloadData()
         }
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -286,6 +314,14 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             }
         }
     }
- 
+    func createAlert (title: String!, message: String!){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 

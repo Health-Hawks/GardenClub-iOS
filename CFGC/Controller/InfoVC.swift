@@ -305,20 +305,20 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         cancelBtn.tintColor = UIColor.clear
         //Get photo from photo ID in recieved contact: ContactCard
         let imageName = contact.PhotoId
-        let image = UIImage(named: imageName)
-        if(imageName != ""){
-            print("Image found!")
-            let image = UIImage(named: "CarolinaYellowJessamineMed1")
-            contactImage.image = image
-            //contactImage.image = image
-            pullPhotoFromURL(imageID: imageName)
-            
+        
+        let objectData = UserDefaults.standard.object(forKey: imageName)
+        if objectData != nil {
+            print("Found Image within InfoVC at\(imageName)")
+            let imageData = objectData as! NSData
+            let image = UIImage(data: imageData as Data)
+            self.contactImage.image = image
+            //self.contactImage.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
         }
-        else{ //Pull stock flower image
-            //print("Clear")
+        else{
             let image = UIImage(named: "CarolinaYellowJessamineMed1")
-            
             contactImage.image = image
+            //contactImg.frame = CGRect(x: 0, y: 0, width: 42, height: 42)
+            print("objectData nil at\(imageName) within Info VC")
         }
         
         nameTxt.layer.borderWidth = 0.0
@@ -510,10 +510,10 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
 
         request.httpMethod = "POST"
         
-        let postString = "userID=\(contact.UserID)&email=\(contact.ContactEmail)&photoID=\(imageID)"
-        request.httpBody = postString.data(using: String.Encoding.ascii)
+        let postString = "userID=\(contact.UserID)&email=\(contact.ContactEmail)&photoID=441baker"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
         //request.httpBody = postString.data(using: String.Encoding.utf8)
-        request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
+        //request.setValue("text/plain", forHTTPHeaderField: "Content-Type")
         DispatchQueue.global().async {
             let task = URLSession.shared.dataTask(with: request as URLRequest) {
                 data, response, error in
@@ -525,19 +525,27 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
                 
                 print("response = \(response)")
                 
+                if let HTTPResponse = response as? HTTPURLResponse{
+                    let statusCode = HTTPResponse.statusCode
+                    
+                    if statusCode == 200{
+                        do{
+                            let data = try Data(contentsOf: request.url!)
+                            DispatchQueue.main.sync {
+                                
+                                print(request.url?.absoluteString)
+                                print(request.httpBody)
+                                self.contactImage.image = UIImage(data: data)
+                            }
+                        } catch{
+                            print("Exception Image")
+                        }
+                    }
+                }
+                
                 let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                 print("responseString = \(responseString)")
-                do{
-                    let data = try Data(contentsOf: request.url!)
-                    DispatchQueue.main.sync {
-                        print(data.)
-                        print(request.url?.absoluteString)
-                        print(request.httpBody)
-                        self.contactImage.image = UIImage(data: data)
-                    }
-                } catch{
-                    print("Exception Image")
-                }
+                
                 
                 
             }
@@ -545,9 +553,31 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         }
        
     }
-
-
-    
+    /*
+    func startConnection(completion: @escaping (NSArray, Int) -> Void) {
+        let url = URL(string: "http://capefeargardenclub.org/cfgcTestingJSON/getImage2.php")
+        var request : URLRequest = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        let postString = "photoID=441baker.jpg"
+        request.httpBody = postString.data(using: .utf8)
+        
+        let dataTask = URLSession.shared.dataTask(with: request) {
+            data,response,error in
+            print("anything")
+            do {
+                //if let data = try Data(contentsOf: url!){
+                    //Use GCD to invoke the completion handler on the main thread
+                    //DispatchQueue.main.async() {
+                        //completion(NSArray(object: teamResult), Int(teamInput.text!)!)
+                    //}
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        dataTask.resume()
+    }
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
             
@@ -569,6 +599,8 @@ class InfoVC: UIViewController, MFMessageComposeViewControllerDelegate, MFMailCo
         
         
     }
+    
+    
 
     /*
     // MARK: - Navigation

@@ -36,8 +36,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         }
         let backG = Background(login: true)
         _backGround = backG
-        print("Check")
-        
     }
     
     override func viewDidLoad() {
@@ -58,7 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     }
     @objc func scrollViewTapped() {
         self.view.endEditing(true)
-        print("scrollViewTapped")
+        //print("scrollViewTapped")
     }
     @objc func keyboardWillShow(notification:NSNotification) {
         guard let keyboardFrameValue = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue else {

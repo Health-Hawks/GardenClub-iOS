@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class WebVC: UIViewController, UIWebViewDelegate {
     
@@ -14,7 +15,9 @@ class WebVC: UIViewController, UIWebViewDelegate {
     var currentURL: String!
     var contactCards: [ContactCard]!
     var attempts = 0
+    var numberOfFiles: Int!
     
+    @IBOutlet weak var statusTextField: UITextField!
     @IBOutlet weak var myWebView: UIWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -65,12 +68,42 @@ class WebVC: UIViewController, UIWebViewDelegate {
         let authentication = Background(url: url)
         
         if authentication.login_wp{
+            self.statusTextField.text = "Downloading Assets..."
+            
+            downloadAssets()
             performSegue(withIdentifier: "ContactVC", sender:currentUser )
         }
         else{
             performSegue(withIdentifier: "LoginViewController", sender: currentUser)
         }
     }
+    func downloadAssets(){
+        self.numberOfFiles = 0
+        var i = 0
+        for card in contactCards{
+            i = i + 1
+            
+            if card.PhotoId != ""{
+                let objectPath = UserDefaults.standard.object(forKey: card.PhotoId)
+                print(i)
+                
+                if objectPath == nil {
+                    numberOfFiles = numberOfFiles + 1
+                }
+            }
+            
+        }
+        //let domain = Bundle.main.bundleIdentifier REMOVE DATA
+        
+        //UserDefaults.standard.removePersistentDomain(forName: (domain)!) REMOVE DATA
+        let downLoad = Background(cards: contactCards)
+        if(numberOfFiles > 1){
+            downLoad.saveImagesAsyncController()
+        }
+    }
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
@@ -79,6 +112,7 @@ class WebVC: UIViewController, UIWebViewDelegate {
                 if let user = sender as? User {
                     contVC.currentUser = user;
                     contVC.contactCards = self.contactCards
+                    contVC.filesToDownload = numberOfFiles
                 }
             }
         }
@@ -98,6 +132,16 @@ class WebVC: UIViewController, UIWebViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title: String!, message: String!){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

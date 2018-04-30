@@ -285,6 +285,7 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             DispatchQueue.main.asyncAfter(deadline: .now() + 2){
                 if self.filesToDownload > 0{
                     self.createAlert(title: "Downloading Images", message: "There are \(self.filesToDownload) left to download, please be patient")
+                    self.filesToDownload = 0;
                 }
             }
             tableView.reloadData()

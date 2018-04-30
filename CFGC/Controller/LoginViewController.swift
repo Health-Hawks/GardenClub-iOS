@@ -22,6 +22,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
     var loginAttempts = 0
     var authenticated = false
     var currentUser: User!
+    var wasLogged = false
+    var previousLogin: User!
     
     @IBOutlet weak var submitBtn: UIButton!
     
@@ -31,8 +33,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
             DispatchQueue.main.asyncAfter(deadline: .now()+2){
                 self.createAlert(title: "Authentication Failed", message: "Incorrect Username or Password")
             }
-            
-            
         }
         let backG = Background(login: true)
         _backGround = backG
@@ -52,8 +52,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         userName.borderStyle = UITextBorderStyle.roundedRect
         password.borderStyle = UITextBorderStyle.roundedRect
         submitBtn.layer.cornerRadius = 23
-        
+    
     }
+    
     @objc func scrollViewTapped() {
         self.view.endEditing(true)
         //print("scrollViewTapped")
@@ -85,7 +86,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         //let spinner = UIViewController.displaySpinner(onView: self.view)
         //self.startActivity()
         
-        performSegue(withIdentifier: "WebVC", sender: currentUser)
+        if(wasLogged && currentUser.userName != ""){
+            if(previousLogin.userName == currentUser.userName && previousLogin.password == currentUser.password){
+                performSegue(withIdentifier: "ContactVC", sender: currentUser)
+            }
+            else{
+                print(previousLogin.userName,"", previousLogin.password)
+                performSegue(withIdentifier: "WebVC", sender: currentUser)
+            }
+        }
+        else{
+            performSegue(withIdentifier: "WebVC", sender: currentUser)
+        }
         
         /*
         if (verifyLogin(userName: currentUser.userName, password: password.text!)){
@@ -114,39 +126,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
         // Dispose of any resources that can be recreated.
     }
     
-    func verifyLogin(userName: String, password: String) -> Bool{
-        /*
-        for x in conCardsJson{
-            if x.ContactEmail == userName{
-                return true
-            }
-        }
-         */
-        
-        //let loginBackground = Background(userName: userName, password: password)
-        
-        //if(loginBackground.login_wp && loginAttempts < 3){
-           // return true
-        //}
-        if loginAttempts < 1{
-            createAlert(title: "Failed To Authenticate", message:"For Beta purposes you may log in with password \"testing\"")
-            loginAttempts = loginAttempts + 1
-        }
-        else{
-            return betaAuthentication(userName: userName, password: password)
-        }
-        return false
-    }
-    
-    func betaAuthentication(userName: String, password: String)->Bool{
-        for x in conCardsJson{
-            if x.ContactEmail == userName && password == "testing"{
-                return true
-            }
-        }
-        return false
-    }
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ContactVC"{
@@ -169,16 +148,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
     /*
      @objc func keyboardDidShow(notification: Notification){
@@ -217,6 +186,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate, UIScrollViewDe
      func textFieldShouldReturn(_ textField: UITextField) -> Bool {
      textField.resignFirstResponder()
      return true
+     }
+     */
+    /*
+     func verifyLogin(userName: String, password: String) -> Bool{
+     /*
+     for x in conCardsJson{
+     if x.ContactEmail == userName{
+     return true
+     }
+     }
+     */
+     
+     //let loginBackground = Background(userName: userName, password: password)
+     
+     //if(loginBackground.login_wp && loginAttempts < 3){
+     // return true
+     //}
+     if loginAttempts < 1{
+     createAlert(title: "Failed To Authenticate", message:"For Beta purposes you may log in with password \"testing\"")
+     loginAttempts = loginAttempts + 1
+     }
+     else{
+     return betaAuthentication(userName: userName, password: password)
+     }
+     return false
+     }
+     
+     func betaAuthentication(userName: String, password: String)->Bool{
+     for x in conCardsJson{
+     if x.ContactEmail == userName && password == "testing"{
+     return true
+     }
+     }
+     return false
      }
      */
 }

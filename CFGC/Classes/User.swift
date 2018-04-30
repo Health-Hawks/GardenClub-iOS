@@ -21,7 +21,7 @@ class User{
     var password: String{
         return _password;
     }
-    var userName: String {
+    var userName: String{
         return _userName;
     }
     

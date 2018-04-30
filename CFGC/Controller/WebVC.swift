@@ -24,7 +24,9 @@ class WebVC: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         myWebView.delegate = self
-        
+        URLCache.shared.removeAllCachedResponses()
+        URLCache.shared.diskCapacity = 0
+        URLCache.shared.memoryCapacity = 0
         // Do any additional setup after loading the view, typically from a nib.
         //self.webView.delegate = self
         let url = NSURL (string: "http://www.capefeargardenclub.org/wp-login.php")! as URL;
@@ -40,6 +42,7 @@ class WebVC: UIViewController, UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         print ("checking site")
         currentURL = webView.request?.url?.absoluteString
+        print(currentURL)
         if(attempts > 0){
             activityIndicator.stopAnimating()
             activityIndicator.isHidden = true
@@ -60,8 +63,10 @@ class WebVC: UIViewController, UIWebViewDelegate {
         //submit form
         DispatchQueue.main.asyncAfter(deadline: .now()+2){
             webView.stringByEvaluatingJavaScript(from: "document.forms[\"loginform\"].submit();")
-            
+            //self.currentURL = webView.request?.url?.absoluteString
+            //self.verifyLogin(url: self.currentURL)
         }
+
     }
     
     func verifyLogin(url: String){

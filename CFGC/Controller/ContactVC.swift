@@ -310,7 +310,8 @@ class ContactVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         if segue.identifier == "LoginVC"{
             if let loginVC = segue.destination as? LoginViewController{
                 if let user = sender as? User{
-                    loginVC.currentUser = user
+                    loginVC.previousLogin = self.currentUser
+                    loginVC.wasLogged = true
                 }
             }
         }
